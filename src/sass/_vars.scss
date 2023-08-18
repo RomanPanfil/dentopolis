@@ -1,0 +1,75 @@
+// Colors & BG's ---
+$bgc: #CDF3F9;
+$bgc_light: #F0FBFD;
+$bgc_pink: #BD5B9E;
+$footer: #4C4D6E;
+$font: #222340;
+$link: #51647B;
+$primary: #319DAC;
+$error: #BD5B9E;
+$gray_dark: #343544;
+
+$green_btn: linear-gradient(180deg, #319DAC 0%, #278FAF 100%);
+$pink_btn: linear-gradient(180deg, #BD5B9E 0%, #A5417D 100%);
+$hover_btn: #4C4D6E;
+
+
+
+// $link: $primary;
+
+$input_border: #CFDAE7;
+$input_hover: darken($input_border, 15%);
+$input_focus: $primary;
+
+$jq_border: #a3a3a3;
+$jq_hover: darken($jq_border,15%);
+$jq_focus: $primary;
+
+
+// Layouts
+$inner: 1700px;
+$gutter: 50px;
+$col_gutter: 15px;
+$block_margin: 0 0 25px;
+
+
+// Grid
+$breakpoints: ("xl":1440,"lg":1260,"md":1024,"sm":769,"xs":599,"us":320);
+
+
+// Typography ---
+$fontsize: 16;
+$weight: 400;
+$basefont: 'Inter';
+$lh: 1.42;
+$th: 1.42;
+$paragraph_margin: 0px 0px 18px;
+$gilroy: 'Gilroy';
+
+// headings
+$headings_font_family: $basefont;
+$headings_margin: 40px 0px 40px;
+$headings_font_weight: 500;
+// $headings_color: $titles;
+$headings_text_transform: none;
+$h1: 136;
+$h2: 45;
+$h3: 32;
+$h4: 24;
+$h5: 22;
+$h6: $fontsize;
+
+$block_heading_font_size: 24;
+$block_heading_font_weight: 700;
+
+
+
+
+@mixin fz($f_size) {
+	font-size: $f_size + px;
+	font-size: $f_size/16 + rem;
+}
+
+@mixin ls($lsp) {
+	letter-spacing: $lsp/1000 + em;
+}
