@@ -173,6 +173,20 @@ const FARBA = {
   });
 })();
 
+// implants slider
+(function() {
+  const sliderFour = new Swiper('.implants-slider', {  
+    loop: false,    
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 32,  
+    navigation: {
+      nextEl: '.implants-slider .slider-next',
+      prevEl: '.implants-slider .slider-prev',
+    },
+  });
+})();
+
 // валидация формы
 $(document).ready(function () {
   

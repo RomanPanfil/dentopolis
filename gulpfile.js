@@ -67,6 +67,7 @@ const copyAll = async () => {
             './src/images/svg/**/*',
             './src/images/*.svg',
             './src/images/**/*.svg',
+            './src/media/**/*.mp4',
             './src/js/**/*',
             './src/fonts/**/*',
             './src/svg/**/*',
