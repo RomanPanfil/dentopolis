@@ -194,7 +194,7 @@ img {
 	@include fz(18);	
 	font-weight: 500;
 	cursor: pointer;
-	transition: .2s;
+	transition: background 0.3s ease-in-out;
 	text-transform: uppercase;
 	user-select: none;
 
@@ -300,6 +300,11 @@ img {
 		bottom: 0;
 		padding: 2px 4px;		
 	}
+
+	.input-icon {
+		position: absolute;
+		right: 21px;
+	}
 	
 	.ui-input {
 		height: 62px;
@@ -315,7 +320,11 @@ img {
 		outline: none;		
       &.error {
         margin-bottom: 0px;
-      } 
+      }
+
+	  &.small {
+		height: 40px;
+	  }
 
      
 

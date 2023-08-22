@@ -103,18 +103,30 @@
             font-weight: 500;
             text-transform: uppercase;
             line-height: 60px;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 8px;
+              width: 0%;
+              background-color: $bgc;
+              border-radius: 4px 4px 0px 0px;
+              transition: width 0.3s ease-in-out;
+            }
+
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
 
             &.active {  
               position: relative;   
-              &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                height: 8px;
-                width: 100%;
-                background-color: $bgc;
-                border-radius: 4px 4px 0px 0px
+              &::after {               
+                width: 100%;                
               }        
             }
           }
@@ -238,6 +250,24 @@
               @include fz(18);
               color: #fff;
               text-transform: uppercase;
+              position: relative;
+
+              &::after {
+                content: '';
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  height: 8px;
+                  width: 0%;
+                  background-color: $bgc;
+                  border-radius: 4px 4px 0px 0px;
+                  transition: width 0.3s ease-in-out
+              }
+              &:hover {          
+                &::after {                  
+                  width: 100%;                  
+                }
+              }
               &.active {
                 position: relative;
                 
@@ -259,7 +289,30 @@
       &-search {
         margin-left: auto;
         cursor: pointer;
+        position: relative;
       }  
+      .search-wrapper {       
+        overflow: hidden;
+        visibility: hidden;
+        transform: translateY(-10px);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        right: 0;
+        padding: 12px 20px;
+        background-color: #FFF;
+        border-radius: 12px;
+        box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+        transition: all 0.4s;
+        &.open {         
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+      .ui-field {
+        width: max-content;
+      }
     }
   }
 }
@@ -968,6 +1021,14 @@
   .prices {
     padding-top: 120px;
     padding-bottom: 80px;
+    .row {
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+    [class*=col-]  {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
     .h2 {
       text-align: center;
       margin-bottom: 60px;
@@ -1311,6 +1372,7 @@
         font-weight: 600;
         line-height: 133.333%;
         margin-bottom: 20px;
+        text-transform: uppercase;
       }
 
       &-subtitle {
@@ -1626,10 +1688,22 @@
     .links {
       display: flex;
       gap: 16px;
+      svg {
+        width: 32px;
+        height: 32px;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
     }  
   }
 
   &-main {
+    .ui-btn:hover {
+      background: #595A85;
+    }
     .logo {
       margin-bottom: 62px;
       display: block;
@@ -1650,6 +1724,15 @@
       gap: 16px;
       margin-left: auto;
       margin-right: auto;
+      svg {
+        width: 32px;
+        height: 32px;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
     }
     .copy {
       text-align: center;
@@ -1708,6 +1791,7 @@
 }
 
 .acide {
+  height: 100%;
   .feedback-wrapper {
     // display: flex;
     // flex-direction: column;
@@ -1716,6 +1800,8 @@
     background-color: $bgc-pink;
     border-radius: 12px;
     box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+    position: sticky;
+    top: 220px;
 
     .feedback-title {
       @include fz(32);

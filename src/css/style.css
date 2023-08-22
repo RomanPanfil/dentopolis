@@ -651,9 +651,9 @@ img {
   font-size: 1.125rem;
   font-weight: 500;
   cursor: pointer;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   text-transform: uppercase;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -771,6 +771,10 @@ img {
   bottom: 0;
   padding: 2px 4px;
 }
+.ui-field .input-icon {
+  position: absolute;
+  right: 21px;
+}
 .ui-field .ui-input {
   height: 62px;
   color: #343544;
@@ -787,6 +791,9 @@ img {
 }
 .ui-field .ui-input.error {
   margin-bottom: 0px;
+}
+.ui-field .ui-input.small {
+  height: 40px;
 }
 .ui-field .ui-input::-webkit-input-placeholder {
   color: #51647B;
@@ -2142,19 +2149,29 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 60px;
-}
-.header-bottom .header-nav-item .trigger-text.active {
   position: relative;
 }
-.header-bottom .header-nav-item .trigger-text.active::after {
+.header-bottom .header-nav-item .trigger-text::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 8px;
-  width: 100%;
+  width: 0%;
   background-color: #CDF3F9;
   border-radius: 4px 4px 0px 0px;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.header-bottom .header-nav-item .trigger-text:hover::after {
+  width: 100%;
+}
+.header-bottom .header-nav-item .trigger-text.active {
+  position: relative;
+}
+.header-bottom .header-nav-item .trigger-text.active::after {
+  width: 100%;
 }
 .header-bottom .header-nav-item .trigger-arrow {
   -webkit-transition: all 0.4s;
@@ -2278,6 +2295,23 @@ img {
   font-size: 1.125rem;
   color: #fff;
   text-transform: uppercase;
+  position: relative;
+}
+.header-bottom .header-nav-pages ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  width: 0%;
+  background-color: #CDF3F9;
+  border-radius: 4px 4px 0px 0px;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.header-bottom .header-nav-pages ul li a:hover::after {
+  width: 100%;
 }
 .header-bottom .header-nav-pages ul li a.active {
   position: relative;
@@ -2295,6 +2329,42 @@ img {
 .header-bottom .header-nav-search {
   margin-left: auto;
   cursor: pointer;
+  position: relative;
+}
+.header-bottom .header-nav .search-wrapper {
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  padding: 12px 20px;
+  background-color: #FFF;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header-bottom .header-nav .search-wrapper.open {
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.header-bottom .header-nav .ui-field {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .main {
@@ -2988,6 +3058,14 @@ img {
   padding-top: 120px;
   padding-bottom: 80px;
 }
+.main .prices .row {
+  margin-left: -40px;
+  margin-right: -40px;
+}
+.main .prices [class*=col-] {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .main .prices .h2 {
   text-align: center;
   margin-bottom: 60px;
@@ -3326,6 +3404,7 @@ img {
   font-weight: 600;
   line-height: 133.333%;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .main .service-content-subtitle {
   color: #343544;
@@ -3657,6 +3736,21 @@ img {
   display: flex;
   gap: 16px;
 }
+.footer-contacts .links svg {
+  width: 32px;
+  height: 32px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer-contacts .links svg:hover {
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.footer-main .ui-btn:hover {
+  background: #595A85;
+}
 .footer-main .logo {
   margin-bottom: 62px;
   display: block;
@@ -3681,6 +3775,18 @@ img {
   gap: 16px;
   margin-left: auto;
   margin-right: auto;
+}
+.footer-main .socials svg {
+  width: 32px;
+  height: 32px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer-main .socials svg:hover {
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 .footer-main .copy {
   text-align: center;
@@ -3735,6 +3841,9 @@ img {
   stroke: #D9D9D9;
 }
 
+.acide {
+  height: 100%;
+}
 .acide .feedback-wrapper {
   display: block;
   padding: 60px 40px;
@@ -3742,6 +3851,8 @@ img {
   border-radius: 12px;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+  position: sticky;
+  top: 220px;
 }
 .acide .feedback-wrapper .feedback-title {
   font-size: 32px;

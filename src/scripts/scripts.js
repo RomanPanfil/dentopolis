@@ -85,6 +85,34 @@ const FARBA = {
 //   }
 // })();
 
+// поиск в header
+(function() {
+  if (!document.querySelector('.header-nav-search .search-wrapper') || !document.querySelector('.header-nav-search .search-icon') || !document.querySelector('.header-nav-search .close-icon')) return
+
+  const searchWrapper = document.querySelector('.header-nav-search .search-wrapper');
+  const iconSearch = document.querySelector('.header-nav-search .search-icon');
+  const iconClose = document.querySelector('.header-nav-search .close-icon');
+
+  iconSearch.addEventListener('click', (e) => {
+    e.stopPropagation()
+    searchWrapper.classList.toggle('open');   
+  });
+
+  iconClose.addEventListener('click', () => {    
+    searchWrapper.classList.remove('open');    
+  });
+
+  searchWrapper.addEventListener('click', e => e.stopPropagation());
+  document.addEventListener('click', handleClickOutside);
+
+
+  function handleClickOutside(event) {
+    if (!event.target.closest('.search-wrapper')) {
+      searchWrapper.classList.remove('open');
+    }
+  }
+})();
+
 // main slider
 (function() {
   const mainSlider = new Swiper('.main-slider', {
