@@ -3330,9 +3330,17 @@ img {
 .main .service-main-wrapper {
   width: 65%;
   padding-right: 40px;
+  width: 63px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 63%;
+          flex: 0 0 63%;
 }
 .main .service-acide-wrapper {
   padding-left: 40px;
+  width: 37px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 37%;
+          flex: 0 0 37%;
 }
 .main .service-acide-wrapper .service-content-price {
   margin-bottom: 80px;
