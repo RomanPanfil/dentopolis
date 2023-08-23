@@ -632,6 +632,7 @@ img {
   vertical-align: middle;
   height: 62px;
   line-height: 62px;
+  letter-spacing: 0.64px;
   max-width: 100%;
   position: relative;
   border: none;
@@ -664,6 +665,7 @@ img {
   margin-left: 12px;
   width: 14px;
   height: 14px;
+  margin-right: 6px;
 }
 @media (max-width: 1680px) {
   .ui-btn {
@@ -703,10 +705,13 @@ img {
   background: linear-gradient(180deg, #319DAC 0%, #278FAF 100%);
 }
 .ui-btn.ui-btn-transparent {
+  font-size: 16px;
+  font-size: 1rem;
   background: transparent;
   color: #319DAC;
   height: unset;
   line-height: unset;
+  letter-spacing: 0.64px;
   padding: 0;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -781,6 +786,7 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 400;
+  letter-spacing: 0.36px;
   background-color: #CDF3F9;
   width: 100%;
   outline: none;
@@ -2149,6 +2155,7 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 60px;
+  letter-spacing: 0.72px;
   position: relative;
 }
 .header-bottom .header-nav-item .trigger-text::after {
@@ -2296,6 +2303,7 @@ img {
   color: #fff;
   text-transform: uppercase;
   position: relative;
+  letter-spacing: 0.72px;
 }
 .header-bottom .header-nav-pages ul li a::after {
   content: "";
@@ -2373,23 +2381,19 @@ img {
           flex-grow: 1;
   padding-top: 140px;
 }
+.main-slider {
+  position: relative;
+}
 .main-slider .swiper-slide {
-  height: calc(100vh - 140px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  height: 820px;
+  padding-top: 232px;
+  background-color: #768bce;
 }
 .main-slider .slider-bg {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -2;
+  z-index: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -2408,7 +2412,7 @@ img {
   line-height: 141.556%;
   letter-spacing: 1.35px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 .main-slider .slider-arrows {
   display: -webkit-box;
@@ -2422,7 +2426,7 @@ img {
           align-items: center;
   gap: 30px;
   position: absolute;
-  bottom: 30px;
+  bottom: 32px;
   z-index: 2;
   left: 0;
   width: 100%;
@@ -2438,8 +2442,11 @@ img {
   letter-spacing: 0.2px;
   margin-bottom: 30px;
 }
-.main-slider .slider-descroption p + p {
-  margin-top: 12px;
+.main-slider .slider-descroption p {
+  margin: 0;
+}
+.main-slider .slider-descroption p:not(:last-of-type) {
+  margin-bottom: 12px;
 }
 .main .benefits {
   padding-top: 32px;
@@ -2593,7 +2600,8 @@ img {
   font-weight: 500;
   line-height: 133.333%;
   letter-spacing: 0.72px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 .main .price-row {
   font-size: 20px;
@@ -2854,6 +2862,9 @@ img {
   overflow: hidden;
   max-width: 62%;
 }
+.main .reviews-head-rating svg:not(:last-of-type) {
+  margin-right: 3px;
+}
 .main .reviews-head-rating.five svg {
   fill: #BD5B9E;
 }
@@ -2934,12 +2945,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #768bce;
 }
 .main .about-bg {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -2;
+  z-index: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -3344,6 +3356,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #768bce;
 }
 .main .service-banner img {
   position: absolute;
@@ -3355,7 +3368,7 @@ img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  z-index: -2;
+  z-index: 0;
 }
 .main .service-banner-content .title {
   color: var(--white, #FFF);
@@ -3690,7 +3703,8 @@ img {
 .footer {
   color: #fff;
   background-color: #4C4D6E;
-  padding: 100px 160px 17px;
+  padding-top: 100px;
+  padding-bottom: 17px;
 }
 .footer-contacts .title {
   font-size: 24px;
@@ -3705,7 +3719,7 @@ img {
   font-size: 1rem;
   line-height: 156.25%;
   letter-spacing: 0.64px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .footer-contacts .phone {
   display: block;
@@ -3713,14 +3727,14 @@ img {
   font-size: 16px;
   font-size: 1rem;
   letter-spacing: 0.64px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .footer-contacts .address {
   color: #fff;
   font-size: 16px;
   font-size: 1rem;
   letter-spacing: 0.64px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .footer-contacts .email {
   display: block;
@@ -3728,7 +3742,7 @@ img {
   font-size: 16px;
   font-size: 1rem;
   letter-spacing: 0.64px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .footer-contacts .links {
   display: -webkit-box;
@@ -3756,7 +3770,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 40px;
+  padding-right: 54px;
 }
 .footer-main .ui-btn {
   margin-bottom: 62px;
@@ -3827,8 +3841,8 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 26px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 34px;
+  margin-top: 40px;
 }
 .slider-four .slider-arrows .slider-prev, .slider-four .slider-arrows .slider-next {
   cursor: pointer;

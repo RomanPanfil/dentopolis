@@ -178,6 +178,7 @@ img {
 	vertical-align: middle;
 	height: 62px;
 	line-height: 62px;
+	letter-spacing: 0.64px;
 	max-width: 100%;
 	position: relative;
 	border: none;
@@ -201,7 +202,8 @@ img {
 	svg {
 		margin-left: 12px;		
 		width: 14px;
-		height: 14px;	
+		height: 14px;
+		margin-right: 6px;		
 	}
 	@media (max-width: 1680px) {
 		height: 50px;
@@ -233,11 +235,13 @@ img {
 		background: $green_btn;		
 	}	
 	
-	&.ui-btn-transparent {		
+	&.ui-btn-transparent {
+		@include fz(16);	
 		background: transparent;	
 		color: $primary;
 		height: unset;
 		line-height: unset;
+		letter-spacing: 0.64px;
 		padding: 0;
 		width: max-content;	
 		&:hover {
@@ -310,7 +314,8 @@ img {
 		height: 62px;
 		color: $gray_dark;
 		@include fz(18);      		
-		font-weight: 400;	
+		font-weight: 400;
+		letter-spacing: 0.36px;
 		background-color: $bgc;	
 		width: 100%;		
 		outline: none;    

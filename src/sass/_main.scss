@@ -103,6 +103,7 @@
             font-weight: 500;
             text-transform: uppercase;
             line-height: 60px;
+            letter-spacing: 0.72px;
             position: relative;
 
             &::after {
@@ -251,6 +252,7 @@
               color: #fff;
               text-transform: uppercase;
               position: relative;
+              letter-spacing: 0.72px;
 
               &::after {
                 content: '';
@@ -322,18 +324,21 @@
   padding-top: 140px;
 
   &-slider {
+    position: relative;
     .swiper-slide {
-      height: calc(100vh - 140px);     
+      height: 820px;     
       // max-height: 820px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      // display: flex;
+      // align-items: center;
+      // justify-content: flex-start;
+      padding-top: 232px;
+      background-color: #768bce;
     }  
     .slider-bg {
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -2;      
+      z-index: 0;      
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -351,7 +356,7 @@
       line-height: 141.556%;
       letter-spacing: 1.35px;
       text-transform: uppercase;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
     }
 
     .slider-arrows {
@@ -360,7 +365,7 @@
       align-items: center;
       gap: 30px;
       position: absolute;
-      bottom: 30px;
+      bottom: 32px;
       z-index: 2;
       left: 0;
       width: 100%;
@@ -375,9 +380,12 @@
       line-height: 155%;
       letter-spacing: 0.2px;
       margin-bottom: 30px;
-      p + p {
-        margin-top: 12px;
-      }
+      p {
+       margin: 0;
+       &:not(:last-of-type) {
+        margin-bottom: 12px;
+       }
+      }     
     }
 
   }
@@ -522,7 +530,8 @@
         font-weight: 500;
         line-height:133.333%;
         letter-spacing: 0.72px;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
+        text-align: center;
       }
     }
   }
@@ -793,6 +802,9 @@
       }
 
       &-rating {
+        svg:not(:last-of-type) {
+          margin-right: 3px;
+        }
         &.five {
           svg {
             fill: $bgc_pink;
@@ -891,12 +903,13 @@
     color: #FFF;
     display: flex;
     align-items: center;
+    background-color: #768bce;
 
     &-bg {      
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -2;      
+      z-index: 0;      
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -1313,6 +1326,8 @@
       height: 540px;
       display: flex;
       align-items: center;
+      background-color: #768bce;
+
       img {
         position: absolute;
         left: 0;
@@ -1321,7 +1336,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        z-index: -2;
+        z-index: 0;
       }
 
       &-content {
@@ -1644,7 +1659,8 @@
 .footer {
   color: #fff;
   background-color: $footer;
-  padding: 100px 160px 17px;
+  padding-top: 100px;
+  padding-bottom: 17px;
 
   &-contacts {
     .title {
@@ -1659,7 +1675,7 @@
       @include fz(16);
       line-height: 156.25%;
       letter-spacing: 0.64px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .phone {
@@ -1667,14 +1683,14 @@
       color: #fff;
       @include fz(16);      
       letter-spacing: 0.64px; 
-      margin-bottom: 12px;    
+      margin-bottom: 10px;    
     }
 
     .address {
       color: #fff;
       @include fz(16);      
       letter-spacing: 0.64px; 
-      margin-bottom: 12px;  
+      margin-bottom: 10px;  
     }
 
     .email {
@@ -1682,7 +1698,7 @@
       color: #fff;
       @include fz(16);      
       letter-spacing: 0.64px; 
-      margin-bottom: 20px; 
+      margin-bottom: 18px; 
     }
 
     .links {
@@ -1709,7 +1725,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      padding-right: 40px;
+      padding-right: 54px;
     }
     .ui-btn {
       margin-bottom: 62px;
@@ -1771,8 +1787,8 @@
     align-items: center;
     justify-content: center;
     gap: 26px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 34px;
+    margin-top: 40px;
 
     .slider-prev, .slider-next {
       cursor: pointer;

@@ -120,13 +120,23 @@ const FARBA = {
     loop: true,    
     slidesPerView: 'auto',
     autoplay: {
-      delay: 3000,
+      delay: 7000,
       disableOnInteraction: false
     },
     navigation: {
       nextEl: '.slider-next',
       prevEl: '.slider-prev',
     },
+    on: {
+      slideChangeTransitionEnd: function() {
+      
+        let activeSlide = this.slides[this.activeIndex];
+        
+        activeSlide.addEventListener('mouseenter', () => {
+          this.slideNext();
+        });      
+      }
+    }
   });
 })();
 
