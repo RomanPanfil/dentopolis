@@ -251,9 +251,9 @@ $(document).ready(function () {
 });
 
 // маска номера телефона
-$(document).ready(function () {
-  $(".feedback-form .number").inputmask("+375(99)-999-9999", { showMaskOnHover: false });
-});
+// $(document).ready(function () {
+//   $(".feedback-form .number").inputmask("+999(99)-999-9999", { showMaskOnHover: false });
+// });
 
 // переключение табов "наша команда"
 (function() {

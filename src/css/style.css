@@ -486,6 +486,8 @@ h2, .h2, .ui-h2 {
   font-size: 2.8125rem;
   line-height: 1.2;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.35px;
 }
 @media (max-width: 959px) {
   h2, .h2, .ui-h2 {
@@ -734,8 +736,15 @@ img {
   margin-right: 4px;
 }
 .ui-btn.ui-btn-tab {
+  height: 68px;
+  border-radius: 40px;
+  padding-left: 38px;
+  padding-right: 38px;
+  font-size: 20px;
+  font-size: 1.25rem;
   background: #FFF;
   color: #343544;
+  letter-spacing: 0.6px;
 }
 .ui-btn.ui-btn-tab.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#BD5B9E), to(#A5417D));
@@ -2612,7 +2621,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 12px 20px;
+  padding: 15px 20px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -2630,7 +2639,10 @@ img {
   border-bottom: 2px solid #CDF3F9;
 }
 .main .price-row .name {
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
+  letter-spacing: 0.36px;
 }
 .main .price-row .price {
   font-weight: 600;
@@ -2737,6 +2749,8 @@ img {
 .main .doctors .doctor {
   background-color: #FFF;
   border-radius: 12px;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
   overflow: hidden;
 }
 .main .doctors .doctor-photo {
@@ -2751,7 +2765,7 @@ img {
   height: 100%;
 }
 .main .doctors .doctor-info {
-  padding: 34px 24px;
+  padding: 34px 24px 38px;
 }
 .main .doctors .doctor-name {
   font-weight: 600;
@@ -2764,6 +2778,7 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   color: #343544;
+  letter-spacing: 0.54px;
   font-weight: 500;
 }
 .main .doctors .doctor-category {
@@ -2969,7 +2984,7 @@ img {
   line-height: 141.556%;
   letter-spacing: 1.35px;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 .main .about-text {
   font-size: 20px;
@@ -2978,8 +2993,11 @@ img {
   line-height: 140%;
   letter-spacing: 0.2px;
 }
-.main .about-text p + p {
-  margin-top: 20px;
+.main .about-text p {
+  margin: 0;
+}
+.main .about-text p:not(:last-of-type) {
+  margin-bottom: 18px;
 }
 .main .about-info .about-tabs ul {
   display: -webkit-box;
@@ -3017,7 +3035,7 @@ img {
 }
 .main .about-description {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .main .about-description .row {
   margin-bottom: 80px;
@@ -3067,7 +3085,7 @@ img {
      object-position: center;
 }
 .main .prices {
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 80px;
 }
 .main .prices .row {
@@ -3080,7 +3098,7 @@ img {
 }
 .main .prices .h2 {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 .main .prices .actions-slider {
   overflow: hidden;
@@ -3256,6 +3274,8 @@ img {
   background-color: #FFF;
   border-radius: 12px;
   overflow: hidden;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
 .main .examples .examples-wrapper .example-images .before {
   margin-bottom: 2px;
@@ -3655,7 +3675,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
+  padding: 16px 20px;
   cursor: pointer;
   border-bottom: 2px solid #319DAC;
 }
@@ -3868,7 +3888,7 @@ img {
 }
 .acide .feedback-wrapper {
   display: block;
-  padding: 60px 40px;
+  padding: 50px 40px 60px;
   background-color: #BD5B9E;
   border-radius: 12px;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
@@ -3882,7 +3902,7 @@ img {
   line-height: 145.938%;
   letter-spacing: 0.96px;
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 46px;
 }
 .acide .feedback-wrapper .feedback-form {
   -webkit-box-orient: vertical;
