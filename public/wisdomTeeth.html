@@ -509,7 +509,7 @@
                                 </p>
                             </div>     
                         </div>
-                        <div class="service-content-price">
+                        <div class="service-content-price single">
                             <div class="items">
                                 <div class="price-row">
                                   <div class="name">
@@ -529,10 +529,10 @@
                             </a>
                         </div>
                         <section class="doctors-page doctors bg-blue-light">                           
-                            <div class="doctors-title h3">
+                            <div class="service-content-title">
                                 Наши Хирурги
                             </div>                
-                            <div class="doctors-wrapper">
+                            <div class="doctors-wrapper horizontal">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="swiper-slide doctor flex single">
@@ -597,59 +597,49 @@
                                         </div>
                                     </div>  
                                 </div>
-                            </div>                            
-                            <a href="#" class="ui-btn ui-btn-green doctors-all">
-                                Все врачи
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                  <path d="M7 1L7 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M1 7L13 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>              
-                            </a>         
+                            </div>
                         </section>
-                        <section class="examples bg-blue-light">            
-                            <div class="container">
-                                <div class="examples-title h3">
-                                    Наши работы
-                                </div>                
-                                <div class="examples-wrapper margin">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="example flex">
-                                                <div class="example-images">
-                                                    <div class="before">                  
-                                                        <img src="./images/before.jpg" alt="before" loading="lazy">
-                                                    </div>
-                                                    <div class="after">                 
-                                                        <img src="./images/after.jpg" alt="after" loading="lazy">
-                                                    </div>
-                                                </div>
-                                                <div class="example-text">
-                                                    <div class="description">
-                                                        Восстановление утраченого зуба с помощью дентальной имплантации и коронки из  диоксида циркония 
-                                                    </div>
-                                                    <div class="executor">                                        
-                                                        <a href="#" class="executor-name">
-                                                            Николаеня Александр Николаевич
-                                                        </a>
-                                                    </div>
-                                                    <div class="executor">                                       
-                                                        <a href="#" class="executor-name">
-                                                            Крат Максим Игоревич ​
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>                            
-                                        </div>                                       
-                                    </div>
-                                  </div>
-                                </div>  
-                                <a href="#" class="ui-btn ui-btn-green work-all">
-                                    Все Работы
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                      <path d="M7 1L7 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                      <path d="M1 7L13 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>              
-                                </a>                    
+                        <section class="examples bg-blue-light horizontal no-padding"> 
+                            
+                          <div class="service-content-title">
+                              Наши работы
+                          </div>                
+                          <div class="examples-wrapper">
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <div class="example flex horizontal">
+                                          <div class="example-images">
+                                              <div class="before">                  
+                                                  <img src="./images/before.jpg" alt="before" loading="lazy">
+                                              </div>
+                                              <div class="after">                 
+                                                  <img src="./images/after.jpg" alt="after" loading="lazy">
+                                              </div>
+                                          </div>
+                                          <div class="example-text">
+                                              <div class="description">
+                                                <p class="title">
+                                                  Восстановление утраченого зуба с помощью дентальной имплантации и коронки из  диоксида циркония
+                                                </p>
+                                                <p>
+                                                  Восстановление утраченого зуба с помощью дентальной имплантации и коронки из  
+                                                </p> 
+                                              </div>
+                                              <div class="executor">                                        
+                                                  <a href="#" class="executor-name">
+                                                    Николаеня Александр Николаевич
+                                                  </a>
+                                              </div>
+                                              <div class="executor">                                       
+                                                  <a href="#" class="executor-name">
+                                                      Крат Максим Игоревич ​
+                                                  </a>
+                                              </div>
+                                          </div>
+                                      </div>                            
+                                  </div>                                       
+                              </div>
+                            </div>                                      
                         </section>
                     </div>                                         
                     <div class="service-acide-wrapper">
@@ -838,6 +828,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+
+  <script src="https://unpkg.com/imask"></script>
 
   <script src="./scripts/scripts.js"></script>
 </body>

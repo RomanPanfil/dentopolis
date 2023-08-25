@@ -811,19 +811,19 @@ img {
   height: 40px;
 }
 .ui-field .ui-input::-webkit-input-placeholder {
-  color: #51647B;
+  color: #343544;
 }
 .ui-field .ui-input::-moz-placeholder {
-  color: #51647B;
+  color: #343544;
 }
 .ui-field .ui-input:-ms-input-placeholder {
-  color: #51647B;
+  color: #343544;
 }
 .ui-field .ui-input::-ms-input-placeholder {
-  color: #51647B;
+  color: #343544;
 }
 .ui-field .ui-input::placeholder {
-  color: #51647B;
+  color: #343544;
 }
 .ui-field .ui-input.error {
   border-color: #BD5B9E;
@@ -831,7 +831,7 @@ img {
 .ui-field input:invalid + span:before {
   content: attr(placeholder);
   position: relative;
-  color: #51647B;
+  color: #343544;
 }
 .ui-field input:invalid + span:after {
   content: "*";
@@ -885,6 +885,10 @@ img {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+.no-padding {
+  padding: 0 !important;
 }
 
 .flex {
@@ -2621,7 +2625,10 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 19px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -2639,13 +2646,18 @@ img {
   border-bottom: 2px solid #CDF3F9;
 }
 .main .price-row .name {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: 0.36px;
+  letter-spacing: 0.2px;
+  line-height: 155%;
 }
 .main .price-row .price {
+  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
+  line-height: 155%;
+  letter-spacing: 0.2px;
   color: #BD5B9E;
   white-space: nowrap;
 }
@@ -2682,7 +2694,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 12px 20px;
+  padding: 11px 20px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -2706,17 +2718,23 @@ img {
   font-weight: 600;
   color: #BD5B9E;
 }
-.main .doctors-page .doctors-wrapper {
+.main .doctors-page {
   padding-bottom: 80px;
 }
+.main .doctors-page .doctors-wrapper {
+  padding-bottom: 0px;
+}
 .main .doctors {
-  padding-top: 80px;
+  margin-top: 80px;
 }
 .main .doctors-wrapper {
   padding-bottom: 60px;
 }
 .main .doctors-wrapper .row + .row {
   margin-top: 32px;
+}
+.main .doctors-wrapper.horizontal .row + .row {
+  margin-top: 28px;
 }
 .main .doctors-tabs {
   display: -webkit-box;
@@ -2745,6 +2763,7 @@ img {
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
+  letter-spacing: 0.12px;
 }
 .main .doctors .doctor {
   background-color: #FFF;
@@ -2825,6 +2844,8 @@ img {
 .main .work .work-slide {
   border-radius: 12px;
   overflow: hidden;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
 .main .work .work-slide .before {
   margin-bottom: 2px;
@@ -2850,6 +2871,8 @@ img {
   background: #FFF;
   border-radius: 12px;
   padding: 40px;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
 .main .reviews-head {
   display: -webkit-box;
@@ -3054,6 +3077,12 @@ img {
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
+}
+.main .about-description-card .head .h4 {
+  text-transform: uppercase;
+  line-height: 133.333%;
+  letter-spacing: 0.72px;
+  font-weight: 600;
 }
 .main .about-description-card .content p {
   color: #343544;
@@ -3277,6 +3306,37 @@ img {
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
+.main .examples .examples-wrapper .example.horizontal .example-text {
+  padding-top: 36px;
+  padding-bottom: 26px;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+.main .examples .examples-wrapper .example.horizontal .example-text .description {
+  height: 238px;
+}
+.main .examples .examples-wrapper .example.horizontal .example-text .description p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 156.25%;
+  letter-spacing: 0.16px;
+}
+.main .examples .examples-wrapper .example.horizontal .example-text .description .title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 14px;
+}
+.main .examples .examples-wrapper .example.horizontal .example-text .executor-name {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.54px;
+}
+.main .examples .examples-wrapper .example.horizontal .example-images .before, .main .examples .examples-wrapper .example.horizontal .example-images .after {
+  width: 380px;
+}
 .main .examples .examples-wrapper .example-images .before {
   margin-bottom: 2px;
 }
@@ -3301,20 +3361,20 @@ img {
   font-size: 1.0625rem;
   font-weight: 400;
   line-height: 129.412%;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   margin-bottom: 24px;
   height: 136px;
   overflow: auto;
   border-bottom: 2px solid #CDF3F9;
 }
 .main .examples .examples-wrapper .example-text .executor + .executor {
-  margin-top: 16px;
+  margin-top: 3px;
 }
 .main .examples .examples-wrapper .example-text .executor-title {
   color: #319DAC;
   font-size: 16px;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1;
   font-weight: 400;
   letter-spacing: 0.48px;
   margin-bottom: 2px;
@@ -3330,7 +3390,7 @@ img {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 600;
-  line-height: normal;
+  line-height: 1;
   letter-spacing: 0.48px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -3349,14 +3409,14 @@ img {
 }
 .main .service-main-wrapper {
   width: 65%;
-  padding-right: 40px;
+  padding-right: 48px;
   width: 63px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 63%;
           flex: 0 0 63%;
 }
 .main .service-acide-wrapper {
-  padding-left: 40px;
+  padding-left: 36px;
   width: 37px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 37%;
@@ -3406,11 +3466,12 @@ img {
   line-height: 141.556%;
   letter-spacing: 1.35px;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   max-width: 590px;
 }
 .main .service-banner-content .text {
   margin-bottom: 32px;
+  max-width: 630px;
 }
 .main .service-banner-content .text p {
   color: #FFF;
@@ -3444,8 +3505,9 @@ img {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 133.333%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   text-transform: uppercase;
+  letter-spacing: 0.72px;
 }
 .main .service-content-subtitle {
   color: #343544;
@@ -3491,12 +3553,29 @@ img {
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
   padding: 20px 20px 40px;
 }
+.main .service-content-price.single .items {
+  margin-bottom: 12px;
+}
+.main .service-content-price.single .price-row {
+  padding-left: 0;
+  padding-right: 0;
+}
+.main .service-content-price.single .name {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 155%;
+  letter-spacing: 0.2px;
+}
+.main .service-content-price.single .ui-btn {
+  margin-right: 0;
+}
 .main .service-content-price .head {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 133.333%;
-  padding: 20px;
+  padding: 19px;
   border-bottom: 2px solid #319DAC;
 }
 .main .service-content-price .items {
@@ -3508,6 +3587,7 @@ img {
   width: -moz-max-content;
   width: max-content;
   margin-left: auto;
+  margin-right: 20px;
 }
 .main .service-content-item {
   margin-bottom: 50px;
@@ -3530,8 +3610,8 @@ img {
 .main .service-content-item ul .icon {
   display: inline-block;
   position: relative;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -3574,6 +3654,12 @@ img {
 }
 .main .service-content-item ul .text {
   margin: 0;
+  color: #343544;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+  letter-spacing: 0.36px;
 }
 .main .service-content-interwiev {
   background-color: #FFF;
@@ -3655,6 +3741,8 @@ img {
   height: 340px;
   border-radius: 12px;
   overflow: hidden;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
 .main .implants-slider-item img {
   width: 100%;
@@ -3721,6 +3809,19 @@ img {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+.accordion-content .price-row {
+  padding-top: 16px;
+  padding-bottom: 11px;
+}
+.accordion-content .price-row:last-child {
+  border-bottom: 2px solid #319DAC;
+}
+.accordion-content .price-row .name {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 155.556%;
+  letter-spacing: 0.36px;
 }
 .accordion-content.open {
   max-height: -webkit-max-content;

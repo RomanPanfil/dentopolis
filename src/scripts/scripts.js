@@ -255,6 +255,42 @@ $(document).ready(function () {
 //   $(".feedback-form .number").inputmask("+999(99)-999-9999", { showMaskOnHover: false });
 // });
 
+function initMask() {
+  const inputs = document.querySelectorAll('.feedback-form .number'); 
+  if(!inputs.length) return
+
+  inputs.forEach(element => {
+    IMask(element, {
+      mask: [
+        {
+          mask: '+000 (00) 000-00-00',
+          startsWith: '375',
+          lazy: false,
+          country: 'Belarus'
+        },
+        {
+          mask: '+0 (000) 000-00-00',
+          startsWith: '7',
+          lazy: false,
+          country: 'Russia'
+        },       
+        {
+          mask: '0000000000000',
+          startsWith: '',
+          country: 'unknown'
+        }
+      ],
+      dispatch: (appended, dynamicMasked) => {
+        const number = (dynamicMasked.value + appended).replace(/\D/g,'');
+    
+        return dynamicMasked.compiledMasks.find(m => number.indexOf(m.startsWith) === 0);
+      }
+    })
+  })
+};
+
+initMask();
+
 // переключение табов "наша команда"
 (function() {
   if (!document.querySelector('.doctors-tabs button') || !document.querySelector('.doctors-tabs-wrapper')) return

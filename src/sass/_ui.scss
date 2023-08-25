@@ -94,7 +94,7 @@ h3, .h3, .ui-h3 {
 	}
 }
 h4, .h4, .ui-h4 {
-	@include fz($h4);
+	@include fz($h4);	
 }
 h5, .h5 {
 	@include fz($h5);
@@ -342,7 +342,7 @@ img {
      
 
       &::placeholder {
-        color: #51647B;
+        color: $gray_dark;
       }
       &.error {
         border-color: $error;
@@ -351,7 +351,7 @@ img {
 	input:invalid + span:before {
 		content: attr(placeholder);
 		position: relative;
-		color: #51647B;
+		color: $gray_dark;
 	}
 	  
 	input:invalid + span:after {

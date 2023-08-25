@@ -540,7 +540,8 @@
     @include fz(20);
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
+    align-items: center;
+    padding: 16px 19px;
     cursor: pointer;
     transition: all 0.3s;
 
@@ -559,13 +560,17 @@
     }
 
     .name {
-      @include fz(18);
+      @include fz(20);
       font-weight: 400;
-      letter-spacing: 0.36px;
+      letter-spacing: 0.2px;
+      line-height: 155%;
     }
 
     .price {
-      font-weight: 600;
+      @include fz(20);
+      font-weight: 600;      
+      line-height: 155%;
+      letter-spacing: 0.2px;
       color: $bgc_pink;
       white-space: nowrap;
     }
@@ -599,7 +604,7 @@
         @include fz(20);
         display: flex;
         justify-content: space-between;
-        padding: 12px 20px;
+        padding: 11px 20px;
         cursor: pointer;
         transition: all 0.3s;
 
@@ -630,12 +635,13 @@
   }
 
   .doctors-page {
+    padding-bottom: 80px;
     .doctors-wrapper {
-      padding-bottom: 80px;
-    }
+      padding-bottom: 0px;
+    }    
   }
   .doctors {
-    padding-top: 80px;
+    margin-top: 80px;
 
     &-wrapper {
       padding-bottom: 60px;
@@ -643,6 +649,16 @@
       .row + .row {
         margin-top: 32px;
       }
+
+      &.horizontal {
+        .row + .row {
+          margin-top: 28px;
+        }
+      }
+
+      // .doctor-photo {
+      //   height: 296px !important;
+      // }
     }
 
     &-tabs {
@@ -669,6 +685,7 @@
         max-width: 760px;
         margin-left: auto;
         margin-right: auto;
+        letter-spacing: 0.12px;
       }
     }
 
@@ -755,6 +772,7 @@
     .work-slide {
       border-radius: 12px;
       overflow: hidden;
+      box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 
       .before {
         margin-bottom: 2px;
@@ -783,7 +801,8 @@
     &-slide {
       background: #FFF;
       border-radius: 12px;
-      padding: 40px;         
+      padding: 40px;
+      box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);      
     }
 
     &-head {
@@ -1003,6 +1022,13 @@
         display: flex;
         gap: 16px;
         margin-bottom: 24px;
+
+        .h4 {
+          text-transform: uppercase;
+          line-height: 133.333%;
+          letter-spacing: 0.72px;
+          font-weight: 600;
+        }
       }
 
       .content {
@@ -1213,7 +1239,7 @@
 
   .examples {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 80px;   
 
     &-title {
       text-align: center;
@@ -1231,6 +1257,40 @@
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+
+        &.horizontal {
+          .example-text {
+            padding-top: 36px;
+            padding-bottom: 26px;          
+            padding-left: 38px;
+            padding-right: 38px;
+            .description {
+              height: 238px;
+              p {
+                margin-bottom: 0;
+                @include fz(16);
+                line-height: 156.25%;
+                letter-spacing: 0.16px;
+              }
+              .title {
+                @include fz(20);               
+                font-weight: 500;
+                line-height: 140%;
+                margin-bottom: 14px;
+              }
+            }
+            .executor-name {
+              @include fz(18);
+              letter-spacing: 0.54px;
+            }
+  
+          }
+          .example-images {
+            .before, .after {
+              width: 380px;
+            }
+          }
+        }
 
         &-images {
           .before {
@@ -1256,7 +1316,7 @@
             @include fz(17);           
             font-weight: 400;
             line-height: 129.412%;
-            padding-bottom: 24px;
+            padding-bottom: 22px;
             margin-bottom: 24px;
             height: 136px;
             overflow: auto;
@@ -1264,13 +1324,13 @@
           }
 
           .executor + .executor {
-            margin-top: 16px;
+            margin-top: 3px;
           }
           .executor {
             &-title {
               color: $primary;
               @include fz(16);  
-              line-height: normal;           
+              line-height: 1;           
               font-weight: 400;             
               letter-spacing: 0.48px;
               margin-bottom: 2px;
@@ -1284,7 +1344,7 @@
               color: $font;
               @include fz(16);               
               font-weight: 600;
-              line-height: normal;
+              line-height: 1;
               letter-spacing: 0.48px;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -1308,12 +1368,12 @@
   }
   .service-main-wrapper {
     width: 65%;
-    padding-right: 40px;
+    padding-right: 48px;
     width: 63px;
     flex: 0 0 63%
   }
   .service-acide-wrapper {
-    padding-left: 40px;
+    padding-left: 36px;
     width: 37px;
     flex: 0 0 37%;
     .service-content-price {
@@ -1359,11 +1419,12 @@
           line-height: 141.556%;
           letter-spacing: 1.35px;
           text-transform: uppercase;
-          margin-bottom: 32px;
+          margin-bottom: 16px;
           max-width: 590px;
         }
         .text {
           margin-bottom: 32px;
+          max-width: 630px;
           p {
             color: #FFF;
             @include fz(20);           
@@ -1398,8 +1459,9 @@
         @include fz(24);       
         font-weight: 600;
         line-height: 133.333%;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
         text-transform: uppercase;
+        letter-spacing: 0.72px;
       }
 
       &-subtitle {
@@ -1444,13 +1506,32 @@
         border-radius: 12px;
         box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
         padding: 20px 20px 40px; 
-        // padding-bottom: 40px;     
+        // padding-bottom: 40px;
+
+        &.single {
+          .items {
+            margin-bottom: 12px;
+          }
+          .price-row {
+            padding-left: 0;
+            padding-right: 0;
+          }
+          .name {
+            @include fz(20);          
+            font-weight: 600;
+            line-height: 155%;
+            letter-spacing: 0.2px;
+          }
+          .ui-btn {
+            margin-right: 0;
+          }
+        }
 
         .head {
           @include fz(24);         
           font-weight: 600;
           line-height: 133.333%;
-          padding: 20px;
+          padding: 19px;
           border-bottom: 2px solid $primary;
         }
 
@@ -1462,6 +1543,7 @@
           display: block;
           width: max-content;
           margin-left: auto;
+          margin-right: 20px;
         }
       }
 
@@ -1480,8 +1562,8 @@
           .icon {
             display: inline-block;
             position: relative;
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             flex-shrink: 0;
             margin-top: 2px;
@@ -1518,6 +1600,11 @@
           }
           .text {
             margin: 0;
+            color: $gray_dark;
+            @include fz(18);           
+            font-weight: 400;
+            line-height: 155.556%;
+            letter-spacing: 0.36px;
           }
         }
       }
@@ -1599,6 +1686,7 @@
         height: 340px;
         border-radius: 12px;
         overflow: hidden;
+        box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 
         img {
           width: 100%;
@@ -1661,6 +1749,20 @@
     max-height: 0; 
     overflow: hidden;
     transition: all 0.5s;
+
+    .price-row {
+      padding-top: 16px;
+      padding-bottom: 11px;
+      &:last-child {
+        border-bottom: 2px solid #319DAC;
+      }
+      .name {
+        @include fz(18);       
+        line-height: 155.556%;
+        letter-spacing: 0.36px;
+      }
+    }
+
 
     &.open {
       max-height: max-content;
