@@ -529,8 +529,8 @@ h4, .h4, .ui-h4 {
 }
 
 h5, .h5 {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 h6, .h6, .ui-h5 {
@@ -2607,7 +2607,7 @@ img {
 .main .services-item .services-icon {
   margin-bottom: 14px;
 }
-.main .services-item .title {
+.main .services-item .h4 {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 500;
@@ -2725,10 +2725,17 @@ img {
   padding-bottom: 0px;
 }
 .main .doctors {
-  margin-top: 80px;
+  padding-top: 80px;
+}
+.main .doctors.single {
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 .main .doctors-wrapper {
   padding-bottom: 60px;
+}
+.main .doctors-wrapper.horizontal {
+  padding-bottom: 0;
 }
 .main .doctors-wrapper .row + .row {
   margin-top: 32px;
@@ -2757,12 +2764,15 @@ img {
   margin-bottom: 60px;
 }
 .main .doctors-title.small {
-  font-size: 24px;
-  font-size: 1.5rem;
-  text-transform: unset;
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
+}
+.main .doctors-title.small .h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: unset;
   letter-spacing: 0.12px;
 }
 .main .doctors .doctor {
@@ -2793,12 +2803,21 @@ img {
   margin-bottom: 24px;
   border-bottom: 2px solid #CDF3F9;
 }
+.main .doctors .doctor-name .h4 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 133.333%;
+  text-transform: unset;
+}
 .main .doctors .doctor-speciality {
   font-size: 18px;
   font-size: 1.125rem;
   color: #343544;
   letter-spacing: 0.54px;
   font-weight: 500;
+}
+.main .doctors .doctor-speciality p {
+  margin: 0;
 }
 .main .doctors .doctor-category {
   font-size: 18px;
@@ -2888,7 +2907,7 @@ img {
   margin-bottom: 24px;
   border-bottom: 2px solid #CDF3F9;
 }
-.main .reviews-head-name {
+.main .reviews-head .h4 {
   color: #222340;
   font-size: 24px;
   font-size: 1.5rem;
@@ -2927,6 +2946,9 @@ img {
   letter-spacing: 0.16px;
   height: 250px;
   overflow: auto;
+}
+.main .reviews-main p {
+  margin: 0;
 }
 .main .feedback {
   background-color: #BD5B9E;
@@ -3189,7 +3211,7 @@ img {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.main .methods-title {
+.main .methods .h3 {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -3289,7 +3311,7 @@ img {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.main .examples-title {
+.main .examples .h3 {
   text-align: center;
   margin-bottom: 60px;
 }
@@ -3322,7 +3344,7 @@ img {
   line-height: 156.25%;
   letter-spacing: 0.16px;
 }
-.main .examples .examples-wrapper .example.horizontal .example-text .description .title {
+.main .examples .examples-wrapper .example.horizontal .example-text .description p:first-child {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 500;
@@ -3367,6 +3389,9 @@ img {
   overflow: auto;
   border-bottom: 2px solid #CDF3F9;
 }
+.main .examples .examples-wrapper .example-text .description p {
+  margin: 0;
+}
 .main .examples .examples-wrapper .example-text .executor + .executor {
   margin-top: 3px;
 }
@@ -3384,6 +3409,9 @@ img {
   white-space: nowrap;
   display: inline-block;
   width: 100%;
+}
+.main .examples .examples-wrapper .example-text .executor-title p {
+  margin: 0;
 }
 .main .examples .examples-wrapper .example-text .executor-name {
   color: #222340;
@@ -3500,16 +3528,14 @@ img {
 .main .service-content-description p:not(:last-child) {
   margin-bottom: 16px;
 }
-.main .service-content-title {
-  font-size: 24px;
-  font-size: 1.5rem;
+.main .service-content .h4 {
   font-weight: 600;
   line-height: 133.333%;
   margin-bottom: 22px;
   text-transform: uppercase;
   letter-spacing: 0.72px;
 }
-.main .service-content-subtitle {
+.main .service-content .h5 {
   color: #343544;
   font-size: 18px;
   font-size: 1.125rem;
@@ -3560,6 +3586,9 @@ img {
   padding-left: 0;
   padding-right: 0;
 }
+.main .service-content-price.single .price-row p {
+  margin: 0;
+}
 .main .service-content-price.single .name {
   font-size: 20px;
   font-size: 1.25rem;
@@ -3604,55 +3633,22 @@ img {
           align-items: flex-start;
   gap: 15px;
 }
-.main .service-content-item ul li:not(:last-child) {
-  margin-bottom: 12px;
-}
-.main .service-content-item ul .icon {
+.main .service-content-item ul li::before {
+  content: "";
+  background-color: #319DAC;
   display: inline-block;
-  position: relative;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5 1V9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 5H9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: 10px 10px;
 }
-.main .service-content-item ul .icon.plus {
-  background-color: #319DAC;
-}
-.main .service-content-item ul .icon.plus svg {
-  width: 10px;
-  height: 10px;
-}
-.main .service-content-item ul .icon.plus span {
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #FFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.main .service-content-item ul .icon.cross {
-  background-color: #BD5B9E;
-}
-.main .service-content-item ul .icon.cross svg {
-  width: 8px;
-  height: 8px;
-}
-.main .service-content-item ul .icon svg {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.main .service-content-item ul .text {
+.main .service-content-item ul li p {
   margin: 0;
   color: #343544;
   font-size: 18px;
@@ -3660,6 +3656,30 @@ img {
   font-weight: 400;
   line-height: 155.556%;
   letter-spacing: 0.36px;
+}
+.main .service-content-item ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.main .service-content-item.cross ul li::before {
+  background-color: #BD5B9E;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8' fill='none'%3E%3Cpath d='M1 1L7 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7 1L1 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+  background-size: 8px 8px;
+}
+.main .service-content-item.check ul li::before {
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='9' viewBox='0 0 11 9' fill='none'%3E%3Cpath d='M1 4.5L4 7.5L10 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+  background-size: 11px 9px;
+}
+.main .service-content-item.num ul li {
+  counter-increment: num;
+}
+.main .service-content-item.num ul li::before {
+  content: counter(num);
+  background-image: none;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
 }
 .main .service-content-interwiev {
   background-color: #FFF;
@@ -3715,6 +3735,9 @@ img {
 .main .service-content-interwiev .right .quote {
   padding-left: 20px;
   border-left: 4px solid #319DAC;
+}
+.main .service-content-interwiev .right .quote p {
+  margin: 0;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 500;
@@ -3725,7 +3748,7 @@ img {
   padding-top: 80px;
   padding-bottom: 60px;
 }
-.main .implants-title {
+.main .implants .h4 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;

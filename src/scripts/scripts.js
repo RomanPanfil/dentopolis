@@ -273,7 +273,37 @@ function initMask() {
           startsWith: '7',
           lazy: false,
           country: 'Russia'
-        },       
+        },
+        {
+          mask: '+{38} (0{00}) 000-00-00', 
+          startsWith: '38',
+          lazy: false,
+          country: 'Ukraine'
+        },
+        {
+          mask: '+000 (00) 000-00-00',
+          startsWith: '371', 
+          lazy: false,
+          country: 'Latvia'  
+        },
+        {
+          mask: '+000 (000) 000-00-00',
+          startsWith: '370',
+          lazy: false,
+          country: 'Lithuania'
+        },
+        {
+          mask: '+00 (000) 000-00-00',
+          startsWith: '48',
+          lazy: false, 
+          country: 'Poland'
+        },
+        {
+           mask: '+{49} {0} {000} {000}-{00}-{00}',
+           startsWith: '49',
+           lazy: false,
+           country: 'Germany'
+        },    
         {
           mask: '0000000000000',
           startsWith: '',
