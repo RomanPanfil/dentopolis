@@ -225,6 +225,20 @@ const FARBA = {
   });
 })();
 
+// articles slider
+(function() {
+  const sliderFour = new Swiper('.articles-slider', {  
+    loop: false,    
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 32,  
+    navigation: {
+      nextEl: '.articles-slider .slider-next',
+      prevEl: '.articles-slider .slider-prev',
+    },
+  });
+})();
+
 // валидация формы
 $(document).ready(function () {
   
