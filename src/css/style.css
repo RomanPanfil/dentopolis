@@ -2641,13 +2641,20 @@ img {
   color: #fff;
   border-radius: 12px;
 }
+.main .price-row:hover .name {
+  color: #fff;
+}
 .main .price-row:hover .price {
+  color: #fff;
+}
+.main .price-row:hover .name a {
   color: #fff;
 }
 .main .price-row:not(:last-of-type) {
   border-bottom: 2px solid #CDF3F9;
 }
-.main .price-row .name {
+.main .price-row .name, .main .price-row .name a {
+  color: #222340;
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 400;
@@ -2783,6 +2790,12 @@ img {
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
   overflow: hidden;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.main .doctors .doctor:hover {
+  background-color: #CDF3F9;
 }
 .main .doctors .doctor-photo {
   height: 300px;
@@ -3585,6 +3598,13 @@ img {
 .main .service-banner-content .breadcrumbs {
   padding: 0;
 }
+.main .service-banner-content .breadcrumbs.big li {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
 .main .service-banner-content .breadcrumbs li {
   display: inline-block;
   color: #FFF;
@@ -3594,16 +3614,16 @@ img {
   line-height: 156.25%;
   letter-spacing: 0.16px;
 }
-.main .service-banner-content .breadcrumbs li + li::before {
+.main .service-banner-content .breadcrumbs li:not(:last-child)::after {
   content: "|";
-  padding: 0 2px;
+  padding: 0 1px;
 }
-.main .service-banner-content .breadcrumbs li a {
+.main .service-banner-content .breadcrumbs a {
   color: #FFF;
 }
 .main .service-content {
   padding-top: 80px;
-  padding-bottom: 28px;
+  padding-bottom: 80px;
 }
 .main .service-content-description {
   margin-bottom: 50px;
@@ -3710,7 +3730,7 @@ img {
   margin-left: auto;
   margin-right: 20px;
 }
-.main .service-content-item {
+.main .service-content-item:not(:last-child) {
   margin-bottom: 50px;
 }
 .main .service-content-item ul {
@@ -3754,6 +3774,9 @@ img {
 }
 .main .service-content-item.plus .service-content-description {
   margin-bottom: 20px;
+}
+.main .service-content-item.plus .service-content-description.post {
+  margin-bottom: 0;
 }
 .main .service-content-item.cross ul li::before {
   background-color: #BD5B9E;
@@ -4147,6 +4170,23 @@ img {
   padding: 16px 20px;
   cursor: pointer;
   border-bottom: 2px solid #319DAC;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.accordion-head:hover {
+  background-color: #319DAC;
+  border-radius: 12px;
+  color: #fff;
+}
+.accordion-head:hover .icon {
+  background: #CDF3F9;
+}
+.accordion-head:hover svg path {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  stroke: #319DAC;
 }
 .accordion-head .title {
   font-size: 24px;
