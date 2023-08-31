@@ -252,14 +252,22 @@ $(document).ready(function () {
       name: {
         required: true,
       },
+      email: {
+        required: true,
+      },
       number: {
         required: true,     
         number: false 
-      },      
+      },
+      message: {
+        required: true,
+      }    
     },
     messages: {
-      name: "Пожалуйста, заполните это поле",   
-      number: "Пожалуйста, заполните это поле",      
+      name: "Пожалуйста, заполните это поле",
+      email: "Пожалуйста, заполните это поле",
+      number: "Пожалуйста, заполните это поле",
+      message: "Пожалуйста, заполните это поле",    
     }
   });  
 });
@@ -389,3 +397,88 @@ initMask();
     });
   });
 })();
+
+
+// (function() {
+//   ymaps.ready(init);
+
+//   function init() {
+//     // Создание карты
+//     const map = new ymaps.Map(
+//       "map",
+//       {
+//       center: [53.949604, 27.694494],
+//       zoom: 16,
+//       controls: [],  
+//       type: 'yandex#map', 
+//     }, 
+//     {
+//       scrollZoom: false,
+//     }
+//   );
+ 
+//   // Отключение перетаскивания и прокрутки карты
+//   map.behaviors.disable(["drag", "scrollZoom"]);
+
+//   // Создание метки
+//   const placemark = new ymaps.Placemark(
+//     [53.949604, 27.694494],
+//     {
+//       hintContent: 'Стоматология "Дентополис"',
+//       balloonContent: 'Стоматология "Дентополис"'
+//     },
+//     // {
+//     //   preset: 'islands#icon',
+//     //   iconColor: '#0095b6'
+//     // }
+//   );
+
+//   // Добавление метки на карту
+//   map.geoObjects.add(placemark);
+// }
+// })();
+
+
+// стилизация чекбокса
+(function() {
+  if(!document.querySelector('.ui-input.checkbox')) return
+
+  $('.ui-input.checkbox').styler();
+})();
+
+
+// карта
+
+function initMap() {
+  if(!document.querySelector('#map')) return
+  
+  // Координаты центра карты 
+  const center = {lat: 53.94979397878479, lng: 27.694455758422095};
+  // Координаты маркера
+  const markerPosition = {lat: 53.949787735905474, lng: 27.69446649937378};
+
+  // Опции карты
+  const options = {
+    center: center,
+    zoom: 16,
+    zoomControl: false,
+    disableDefaultUI: true,
+    draggable: false,
+  };
+
+  // Создаем карту в контейнере
+  const map = new google.maps.Map(document.getElementById("map"), options);
+
+  // Создание маркера
+  const marker = new google.maps.Marker({
+    optimized: false,
+    position: markerPosition,
+    title: 'Стоматология "Дентополис"',
+    map: map,   
+    // label: {
+    //   text: 'Стоматология "Дентополис"',
+    //   color: 'red',
+    //   fontSize: '12px',     
+    // }
+  });   
+};

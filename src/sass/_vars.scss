@@ -70,6 +70,10 @@ $block_heading_font_weight: 700;
 	font-size: $f_size/16 + rem;
 }
 
+// @mixin ls($lsp) {
+// 	letter-spacing: $lsp/1000 + em;
+// }
+
 @mixin ls($lsp) {
-	letter-spacing: $lsp/1000 + em;
+	letter-spacing: $lsp/16 + rem;
 }

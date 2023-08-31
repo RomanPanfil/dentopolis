@@ -297,8 +297,8 @@ img {
 
 
 .ui-field {	
-	border-radius: 30px;	
-	overflow: hidden;
+	// border-radius: 30px;	
+	// overflow: hidden;
 	position: relative;	
 	display: flex;
 	align-items: center;	
@@ -319,6 +319,7 @@ img {
 	}
 	
 	.ui-input {
+		border-radius: 30px;
 		height: 62px;
 		color: $gray_dark;
 		@include fz(18);      		
@@ -326,8 +327,7 @@ img {
 		letter-spacing: 0.36px;
 		background-color: $bgc;	
 		width: 100%;		
-		outline: none;    
-		border: none;
+		outline: none;		
 		border: none;
 		padding: 17px 32px;
 		outline: none;		
@@ -346,8 +346,9 @@ img {
       }
       &.error {
         border-color: $error;
-      }
-	}	
+      }	 
+	}
+	
 	input:invalid + span:before {
 		content: attr(placeholder);
 		position: relative;
@@ -359,7 +360,42 @@ img {
 		position: relative;
 		color: $error;
 	}
+
+	.ui-texarea {		
+		border-radius: 30px;
+		height: 185px;
+		color: $gray_dark;
+		@include fz(18);      		
+		font-weight: 400;
+		@include ls(0.36);		
+		background-color: $bgc;	
+		width: 100%;		
+		outline: none;		
+		border: none;
+		padding: 17px 32px;
+		outline: none;
+		resize: none;
+		&::placeholder {
+			color: $gray_dark;
+		}
+	}
 }
 
   
-  
+.jq-checkbox {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: $bgc;
+	border: 3px solid $bgc;
+	cursor: pointer;
+}
+
+.jq-checkbox.checked {
+	position: relative;
+	&::after {
+		position: absolute;
+		background-color: $primary;
+	}
+	background-color: $primary;
+}
