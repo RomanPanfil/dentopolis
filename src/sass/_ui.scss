@@ -306,9 +306,10 @@ img {
 .ui-field {	
 	// border-radius: 30px;	
 	// overflow: hidden;
-	position: relative;	
-	display: flex;
-	align-items: center;	
+	// position: relative;	
+	// display: flex;
+	// align-items: center;	
+	display: inline-block;
 	width: 400px;
 	
 	label.error {

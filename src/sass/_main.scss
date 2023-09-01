@@ -8,7 +8,9 @@
 .header {
   position: fixed;
   z-index: 10;
-  width: 100%;  
+  width: 100%;
+  top: 0;
+  left: 0;
 
   &-top {
     background-color: $primary;    
@@ -332,6 +334,7 @@
 
   &-slider {
     position: relative;
+    overflow: hidden;
     .swiper-slide {
       height: 820px;     
       // max-height: 820px;
@@ -402,7 +405,9 @@
   padding-bottom: 32px;
 
   &-item {
+    height: 100%;
     display: flex;
+    align-items: center;
     gap: 36px;
     background-color: #FFF;
     border-radius: 12px;
@@ -615,6 +620,7 @@
   }
 
   &-item {
+    height: 100%;
     background-color: #FFF;
     border-radius: 12px;
     padding: 40px;
@@ -871,6 +877,10 @@
     }
 
     &-rating {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
       svg:not(:last-of-type) {
         margin-right: 3px;
       }
@@ -940,8 +950,11 @@
   }
 
   &-form {
-    display: flex;
-    gap: 40px;
+    // display: flex;
+    // gap: 40px;
+    .ui-field {
+      margin-right: 35px;
+    }
   }
 }
 
@@ -1185,6 +1198,9 @@
           }
         }
       }
+    }
+    .slider-arrows {
+      margin-top: 26px;
     }
   }
 }
@@ -1438,6 +1454,14 @@
   padding-left: 36px;
   width: 37px;
   flex: 0 0 37%;
+  .price-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .name {
+      @include fz(18);
+      @include ls(0.36);
+    }
+  }
   .service-content-price {
     margin-bottom: 80px;
   }
@@ -2636,7 +2660,7 @@
       margin-right: auto;
     }
     .socials {
-      margin-bottom: 62px;
+      margin-bottom: 56px;
       display: flex;
       justify-content: center;
       gap: 16px;
@@ -2651,10 +2675,7 @@
           transform: translateY(-2px);
         }
       }
-    }
-    .copy {
-      text-align: center;
-    }
+    }    
   }
 
   &-services {    
@@ -2680,6 +2701,9 @@
         color: $primary;
       }
     }
+  }
+  .copy {
+    text-align: center;
   }
 }
 
@@ -2763,6 +2787,8 @@
 
     .ui-field {
       width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
     }
   }
 }

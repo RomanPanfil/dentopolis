@@ -779,13 +779,7 @@ img {
 }
 
 .ui-field {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: inline-block;
   width: 400px;
 }
 .ui-field label.error {
@@ -908,9 +902,6 @@ img {
   padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 .inner-fluid,
 .container-fluid {
@@ -2102,6 +2093,8 @@ img {
   position: fixed;
   z-index: 10;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 .header-top {
   background-color: #319DAC;
@@ -2458,6 +2451,7 @@ img {
 }
 .main-slider {
   position: relative;
+  overflow: hidden;
 }
 .main-slider .swiper-slide {
   height: 820px;
@@ -2528,9 +2522,13 @@ img {
   padding-bottom: 32px;
 }
 .main .benefits-item {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 36px;
   background-color: #FFF;
   border-radius: 12px;
@@ -2763,6 +2761,7 @@ img {
   left: 50%;
 }
 .main .popular-item {
+  height: 100%;
   background-color: #FFF;
   border-radius: 12px;
   padding: 40px;
@@ -3009,6 +3008,10 @@ img {
   overflow: hidden;
   max-width: 62%;
 }
+.main .reviews-head-rating svg {
+  width: 24px;
+  height: 24px;
+}
 .main .reviews-head-rating svg:not(:last-of-type) {
   margin-right: 3px;
 }
@@ -3059,11 +3062,8 @@ img {
 .main .feedback-title {
   color: #FFF;
 }
-.main .feedback-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
+.main .feedback-form .ui-field {
+  margin-right: 35px;
 }
 .main .portfolio {
   text-align: center;
@@ -3296,6 +3296,9 @@ img {
 }
 .main .prices .actions-slider .actions-wrapper .actions-content .more svg path {
   stroke: #343544;
+}
+.main .prices .actions-slider .slider-arrows {
+  margin-top: 26px;
 }
 .main .methods {
   padding-top: 80px;
@@ -3542,6 +3545,15 @@ img {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 37%;
           flex: 0 0 37%;
+}
+.main .service-acide-wrapper .price-row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.main .service-acide-wrapper .price-row .name {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.0225rem;
 }
 .main .service-acide-wrapper .service-content-price {
   margin-bottom: 80px;
@@ -4737,7 +4749,7 @@ img {
   margin-right: auto;
 }
 .footer-main .socials {
-  margin-bottom: 62px;
+  margin-bottom: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4759,9 +4771,6 @@ img {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
-}
-.footer-main .copy {
-  text-align: center;
 }
 .footer-services {
   text-align: end;
@@ -4786,6 +4795,9 @@ img {
 }
 .footer-services a:hover {
   color: #319DAC;
+}
+.footer .copy {
+  text-align: center;
 }
 
 .slider-four {
@@ -4876,6 +4888,8 @@ img {
 }
 .acide .feedback-wrapper .ui-field {
   width: 100%;
+  margin-right: 0;
+  margin-bottom: 40px;
 }
 
 .labels {
