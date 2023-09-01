@@ -381,9 +381,16 @@ initMask();
   const icons = document.querySelectorAll('.accordion-head .icon');
 
   buttons.forEach((button, index) => {
+    if (index === 0) {
+      const content = button.nextElementSibling;
+      if(content.classList.contains('open')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    }
+
     button.addEventListener('click', () => {
       const content = button.nextElementSibling;
-      const icon = icons[index];
+      const icon = icons[index];     
       
       if (content.classList.contains('open')) {
         content.classList.remove('open');
@@ -396,6 +403,8 @@ initMask();
       } 
     });
   });
+
+  
 })();
 
 
@@ -451,7 +460,7 @@ initMask();
 
 function initMap() {
   if(!document.querySelector('#map')) return
-  
+
   // Координаты центра карты 
   const center = {lat: 53.94979397878479, lng: 27.694455758422095};
   // Координаты маркера

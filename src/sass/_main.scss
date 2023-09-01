@@ -30,7 +30,7 @@
       margin-left: auto;
       margin-right: 40px;
       @include fz(18);
-      letter-spacing: 0.72px;
+      @include ls(0.72);     
 
       .address {
         display: flex;
@@ -81,9 +81,10 @@
           ul {
             height: max-content;
             opacity: 1;
-            transform: translateY(0);
+            // transform: translateY(0);
             overflow: initial;
-            transition: all 0.8s;
+            transition: all 0.5s;
+            padding: 20px 20px; 
           }
           .trigger {
             &-arrow {
@@ -102,9 +103,10 @@
             @include fz(18);
             font-weight: 500;
             text-transform: uppercase;
-            line-height: 60px;
-            letter-spacing: 0.72px;
+            line-height: 60px;           
+            @include ls(0.72);
             position: relative;
+            white-space: nowrap;
 
             &::after {
               content: '';
@@ -115,7 +117,7 @@
               width: 0%;
               background-color: $bgc;
               border-radius: 4px 4px 0px 0px;
-              transition: width 0.3s ease-in-out;
+              transition: width 0.5s ease-in-out;
             }
 
             &:hover {
@@ -132,7 +134,9 @@
             }
           }
           &-arrow {
-            transition: all 0.4s;
+            transition: all 0.5s;
+            width: 16px;
+            height: 16px;
           }
         }     
         ul {
@@ -140,14 +144,14 @@
           top: 50px;  
           height: 0;
           opacity: 0; 
-          transform: translateY(-10px);
+          // transform: translateY(-10px);
           overflow: hidden; 
           background-color: #fff; 
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);   
           border-radius: 12px;    
-          padding: 20px 20px;  
+          padding: 0;  
           padding-right: 0;       
-          transition: all 0.3s;
+          transition: all 0.5s;
           z-index: 3;
           li {    
             margin-right: 20px;          
@@ -158,7 +162,7 @@
               display: inline-block;
               @include fz(18);
               font-weight: 500;
-              letter-spacing: 0.72px;
+              @include ls(0.72);
               text-transform: uppercase;
               transition: all 0.5s;
               &:hover {
@@ -192,7 +196,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center; 
-            transition: all 0.4s;            
+            transition: all 0.5s;            
             &:hover {
               border-top-right-radius: 0;
               border-bottom-right-radius: 0;
@@ -233,7 +237,7 @@
               }            
             }         
           }
-          &:hover {            
+          &:hover {
             ul {
               display: block;
               width: max-content;
@@ -253,8 +257,9 @@
               @include fz(18);
               color: #fff;
               text-transform: uppercase;
-              position: relative;
-              letter-spacing: 0.72px;
+              position: relative;             
+              @include ls(0.72);
+              white-space: nowrap;
 
               &::after {
                 content: '';
@@ -265,7 +270,7 @@
                   width: 0%;
                   background-color: $bgc;
                   border-radius: 4px 4px 0px 0px;
-                  transition: width 0.3s ease-in-out
+                  transition: width 0.5s ease-in-out
               }
               &:hover {          
                 &::after {                  
@@ -308,7 +313,7 @@
         background-color: #FFF;
         border-radius: 12px;
         box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-        transition: all 0.4s;
+        transition: all 0.5s;
         &.open {         
           visibility: visible;
           transform: translateY(0);
@@ -356,7 +361,7 @@
       @include fz(45);      
       font-weight: 600;
       line-height: 141.556%;
-      letter-spacing: 1.35px;
+      @include ls(1.35);
       text-transform: uppercase;
       margin-bottom: 18px;
     }
@@ -380,7 +385,7 @@
       @include fz(20);
       font-weight: 400;
       line-height: 155%;
-      letter-spacing: 0.2px;
+      @include ls(0.2);
       margin-bottom: 30px;
       p {
        margin: 0;
@@ -503,7 +508,7 @@
     padding-left: 16px;
     padding-right: 16px;
     height: 100%;
-    transition: all 0.3s;
+    transition: all 0.5s;
 
     &:hover {
       background-color: $bgc_pink;
@@ -511,14 +516,17 @@
 
       .services-icon {
         path {
+          transition: all 0.5s;
           fill: #FFF;
         }
       }
 
       .services-more {
         color: $bgc;
+        transition: all 0.5s;
         svg path {
-          stroke: $bgc
+          stroke: $bgc;
+          transition: all 0.5s;
         }
       }
     }
@@ -531,7 +539,7 @@
       @include fz(24);
       font-weight: 500;
       line-height:133.333%;
-      letter-spacing: 0.72px;
+      @include ls(0.72);
       margin-bottom: 10px;
       text-align: center;
     }
@@ -545,7 +553,7 @@
   align-items: center;
   padding: 16px 19px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.5s;
 
   &:hover {
     background-color: $primary;
@@ -572,17 +580,19 @@
     color: $font;
     @include fz(20);
     font-weight: 400;
-    letter-spacing: 0.2px;
-    line-height: 155%;      
+    @include ls(0.2);
+    line-height: 155%;
+    transition: all 0.5s    
   }    
 
   .price {
     @include fz(20);
     font-weight: 600;      
     line-height: 155%;
-    letter-spacing: 0.2px;
+    @include ls(0.2);
     color: $bgc_pink;
     white-space: nowrap;
+    transition: all 0.5s
   }
 }
 
@@ -616,7 +626,7 @@
       justify-content: space-between;
       padding: 11px 20px;
       cursor: pointer;
-      transition: all 0.3s;
+      transition: all 0.5s;
 
       &:hover {
         background-color: $primary;
@@ -705,8 +715,8 @@
       .h4 {
         @include fz(24);
         font-weight: 600;
-        text-transform: unset;         
-        letter-spacing: 0.12px;
+        text-transform: unset;
+        @include ls(0.12);
       }
     }
   }
@@ -717,7 +727,7 @@
     // box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
     box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
     overflow: hidden;
-    transition: all 0.4s;
+    transition: all 0.5s;
 
     &:hover {
       background-color: $bgc;
@@ -754,7 +764,7 @@
     &-speciality {
       @include fz(18);
       color: $gray_dark;
-      letter-spacing: 0.54px;
+      @include ls(0.54);
       font-weight: 500;
       p {
         margin: 0;
@@ -905,7 +915,7 @@
     @include fz(16);           
     font-weight: 400;
     line-height: 156.25%;
-    letter-spacing: 0.16px;
+    @include ls(0.16);
     height: 250px;
     overflow: auto;
     p {
@@ -946,8 +956,8 @@
     text-align: center;      
     @include fz(20);      
     font-weight: 400;
-    line-height: 155%;
-    letter-spacing: 0.2px;
+    line-height: 155%;  
+    @include ls(0.2);
     max-width: 784px;
     margin-bottom: 30px;
 
@@ -986,7 +996,7 @@
     @include fz(45);      
     font-weight: 600;
     line-height: 141.556%;
-    letter-spacing: 1.35px;
+    @include ls(1.35);
     text-transform: uppercase;
     margin-bottom: 16px;
   }
@@ -994,8 +1004,8 @@
   &-text {
     @include fz(20);     
     font-weight: 400;
-    line-height: 140%;
-    letter-spacing: 0.2px;
+    line-height: 140%;  
+    @include ls(0.2);
 
     p {
       margin: 0;
@@ -1019,8 +1029,8 @@
       padding-bottom: 19px;       
       color: $font;
       @include fz(18);       
-      font-weight: 500;        
-      letter-spacing: 0.72px;
+      font-weight: 500;     
+      @include ls(0.72);
       text-transform: uppercase;
       cursor: pointer;
       transition: all 0.5s;
@@ -1064,8 +1074,8 @@
 
       .h4 {
         text-transform: uppercase;
-        line-height: 133.333%;
-        letter-spacing: 0.72px;
+        line-height: 133.333%;       
+        @include ls(0.72);
         font-weight: 600;
       }
     }
@@ -1075,8 +1085,8 @@
         color: $gray_dark;
         @include fz(16);          
         font-weight: 400;
-        line-height: 156.25%;
-        letter-spacing: 0.16px;
+        line-height: 156.25%;       
+        @include ls(0.16);
         &:not(:last-of-type) {
           margin-bottom: 12px;;
         }
@@ -1161,8 +1171,8 @@
           color: $gray_dark;
           @include fz(16);          
           font-weight: 400;
-          line-height: 156.25%;
-          letter-spacing: 0.16px;            
+          line-height: 156.25%;         
+          @include ls(0.16);         
         }
 
         .more {
@@ -1209,8 +1219,8 @@
       color: $gray_dark;
       @include fz(24);
       font-weight: 600;
-      line-height: 133.333%;
-      letter-spacing: 0.72px;
+      line-height: 133.333%;      
+      @include ls(0.72);
       text-transform: uppercase;
     }
   }
@@ -1249,7 +1259,7 @@
       @include fz(24);
       font-weight: 600;
       line-height: 133.333%;
-      letter-spacing: 0.72px;
+      @include ls(0.72);
       text-transform: uppercase;
     }
 
@@ -1257,8 +1267,8 @@
       color:$gray_dark;
       @include fz(20);
       font-weight: 500;
-      line-height: 140%;
-      letter-spacing: 0.6px;
+      line-height: 140%;    
+      @include ls(0.6);
       padding-top: 2px;
       padding-bottom: 16px;
       margin-bottom: 16px;
@@ -1270,8 +1280,8 @@
       color: $gray_dark;
       @include fz(18);       
       font-weight: 500;
-      line-height: 121.111%;
-      letter-spacing: 0.54px;
+      line-height: 121.111%;    
+      @include ls(0.54);
     }
   }
 }
@@ -1309,8 +1319,8 @@
             p {
               margin-bottom: 0;
               @include fz(16);
-              line-height: 156.25%;
-              letter-spacing: 0.16px;
+              line-height: 156.25%;            
+              @include ls(0.16);
               &:first-child {
                 @include fz(20);               
                 font-weight: 500;
@@ -1326,8 +1336,8 @@
             // }
           }
           .executor-name {
-            @include fz(18);
-            letter-spacing: 0.54px;
+            @include fz(18);          
+            @include ls(0.54);
           }
 
         }
@@ -1380,8 +1390,8 @@
             color: $primary;
             @include fz(16);  
             line-height: 1;           
-            font-weight: 400;             
-            letter-spacing: 0.48px;
+            font-weight: 400;          
+            @include ls(0.48);
             margin-bottom: 2px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -1396,8 +1406,8 @@
             color: $font;
             @include fz(16);               
             font-weight: 600;
-            line-height: 1;
-            letter-spacing: 0.48px;
+            line-height: 1;          
+            @include ls(0.48);
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -1471,16 +1481,16 @@
         color: #FFF;
         @include fz(16);        
         font-weight: 400;
-        line-height: 156.25%;
-        letter-spacing: 0.16px;
+        line-height: 156.25%;       
+        @include ls(0.16);
         margin-bottom: 28px;
       }
 
       .h3 {
         color: #FFF;         
         font-weight: 600;
-        line-height: 145.938%;
-        letter-spacing: 0.96px;
+        line-height: 145.938%;      
+        @include ls(0.96);
         text-transform: uppercase;
         max-width: 880px;
         margin-bottom: 28px;
@@ -1489,8 +1499,8 @@
         color: var(--white, #FFF);
         @include fz(45);         
         font-weight: 600;
-        line-height: 141.556%;
-        letter-spacing: 1.35px;
+        line-height: 141.556%;        
+        @include ls(1.35);
         text-transform: uppercase;
         margin-bottom: 16px;
         max-width: 590px;
@@ -1535,8 +1545,8 @@
             color: #FFF;
             @include fz(18);             
             font-weight: 500;
-            line-height: 121.111%;
-            letter-spacing: 0.54px;
+            line-height: 121.111%;            
+            @include ls(0.54);
             margin-bottom: 0;
           }
         }
@@ -1548,8 +1558,8 @@
           color: #FFF;
           @include fz(20);           
           font-weight: 400;
-          line-height: 140%;
-          letter-spacing: 0.2px;
+          line-height: 140%;         
+          @include ls(0.2);
         }
       }
 
@@ -1562,8 +1572,8 @@
           li {
             @include fz(20);             
             font-weight: 400;
-            line-height: 140%;
-            letter-spacing: 0.2px;
+            line-height: 140%;           
+            @include ls(0.2);
           }
         }
 
@@ -1572,8 +1582,8 @@
           color: #FFF;
           @include fz(16);       
           font-weight: 400;
-          line-height: 156.25%;
-          letter-spacing: 0.16px;
+          line-height: 156.25%;        
+          @include ls(0.16);
           &:not(:last-child)::after {
             content: '|';
             padding: 0 1px;
@@ -1598,8 +1608,8 @@
         color: $gray_dark;
         @include fz(18);         
         font-weight: 400;
-        line-height: 155.556%;
-        letter-spacing: 0.36px;
+        line-height: 155.556%;        
+        @include ls(0.36);
         &:not(:last-child) {
           margin-bottom: 16px;
         }
@@ -1610,16 +1620,16 @@
       font-weight: 600;
       line-height: 133.333%;
       margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.72px;
+      text-transform: uppercase;     
+      @include ls(0.72);
     }
 
     .h5 {
       color: $gray_dark;
       @include fz(18);       
       font-weight: 600;
-      line-height: 155.556%;
-      letter-spacing: 0.36px;
+      line-height: 155.556%;   
+      @include ls(0.36);
       margin-bottom: 12px;
     }
 
@@ -1672,8 +1682,8 @@
         .name {
           @include fz(20);          
           font-weight: 600;
-          line-height: 155%;
-          letter-spacing: 0.2px;
+          line-height: 155%;        
+          @include ls(0.2);
         }
         .ui-btn {
           margin-right: 0;
@@ -1731,61 +1741,14 @@
             color: $gray_dark;
             @include fz(18);           
             font-weight: 400;
-            line-height: 155.556%;
-            letter-spacing: 0.36px;
+            line-height: 155.556%;            
+            @include ls(0.36);
           }
 
           &:not(:last-child) {
             margin-bottom: 12px;
           }
-        }
-        // .icon {
-        //   display: inline-block;
-        //   position: relative;
-        //   width: 20px;
-        //   height: 20px;
-        //   border-radius: 50%;
-        //   flex-shrink: 0;
-        //   margin-top: 2px;
-        //   &.plus {
-        //     background-color: $primary;
-        //     svg {
-        //       width: 10px;
-        //       height: 10px;
-        //     }
-        //     span {
-        //       @include fz(14);
-        //       font-weight: 400;
-        //       color:#FFF;
-        //       position: absolute;              
-        //       top: 50%;
-        //       left: 50%;
-        //       transform: translate(-50%, -50%);
-        //     }
-        //   }
-        //   &.cross {
-        //     background-color: $bgc-pink;
-        //     svg {
-        //       width: 8px;
-        //       height: 8px;
-        //     }
-        //   }
-        //   svg {
-        //     display: inline-block;
-        //     position: absolute;              
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%, -50%);
-        //   }
-        // }
-        // .text {
-        //   margin: 0;
-        //   color: $gray_dark;
-        //   @include fz(18);           
-        //   font-weight: 400;
-        //   line-height: 155.556%;
-        //   letter-spacing: 0.36px;
-        // }
+        }        
       }
 
       &.plus {
@@ -1856,8 +1819,8 @@
         .text {
           @include fz(16);            
           font-weight: 400;
-          line-height: 156.25%;
-          letter-spacing: 0.16px;
+          line-height: 156.25%;         
+          @include ls(0.16);
           p {
             margin-bottom: 0;
             &:not(:last-child) {
@@ -1888,8 +1851,8 @@
             margin: 0;
             @include fz(16);            
             font-weight: 500;
-            line-height: 156.25%;
-            letter-spacing: 0.16px;
+            line-height: 156.25%;          
+            @include ls(0.16);
           }
         }
       }
@@ -1963,14 +1926,14 @@
         color: $gray_dark;
         text-align: center;
         @include fz(18);         
-        font-weight: 500;          
-        letter-spacing: 0.72px;         
+        font-weight: 500;      
+        @include ls(0.72);         
         display: block;
         width: 62px;
         height: 62px;     
         padding: 20px;
         border-radius: 50%;
-        transition: all 0.4s;
+        transition: all 0.5s;
         &:hover {
           background-color: $primary;
           color: #FFF;
@@ -2029,8 +1992,8 @@
       .speciality {
         color: var(--green-1, $primary);
         @include fz(16);           
-        font-weight: 400;          
-        letter-spacing: 0.48px;
+        font-weight: 400;  
+        @include ls(0.48);
         p {
          margin-bottom: 4px;
         }
@@ -2039,8 +2002,8 @@
         color: $gray_dark;
         @include fz(18);           
         font-weight: 500;
-        line-height: 121.111%;
-        letter-spacing: 0.54px;
+        line-height: 121.111%;        
+        @include ls(0.54);
       }
     }
   }
@@ -2067,8 +2030,8 @@
         color: $font;
         @include fz(20);         
         font-weight: 500;
-        line-height: 140%;
-        letter-spacing: 0.6px;
+        line-height: 140%;       
+        @include ls(0.6);
         text-transform: uppercase;
       }     
       svg {          
@@ -2146,7 +2109,7 @@
     display: flex;
     align-items: center;
     gap: 20px;      
-    transition: all 0.4s;     
+    transition: all 0.5s;     
     &.border {
       border-bottom: 2px solid $primary;
     }
@@ -2164,14 +2127,20 @@
     }
 
     svg {
+      path {
+        transition: all .5s;  
+      }
+
       width: 68px;
       height: 68px;
+      transition: all .5s;  
     }
 
     .h4 {
       color: $font;
       font-weight: 600;
-      line-height:133.333%;
+      line-height: 133.333%;
+      transition: all 0.5s;  
     }
   }      
   
@@ -2186,11 +2155,11 @@
           color: $font;
           @include fz(20);             
           font-weight: 400;
-          line-height: 155%;
-          letter-spacing: 0.2px;
+          line-height: 155%;          
+          @include ls(0.2);
           padding: 11px 20px;
           display: inline-block;
-          transition: all 0.4s;
+          transition: all 0.5s;
           border-radius: 12px;
 
           &:hover {
@@ -2231,8 +2200,8 @@
       .h2 {
         color: $font;         
         font-weight: 600;
-        line-height: 145.938%;
-        letter-spacing: 0.96px;
+        line-height: 145.938%;       
+        @include ls(0.96);
         text-transform: uppercase;
         max-width: 880px;
         margin-bottom: 22px;
@@ -2256,8 +2225,7 @@
         @include fz(20);
         font-weight: 500;
         line-height: 140%;
-        @include ls(0.6);
-        // letter-spacing: 0.6px;
+        @include ls(0.6);       
         text-transform: uppercase;
         display: inline-block;
         width: max-content;
@@ -2440,7 +2408,7 @@
         .item {
           display: flex;
           padding: 11px 20px;
-          transition: all 0.4s;
+          transition: all 0.5s;
 
           &:not(:last-child) {
             border-bottom: 2px solid $bgc;
@@ -2450,16 +2418,17 @@
             background-color: $primary;
             border-radius: 12px;            
 
-            .title {
+            .title {              
               color: #fff;
             }
 
-            .info {
+            .info {              
               color: #fff;
             }
 
-            svg {
-              display: block;
+            svg {             
+              display: block;              
+              width: 24px;
             }
           }
         }
@@ -2470,6 +2439,7 @@
           font-weight: 400;
           line-height: 155%;
           @include ls(0.2);
+          transition: all 0.5s;
         }
         .info {
           display: flex;
@@ -2481,14 +2451,18 @@
           @include ls(0.54);
           margin-left: auto;
           flex-shrink: 0;
+          transition: all 0.5s;
 
           .weight {           
             margin-left: 20px;
           }
 
           svg {
-            display: none;
+            // display: none;
+            width: 0;
+            height: 24px;
             margin-left: 20px;
+            transition: all 0.5s;
           }
         }
       }
@@ -2505,7 +2479,7 @@
     padding: 16px 20px;
     cursor: pointer;
     border-bottom: 2px solid $primary;
-    transition: all 0.4s;
+    transition: all 0.5s;
 
     &:hover {
       background-color: $primary;
@@ -2538,13 +2512,13 @@
       transition: all 0.5s;
 
       &.open {
-        background: $bgc;
+        background: $bgc;        
         svg {
           path {
             transition: all 0.5s;
             stroke: $primary;
             &:first-child {
-              display: none;
+              opacity: 0;
             }
           }
         }
@@ -2572,8 +2546,8 @@
       }
       .name {
         @include fz(18);       
-        line-height: 155.556%;
-        letter-spacing: 0.36px;
+        line-height: 155.556%;       
+        @include ls(0.36);
       }
     }
 
@@ -2593,31 +2567,31 @@
   &-contacts {
     .title {
       @include fz(24);
-      font-weight: 600;
-      letter-spacing: 0.72px;
+      font-weight: 600;      
+      @include ls(0.72);
       text-transform: uppercase;
       margin-bottom: 20px;
     }
 
     .time {
       @include fz(16);
-      line-height: 156.25%;
-      letter-spacing: 0.64px;
+      line-height: 156.25%;     
+      @include ls(0.64);
       margin-bottom: 18px;
     }
 
     .phone {
       display: block;
       color: #fff;
-      @include fz(16);      
-      letter-spacing: 0.64px; 
+      @include fz(16);
+      @include ls(0.64);
       margin-bottom: 10px;    
     }
 
     .address {
       color: #fff;
-      @include fz(16);      
-      letter-spacing: 0.64px; 
+      @include fz(16);
+      @include ls(0.64); 
       margin-bottom: 10px;  
     }
 
@@ -2625,7 +2599,7 @@
       display: block;
       color: #fff;
       @include fz(16);      
-      letter-spacing: 0.64px; 
+      @include ls(0.64); 
       margin-bottom: 18px; 
     }
 
@@ -2635,7 +2609,7 @@
       svg {
         width: 32px;
         height: 32px;
-        transition: all 0.3s;
+        transition: all 0.5s;
 
         &:hover {
           transform: translateY(-2px);
@@ -2671,7 +2645,7 @@
       svg {
         width: 32px;
         height: 32px;
-        transition: all 0.3s;
+        transition: all 0.5s;
 
         &:hover {
           transform: translateY(-2px);
@@ -2687,8 +2661,8 @@
     text-align: end;
     .title {
       @include fz(24);
-      font-weight: 600;
-      letter-spacing: 0.72px;
+      font-weight: 600;     
+      @include ls(0.72);
       text-transform: uppercase;
       margin-bottom: 20px;
     }
@@ -2757,8 +2731,8 @@
 
     .feedback-title {
       @include fz(32);
-      line-height: 145.938%;
-      letter-spacing: 0.96px;
+      line-height: 145.938%;     
+      @include ls(0.96);
       display: block;
       margin-bottom: 46px;
     }

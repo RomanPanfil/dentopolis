@@ -568,9 +568,9 @@ a {
   color: #51647B;
   text-decoration: none;
   outline: none;
-  -webkit-transition: color 0.3s, border 0.3s;
-  -o-transition: color 0.3s, border 0.3s;
-  transition: color 0.3s, border 0.3s;
+  -webkit-transition: color 0.5s, border 0.5s;
+  -o-transition: color 0.5s, border 0.5s;
+  transition: color 0.5s, border 0.5s;
 }
 
 b, strong {
@@ -654,9 +654,9 @@ img {
   font-size: 1.125rem;
   font-weight: 500;
   cursor: pointer;
-  -webkit-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   text-transform: uppercase;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -668,6 +668,14 @@ img {
   width: 14px;
   height: 14px;
   margin-right: 6px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.ui-btn svg path {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 1680px) {
   .ui-btn {
@@ -724,9 +732,9 @@ img {
   background: none;
 }
 .ui-btn.ui-btn-transparent:hover svg {
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .ui-btn.ui-btn-transparent:hover svg path {
   stroke: #4C4D6E;
@@ -745,6 +753,9 @@ img {
   background: #FFF;
   color: #343544;
   letter-spacing: 0.6px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .ui-btn.ui-btn-tab.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#BD5B9E), to(#A5417D));
@@ -753,6 +764,9 @@ img {
   color: #FFF;
 }
 .ui-btn.ui-btn-tab:hover {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   background: -webkit-gradient(linear, left top, left bottom, from(#BD5B9E), to(#A5417D));
   background: -o-linear-gradient(top, #BD5B9E 0%, #A5417D 100%);
   background: linear-gradient(180deg, #BD5B9E 0%, #A5417D 100%);
@@ -2118,7 +2132,7 @@ img {
   margin-right: 40px;
   font-size: 18px;
   font-size: 1.125rem;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
 }
 .header-top-contact .address {
   display: -webkit-box;
@@ -2184,13 +2198,11 @@ img {
   height: -moz-max-content;
   height: max-content;
   opacity: 1;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
   overflow: initial;
-  -webkit-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 20px 20px;
 }
 .header-bottom .header-nav-item:hover .trigger-arrow {
   -webkit-transform: rotate(180deg);
@@ -2215,8 +2227,9 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 60px;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   position: relative;
+  white-space: nowrap;
 }
 .header-bottom .header-nav-item .trigger-text::after {
   content: "";
@@ -2227,9 +2240,9 @@ img {
   width: 0%;
   background-color: #CDF3F9;
   border-radius: 4px 4px 0px 0px;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 .header-bottom .header-nav-item .trigger-text:hover::after {
   width: 100%;
@@ -2241,28 +2254,27 @@ img {
   width: 100%;
 }
 .header-bottom .header-nav-item .trigger-arrow {
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 16px;
+  height: 16px;
 }
 .header-bottom .header-nav-item ul {
   position: absolute;
   top: 50px;
   height: 0;
   opacity: 0;
-  -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-          transform: translateY(-10px);
   overflow: hidden;
   background-color: #fff;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
   border-radius: 12px;
-  padding: 20px 20px;
+  padding: 0;
   padding-right: 0;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   z-index: 3;
 }
 .header-bottom .header-nav-item ul li {
@@ -2276,7 +2288,7 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 500;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -2303,9 +2315,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .header-bottom .header-nav-item .sub-menu a:hover {
   border-top-right-radius: 0;
@@ -2365,7 +2377,8 @@ img {
   color: #fff;
   text-transform: uppercase;
   position: relative;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
+  white-space: nowrap;
 }
 .header-bottom .header-nav-pages ul li a::after {
   content: "";
@@ -2376,9 +2389,9 @@ img {
   width: 0%;
   background-color: #CDF3F9;
   border-radius: 4px 4px 0px 0px;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 .header-bottom .header-nav-pages ul li a:hover::after {
   width: 100%;
@@ -2421,9 +2434,9 @@ img {
   border-radius: 12px;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .header-bottom .header-nav .search-wrapper.open {
   visibility: visible;
@@ -2472,7 +2485,7 @@ img {
   font-size: 2.8125rem;
   font-weight: 600;
   line-height: 141.556%;
-  letter-spacing: 1.35px;
+  letter-spacing: 0.084375rem;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
@@ -2501,7 +2514,7 @@ img {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 155%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
   margin-bottom: 30px;
 }
 .main-slider .slider-descroption p {
@@ -2636,22 +2649,31 @@ img {
   padding-left: 16px;
   padding-right: 16px;
   height: 100%;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .services-item:hover {
   background-color: #BD5B9E;
   color: #FFF;
 }
 .main .services-item:hover .services-icon path {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   fill: #FFF;
 }
 .main .services-item:hover .services-more {
   color: #CDF3F9;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .services-item:hover .services-more svg path {
   stroke: #CDF3F9;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .services-item .services-icon {
   margin-bottom: 14px;
@@ -2661,7 +2683,7 @@ img {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 133.333%;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -2679,9 +2701,9 @@ img {
           align-items: center;
   padding: 16px 19px;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .price-row:hover {
   background-color: #319DAC;
@@ -2705,17 +2727,23 @@ img {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
   line-height: 155%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .price-row .price {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 155%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
   color: #BD5B9E;
   white-space: nowrap;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .popular {
   padding-top: 80px;
@@ -2752,9 +2780,9 @@ img {
           justify-content: space-between;
   padding: 11px 20px;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .popular-item-row:hover {
   background-color: #319DAC;
@@ -2829,7 +2857,7 @@ img {
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: unset;
-  letter-spacing: 0.12px;
+  letter-spacing: 0.0075rem;
 }
 .main .doctors .doctor {
   background-color: #FFF;
@@ -2837,9 +2865,9 @@ img {
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
   overflow: hidden;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .doctors .doctor:hover {
   background-color: #CDF3F9;
@@ -2875,7 +2903,7 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   color: #343544;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03375rem;
   font-weight: 500;
 }
 .main .doctors .doctor-speciality p {
@@ -3005,7 +3033,7 @@ img {
   font-size: 1rem;
   font-weight: 400;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
   height: 250px;
   overflow: auto;
 }
@@ -3050,7 +3078,7 @@ img {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 155%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
   max-width: 784px;
   margin-bottom: 30px;
 }
@@ -3089,7 +3117,7 @@ img {
   font-size: 2.8125rem;
   font-weight: 600;
   line-height: 141.556%;
-  letter-spacing: 1.35px;
+  letter-spacing: 0.084375rem;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -3098,7 +3126,7 @@ img {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 140%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
 }
 .main .about-text p {
   margin: 0;
@@ -3120,7 +3148,7 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 500;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: all 0.5s;
@@ -3165,7 +3193,7 @@ img {
 .main .about-description-card .head .h4 {
   text-transform: uppercase;
   line-height: 133.333%;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   font-weight: 600;
 }
 .main .about-description-card .content p {
@@ -3174,7 +3202,7 @@ img {
   font-size: 1rem;
   font-weight: 400;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
 }
 .main .about-description-card .content p:not(:last-of-type) {
   margin-bottom: 12px;
@@ -3259,7 +3287,7 @@ img {
   font-size: 1rem;
   font-weight: 400;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
 }
 .main .prices .actions-slider .actions-wrapper .actions-content .more {
   margin-top: auto;
@@ -3308,7 +3336,7 @@ img {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 133.333%;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   text-transform: uppercase;
 }
 .main .installment {
@@ -3345,7 +3373,7 @@ img {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 133.333%;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   text-transform: uppercase;
 }
 .main .installment-item .bank {
@@ -3354,7 +3382,7 @@ img {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 140%;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.0375rem;
   padding-top: 2px;
   padding-bottom: 16px;
   margin-bottom: 16px;
@@ -3367,7 +3395,7 @@ img {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 121.111%;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03375rem;
 }
 .main .examples {
   padding-top: 80px;
@@ -3407,7 +3435,7 @@ img {
   font-size: 16px;
   font-size: 1rem;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
 }
 .main .examples .examples-wrapper .example.horizontal .example-text .description p:first-child {
   font-size: 20px;
@@ -3419,7 +3447,7 @@ img {
 .main .examples .examples-wrapper .example.horizontal .example-text .executor-name {
   font-size: 18px;
   font-size: 1.125rem;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03375rem;
 }
 .main .examples .examples-wrapper .example.horizontal .example-images .before, .main .examples .examples-wrapper .example.horizontal .example-images .after {
   width: 380px;
@@ -3466,7 +3494,7 @@ img {
   font-size: 1rem;
   line-height: 1;
   font-weight: 400;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03rem;
   margin-bottom: 2px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -3484,7 +3512,7 @@ img {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03rem;
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -3560,14 +3588,14 @@ img {
   font-size: 1rem;
   font-weight: 400;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
   margin-bottom: 28px;
 }
 .main .service-banner-content .h3 {
   color: #FFF;
   font-weight: 600;
   line-height: 145.938%;
-  letter-spacing: 0.96px;
+  letter-spacing: 0.06rem;
   text-transform: uppercase;
   max-width: 880px;
   margin-bottom: 28px;
@@ -3578,7 +3606,7 @@ img {
   font-size: 2.8125rem;
   font-weight: 600;
   line-height: 141.556%;
-  letter-spacing: 1.35px;
+  letter-spacing: 0.084375rem;
   text-transform: uppercase;
   margin-bottom: 16px;
   max-width: 590px;
@@ -3627,7 +3655,7 @@ img {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 121.111%;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03375rem;
   margin-bottom: 0;
 }
 .main .service-banner-content .text {
@@ -3640,7 +3668,7 @@ img {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 140%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
 }
 .main .service-banner-content .breadcrumbs {
   padding: 0;
@@ -3650,7 +3678,7 @@ img {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 140%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
 }
 .main .service-banner-content .breadcrumbs li {
   display: inline-block;
@@ -3659,7 +3687,7 @@ img {
   font-size: 1rem;
   font-weight: 400;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
 }
 .main .service-banner-content .breadcrumbs li:not(:last-child)::after {
   content: "|";
@@ -3682,7 +3710,7 @@ img {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 155.556%;
-  letter-spacing: 0.36px;
+  letter-spacing: 0.0225rem;
 }
 .main .service-content-description p:not(:last-child) {
   margin-bottom: 16px;
@@ -3692,7 +3720,7 @@ img {
   line-height: 133.333%;
   margin-bottom: 16px;
   text-transform: uppercase;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
 }
 .main .service-content .h5 {
   color: #343544;
@@ -3700,7 +3728,7 @@ img {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 155.556%;
-  letter-spacing: 0.36px;
+  letter-spacing: 0.0225rem;
   margin-bottom: 12px;
 }
 .main .service-content-addition {
@@ -3753,7 +3781,7 @@ img {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 155%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
 }
 .main .service-content-price.single .ui-btn {
   margin-right: 0;
@@ -3814,7 +3842,7 @@ img {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 155.556%;
-  letter-spacing: 0.36px;
+  letter-spacing: 0.0225rem;
 }
 .main .service-content-item ul li:not(:last-child) {
   margin-bottom: 12px;
@@ -3872,7 +3900,7 @@ img {
   font-size: 1rem;
   font-weight: 400;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
 }
 .main .service-content-interwiev .left .text p {
   margin-bottom: 0;
@@ -3907,7 +3935,7 @@ img {
   font-size: 1rem;
   font-weight: 500;
   line-height: 156.25%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.01rem;
 }
 .main .implants {
   padding-top: 80px;
@@ -3976,15 +4004,15 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 500;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   display: block;
   width: 62px;
   height: 62px;
   padding: 20px;
   border-radius: 50%;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .articles-pagination .pagination__item-link:hover {
   background-color: #319DAC;
@@ -4045,7 +4073,7 @@ img {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03rem;
 }
 .main .article-content-author .speciality p {
   margin-bottom: 4px;
@@ -4056,7 +4084,7 @@ img {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 121.111%;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03375rem;
 }
 .main .articles-section {
   padding-top: 86px;
@@ -4085,7 +4113,7 @@ img {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 140%;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.0375rem;
   text-transform: uppercase;
 }
 .main .articles-section .slider-arrows .slider-prev svg, .main .articles-section .slider-arrows .slider-next svg {
@@ -4158,9 +4186,9 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .service-card-head.border {
   border-bottom: 2px solid #319DAC;
@@ -4175,11 +4203,22 @@ img {
 .main .service-card-head svg {
   width: 68px;
   height: 68px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.main .service-card-head svg path {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .service-card-head .h4 {
   color: #222340;
   font-weight: 600;
   line-height: 133.333%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .main .service-card-list ul li:not(:last-child) {
   border-bottom: 2px solid #CDF3F9;
@@ -4191,12 +4230,12 @@ img {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 155%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
   padding: 11px 20px;
   display: inline-block;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   border-radius: 12px;
 }
 .main .service-card-list ul li a:hover {
@@ -4235,7 +4274,7 @@ img {
   color: #222340;
   font-weight: 600;
   line-height: 145.938%;
-  letter-spacing: 0.96px;
+  letter-spacing: 0.06rem;
   text-transform: uppercase;
   max-width: 880px;
   margin-bottom: 22px;
@@ -4462,9 +4501,9 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding: 11px 20px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .requisites-files-block .items-wrapper .item:not(:last-child) {
   border-bottom: 2px solid #CDF3F9;
@@ -4481,6 +4520,7 @@ img {
 }
 .requisites-files-block .items-wrapper .item:hover svg {
   display: block;
+  width: 24px;
 }
 .requisites-files-block .items-wrapper .title {
   color: #222340;
@@ -4489,6 +4529,9 @@ img {
   font-weight: 400;
   line-height: 155%;
   letter-spacing: 0.0125rem;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .requisites-files-block .items-wrapper .info {
   display: -webkit-box;
@@ -4506,13 +4549,20 @@ img {
   margin-left: auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .requisites-files-block .items-wrapper .info .weight {
   margin-left: 20px;
 }
 .requisites-files-block .items-wrapper .info svg {
-  display: none;
+  width: 0;
+  height: 24px;
   margin-left: 20px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .accordion-head {
@@ -4528,9 +4578,9 @@ img {
   padding: 16px 20px;
   cursor: pointer;
   border-bottom: 2px solid #319DAC;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .accordion-head:hover {
   background-color: #319DAC;
@@ -4572,7 +4622,7 @@ img {
   stroke: #319DAC;
 }
 .accordion-head .icon.open svg path:first-child {
-  display: none;
+  opacity: 0;
 }
 .accordion-head .icon svg {
   position: absolute;
@@ -4600,7 +4650,7 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 155.556%;
-  letter-spacing: 0.36px;
+  letter-spacing: 0.0225rem;
 }
 .accordion-content.open {
   max-height: -webkit-max-content;
@@ -4618,7 +4668,7 @@ img {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -4626,7 +4676,7 @@ img {
   font-size: 16px;
   font-size: 1rem;
   line-height: 156.25%;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04rem;
   margin-bottom: 18px;
 }
 .footer-contacts .phone {
@@ -4634,14 +4684,14 @@ img {
   color: #fff;
   font-size: 16px;
   font-size: 1rem;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04rem;
   margin-bottom: 10px;
 }
 .footer-contacts .address {
   color: #fff;
   font-size: 16px;
   font-size: 1rem;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04rem;
   margin-bottom: 10px;
 }
 .footer-contacts .email {
@@ -4649,7 +4699,7 @@ img {
   color: #fff;
   font-size: 16px;
   font-size: 1rem;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04rem;
   margin-bottom: 18px;
 }
 .footer-contacts .links {
@@ -4661,9 +4711,9 @@ img {
 .footer-contacts .links svg {
   width: 32px;
   height: 32px;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .footer-contacts .links svg:hover {
   -webkit-transform: translateY(-2px);
@@ -4701,9 +4751,9 @@ img {
 .footer-main .socials svg {
   width: 32px;
   height: 32px;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .footer-main .socials svg:hover {
   -webkit-transform: translateY(-2px);
@@ -4720,7 +4770,7 @@ img {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.045rem;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -4786,7 +4836,7 @@ img {
   font-size: 32px;
   font-size: 2rem;
   line-height: 145.938%;
-  letter-spacing: 0.96px;
+  letter-spacing: 0.06rem;
   display: block;
   margin-bottom: 46px;
 }
