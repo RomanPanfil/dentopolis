@@ -239,6 +239,20 @@ const FARBA = {
   });
 })();
 
+// diploms slider
+(function() {
+  const sliderFour = new Swiper('.diploms-slider', {  
+    loop: false,    
+    slidesPerView: 6,
+    slidesPerGroup: 2,
+    spaceBetween: 32,  
+    navigation: {
+      nextEl: '.diploms-slider .slider-next',
+      prevEl: '.diploms-slider .slider-prev',
+    },
+  });
+})();
+
 // валидация формы
 $(document).ready(function () {
   
