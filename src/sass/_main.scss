@@ -1917,16 +1917,18 @@
   }  
 }
 
-.description-slider-item {
-  height: 341px;
-  border-radius: 12px;
-  box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.description-slide {
+  &-item {
+    height: 341px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 
@@ -2003,9 +2005,8 @@
     }
 
     &-main {
+      padding-right: 14px;
       color: $gray_dark;
-      @include fz(16);           
-      font-weight: 400;
       line-height: 156.25%;
       @include ls(0.16);
       height: 250px;
@@ -2016,14 +2017,6 @@
     }
   }
 
-}
-
-.show-all {
-  text-align: center;
-  .ui-btn {
-    position: relative;
-    z-index: 2;
-  }
 }
 
 // feedback form
@@ -2059,7 +2052,7 @@
 }
 
 // doctors
-.doctors-page {
+.section-doctors {
   padding-bottom: 20px;   
 }
 
@@ -2121,66 +2114,54 @@
     transition: background-color 0.5s;
     margin-bottom: 32px;
     height: calc(100% - 32px);
+
     &:hover {
       background-color: $bgc;
     }
-  }  
 
-  &-photo {     
-    aspect-ratio: 1.25;
-    img {
+    &-photo {     
+      aspect-ratio: 1.25;
       display: block;
-      object-fit: cover;
-      object-position: top center;
-      width: 100%;
-      height: 100%;
+      img {
+        display: block;
+        object-fit: cover;
+        object-position: top center;
+        width: 100%;
+        height: 100%;
+      }
     }
-  }
 
-  &-info {
-    padding: 34px 24px 38px;
-  }
-
-  &-name {
-    font-weight: 600;
-    line-height: 133.333%;
-    padding-bottom: 23px;
-    margin-bottom: 23px;
-    border-bottom: 2px solid $bgc;    
-    @include fz(24);
-    font-weight: 600;
-    line-height: 133.333%;
-    text-transform: unset;
-
-    .h4 {
-      margin: 0;
+    &-info {
+      padding: 34px 24px 38px;
+    }
+  
+    &-name {
+      display: block;    
       font-weight: 600;
       line-height: 133.333%;
-      text-transform: unset;
+      padding-bottom: 23px;
+      margin-bottom: 23px;
+      border-bottom: 2px solid $bgc;    
+      @include fz(24);
+      font-weight: 600;
+      line-height: 133.333%;
+      text-transform: unset;      
     }
-  }
 
-  &-speciality {
-    @include fz(18);
-    color: $gray_dark;
-    @include ls(0.54);
-    font-weight: 500;
-    p {
-      margin: 0;
+    &-speciality {
+      @include fz(18);
+      color: $gray_dark;
+      @include ls(0.54);
+      font-weight: 500;      
     }
-  }
-
-  &-category {
-    @include fz(18);
-    color: $gray_dark;
-    @include ls(0.54);
-    font-weight: 500;
-    margin-bottom: 24px;
-  }
-
-  .more {
-    display: block;
-    margin-left: auto;
+  
+    &-category {
+      @include fz(18);
+      color: $gray_dark;
+      @include ls(0.54);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
   }
 
   &.single {
@@ -2194,6 +2175,89 @@
     }
   }
 }
+
+// .doctor {
+//   &-card {
+//     background-color: #FFF;
+//     border-radius: 12px;    
+//     box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+//     overflow: hidden;
+//     transition: background-color 0.5s;
+//     margin-bottom: 32px;
+//     height: calc(100% - 32px);
+//     &:hover {
+//       background-color: $bgc;
+//     }
+//   }  
+
+//   &-photo {     
+//     aspect-ratio: 1.25;
+//     img {
+//       display: block;
+//       object-fit: cover;
+//       object-position: top center;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+
+//   &-info {
+//     padding: 34px 24px 38px;
+//   }
+
+//   &-name {
+//     font-weight: 600;
+//     line-height: 133.333%;
+//     padding-bottom: 23px;
+//     margin-bottom: 23px;
+//     border-bottom: 2px solid $bgc;    
+//     @include fz(24);
+//     font-weight: 600;
+//     line-height: 133.333%;
+//     text-transform: unset;
+
+//     .h4 {
+//       margin: 0;
+//       font-weight: 600;
+//       line-height: 133.333%;
+//       text-transform: unset;
+//     }
+//   }
+
+//   &-speciality {
+//     @include fz(18);
+//     color: $gray_dark;
+//     @include ls(0.54);
+//     font-weight: 500;
+//     p {
+//       margin: 0;
+//     }
+//   }
+
+//   &-category {
+//     @include fz(18);
+//     color: $gray_dark;
+//     @include ls(0.54);
+//     font-weight: 500;
+//     margin-bottom: 24px;
+//   }
+
+//   .more {
+//     display: block;
+//     margin-left: auto;
+//   }
+
+//   &.single {
+//     .doctor-photo {
+//       width: 50%;
+//       order: 1;
+//     }
+//     .doctor-info {
+//       width: 50%;
+//       padding: 40px 60px;       
+//     }
+//   }
+// }
 
 .swiper-slide.doctor {
   margin-bottom: 0;
@@ -3140,10 +3204,9 @@
 }
 
 
-.slider-four {
-  // overflow-x: hidden;
-  margin: -32px;
-  padding: 32px;  
+.slider-four {  
+  margin: -32px -32px 0;
+  padding: 32px 32px 0;
   position: relative;
   
   &::before {

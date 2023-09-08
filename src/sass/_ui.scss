@@ -123,7 +123,7 @@ h6, .h6, .ui-h5 {
 
 
 a {
-	color: $link;
+	color: $font;
 	text-decoration: none;
 	outline: none;
 	transition: color .5s, border .5s;
@@ -142,7 +142,9 @@ b, strong {
 	line-height: 0;
 	font-size: 0;
 }
-
+.ui-centered {
+	text-align: center;
+}
 .section {
 	padding-top: 80px;
 	padding-bottom: 80px;
