@@ -3051,7 +3051,7 @@
   padding-bottom: 17px;
 
   &-contacts {
-    .title {
+    &-title {
       @include fz(24);
       font-weight: 600;      
       @include ls(0.72);
@@ -3059,14 +3059,14 @@
       margin-bottom: 20px;
     }
 
-    .time {
+    &-info {
       @include fz(16);
       line-height: 156.25%;     
       @include ls(0.64);
       margin-bottom: 18px;
     }
 
-    .phone {
+    &-phone {
       display: block;
       color: #fff;
       @include fz(16);
@@ -3074,14 +3074,14 @@
       margin-bottom: 10px;    
     }
 
-    .address {
+    &-address {
       color: #fff;
       @include fz(16);
       @include ls(0.64); 
       margin-bottom: 10px;  
     }
 
-    .email {
+    &-email {
       display: block;
       color: #fff;
       @include fz(16);      
@@ -3089,7 +3089,7 @@
       margin-bottom: 18px; 
     }
 
-    .links {
+    &-links {
       display: flex;
       gap: 16px;
       svg {
@@ -3108,20 +3108,21 @@
     .ui-btn:hover {
       background: #595A85;
     }
-    .logo {
-      margin-bottom: 62px;
+    &-logo {
+      margin-bottom: 60px;
+      margin-top: -6px;
       display: block;
       margin-left: auto;
       margin-right: auto;
       padding-right: 54px;
     }
     .ui-btn {
-      margin-bottom: 62px;
+      margin-bottom: 68px;
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
-    .socials {
+    &-socials {
       margin-bottom: 56px;
       display: flex;
       justify-content: center;
@@ -3142,7 +3143,7 @@
 
   &-services {    
     text-align: end;
-    .title {
+    &-title {
       @include fz(24);
       font-weight: 600;     
       @include ls(0.72);
@@ -3164,7 +3165,7 @@
       }
     }
   }
-  .copy {
+  &-copy {
     text-align: center;
   }
 }

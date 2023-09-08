@@ -5084,7 +5084,7 @@ b, strong {
   padding-top: 100px;
   padding-bottom: 17px;
 }
-.footer-contacts .title {
+.footer-contacts-title {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -5092,14 +5092,14 @@ b, strong {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.footer-contacts .time {
+.footer-contacts-info {
   font-size: 16px;
   font-size: 1rem;
   line-height: 156.25%;
   letter-spacing: 0.04rem;
   margin-bottom: 18px;
 }
-.footer-contacts .phone {
+.footer-contacts-phone {
   display: block;
   color: #fff;
   font-size: 16px;
@@ -5107,14 +5107,14 @@ b, strong {
   letter-spacing: 0.04rem;
   margin-bottom: 10px;
 }
-.footer-contacts .address {
+.footer-contacts-address {
   color: #fff;
   font-size: 16px;
   font-size: 1rem;
   letter-spacing: 0.04rem;
   margin-bottom: 10px;
 }
-.footer-contacts .email {
+.footer-contacts-email {
   display: block;
   color: #fff;
   font-size: 16px;
@@ -5122,20 +5122,20 @@ b, strong {
   letter-spacing: 0.04rem;
   margin-bottom: 18px;
 }
-.footer-contacts .links {
+.footer-contacts-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
 }
-.footer-contacts .links svg {
+.footer-contacts-links svg {
   width: 32px;
   height: 32px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.footer-contacts .links svg:hover {
+.footer-contacts-links svg:hover {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -5143,20 +5143,21 @@ b, strong {
 .footer-main .ui-btn:hover {
   background: #595A85;
 }
-.footer-main .logo {
-  margin-bottom: 62px;
+.footer-main-logo {
+  margin-bottom: 60px;
+  margin-top: -6px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-right: 54px;
 }
 .footer-main .ui-btn {
-  margin-bottom: 62px;
+  margin-bottom: 68px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.footer-main .socials {
+.footer-main-socials {
   margin-bottom: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5168,14 +5169,14 @@ b, strong {
   margin-left: auto;
   margin-right: auto;
 }
-.footer-main .socials svg {
+.footer-main-socials svg {
   width: 32px;
   height: 32px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.footer-main .socials svg:hover {
+.footer-main-socials svg:hover {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -5183,7 +5184,7 @@ b, strong {
 .footer-services {
   text-align: end;
 }
-.footer-services .title {
+.footer-services-title {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -5204,7 +5205,7 @@ b, strong {
 .footer-services a:hover {
   color: #319DAC;
 }
-.footer .copy {
+.footer-copy {
   text-align: center;
 }
 
