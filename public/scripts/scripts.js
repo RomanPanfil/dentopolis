@@ -199,14 +199,14 @@ const FARBA = {
 
 // description slider
 (function() {
-  const sliderFour = new Swiper('.description-slider', {  
+  const sliderFour = new Swiper('.gallery-slider', {  
     loop: false,    
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 32,  
     navigation: {
-      nextEl: '.description-slider .slider-next',
-      prevEl: '.description-slider .slider-prev',
+      nextEl: '.gallery-slider .slider-next',
+      prevEl: '.gallery-slider .slider-prev',
     },
   });
 })();
