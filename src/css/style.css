@@ -4036,11 +4036,11 @@ b, strong {
   margin-bottom: 18px;
 }
 
-.about-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 60px;
+.about-nav li {
+  display: inline-block;
+}
+.about-nav li:not(:last-child) {
+  margin-right: 60px;
 }
 .about-nav a {
   display: inline-block;
@@ -4083,13 +4083,18 @@ b, strong {
   height: 100%;
 }
 .advantages-card-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
   margin-bottom: 24px;
 }
+.advantages-card-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
 .advantages-card-title {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 24px;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -4252,13 +4257,7 @@ b, strong {
   margin-bottom: 30px;
 }
 .doctors-tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 40px;
+  text-align: center;
   margin-bottom: 60px;
 }
 .doctors-tabs-wrapper {
@@ -4266,6 +4265,9 @@ b, strong {
 }
 .doctors-tabs-wrapper.active {
   display: block;
+}
+.doctors-tabs-item:not(:last-child) {
+  margin-right: 40px;
 }
 .doctors-title {
   font-size: 24px;

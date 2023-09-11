@@ -2089,10 +2089,12 @@
   }
 }
 
-.about-nav {
-  ul {
-    display: flex;
-    gap: 60px;
+.about-nav { 
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
   }
 
   a {
@@ -2136,12 +2138,20 @@
     height: 100%;
 
     &-head {
-      display: flex;
-      gap: 16px;
       margin-bottom: 24px;      
     }
 
+    &-icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+    }
+
     &-title {
+      display: inline-block;
+      vertical-align: middle;
       @include fz(24);
       text-transform: uppercase;
       line-height: 133.333%;       
@@ -2323,9 +2333,10 @@
   }
 
   &-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    // display: flex;
+    // justify-content: center;
+    // gap: 40px;
+    text-align: center;
     margin-bottom: 60px;
 
     &-wrapper {
@@ -2333,6 +2344,12 @@
 
       &.active {
         display: block;
+      }
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 40px;
       }
     }
   }
