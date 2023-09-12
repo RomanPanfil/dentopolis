@@ -1,13 +1,42 @@
 p {
-	margin: $paragraph_margin;
+	margin: $paragraph_margin;	
 }
 ul, ol {
 	padding: 0px;
 	margin: 0px;
 	list-style: none;
 }
+
+ul.plus {
+	margin-bottom: 20px;
+	li {
+		display: flex;
+		gap: 15px;
+		margin-bottom: 14px;
+		line-height: 155.556%;
+		letter-spacing: 0.36px;
+		&::before {
+			content: '';
+			background-color: $primary;
+			display: inline-block;             
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			flex-shrink: 0;
+			margin-top: 6px;
+			margin-left: 4px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5 1V9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 5H9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+			background-repeat: no-repeat no-repeat;
+			background-position: center center;
+			background-size: 10px 10px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+}
 li {
-	list-style: none;
+	list-style: none;	
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6, .h20 {
@@ -94,7 +123,13 @@ h3, .h3, .ui-h3 {
 	}
 }
 h4, .h4, .ui-h4 {
-	@include fz($h4);	
+	@include fz($h4);
+	text-transform: uppercase;	
+	font-weight: 600;
+	line-height: 133.333%;
+	@include ls(0.72);
+	padding-top: 34px;
+	padding-bottom: 14px;
 }
 h5, .h5 {
 	@include fz($h5);
@@ -398,7 +433,8 @@ b, strong {
 		color: $error;
 	}
 
-	.ui-texarea {		
+	.ui-texarea {
+		display: block;	
 		border-radius: 30px;
 		height: 185px;
 		color: $gray_dark;

@@ -225,20 +225,6 @@ const FARBA = {
   });
 })();
 
-// articles slider
-(function() {
-  const sliderFour = new Swiper('.articles-slider', {  
-    loop: false,    
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween: 32,  
-    navigation: {
-      nextEl: '.articles-slider .slider-next',
-      prevEl: '.articles-slider .slider-prev',
-    },
-  });
-})();
-
 // diploms slider
 (function() {
   const sliderFour = new Swiper('.diploms-slider', {  
@@ -471,9 +457,11 @@ initMask();
 
 
 // карта
+function initMap() {  
+};
 
-function initMap() {
-  if(!document.querySelector('#map')) return
+function createMap() {
+  if(!document.querySelector('#map')) return  
 
   // Координаты центра карты 
   const center = {lat: 53.94979397878479, lng: 27.694455758422095};
@@ -497,16 +485,17 @@ function initMap() {
     optimized: false,
     position: markerPosition,
     title: 'Стоматология "Дентополис"',
-    map: map,   
-    // label: {
-    //   text: 'Стоматология "Дентополис"',
-    //   color: 'red',
-    //   fontSize: '12px',     
-    // }
-  });   
-};
+    map: map,    
+  });
+}
 
+window.onload = function() {
+  if(document.getElementById('map')) {
+    createMap();
+  }
+}
 
+// pop-up
 $(document).on("click", ".mfp-link", function () {
   var a = $(this);
   $.magnificPopup.open({
