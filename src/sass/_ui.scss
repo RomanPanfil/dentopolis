@@ -7,7 +7,7 @@ ul, ol {
 	list-style: none;
 }
 
-ul.plus {
+.ui-list {
 	margin-bottom: 20px;
 	li {
 		display: flex;
@@ -23,9 +23,8 @@ ul.plus {
 			height: 20px;
 			border-radius: 50%;
 			flex-shrink: 0;
-			margin-top: 6px;
-			margin-left: 4px;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5 1V9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 5H9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+			margin-top: 4px;
+			margin-left: 4px;			
 			background-repeat: no-repeat no-repeat;
 			background-position: center center;
 			background-size: 10px 10px;
@@ -34,7 +33,49 @@ ul.plus {
 			margin-bottom: 12px;
 		}
 	}
+
+	&-plus {
+		li {
+			&::before {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5 1V9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 5H9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+			}
+		}
+	}
+
+	&-check {
+		li {
+			&::before {
+				background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='9' viewBox='0 0 11 9' fill='none'%3E%3Cpath d='M1 4.5L4 7.5L10 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");                
+				background-size: 11px 9px;
+			}
+		}
+	}
+
+	&-cross {
+		li {
+			&::before {
+				background-color: $bgc-pink;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8' fill='none'%3E%3Cpath d='M1 1L7 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7 1L1 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+				background-size: 8px 8px;
+			}
+		}
+	}
+	&-num {
+		li {
+			counter-increment: num;			
+			&::before {
+				content: counter(num);
+				background-image: none;
+				@include fz(14);
+				line-height: 20px;
+				font-weight: 400;
+				color:#FFF;
+				text-align: center;				
+			}
+		}
+	}
 }
+
 li {
 	list-style: none;	
 }
@@ -193,6 +234,16 @@ b, strong {
 		font-weight: 600;
 		letter-spacing: 0.96px;
 	}
+}
+
+.block-title {
+	@include fz(24);
+    font-weight: 600;
+    text-transform: unset;
+    @include ls(0.72);
+    line-height: 133.333%;
+    text-transform: uppercase;
+    margin-bottom: 28px;
 }
 /*---- ICONS ---- */
 

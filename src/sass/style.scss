@@ -59,6 +59,7 @@ input[type="search"]::-webkit-search-cancel-button {
 article {
   @include ls(0.36);
 	line-height: 155.556%;
+  color: $gray_dark;
 }
 @import "ui";
 
