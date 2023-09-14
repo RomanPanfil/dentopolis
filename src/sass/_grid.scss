@@ -219,11 +219,7 @@
   @media (max-width: 1366px) {
     margin-left: -10px;
     margin-right: -10px;
-  }
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+  }  
 }
 [class*="col-"] {
   width: 100%;

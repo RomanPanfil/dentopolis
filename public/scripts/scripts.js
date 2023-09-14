@@ -119,24 +119,24 @@ const FARBA = {
     autoHeight: true,
     loop: true,    
     slidesPerView: 'auto',
-    autoplay: {
-      delay: 7000,
-      disableOnInteraction: false
-    },
+    // autoplay: {
+    //   delay: 7000,
+    //   disableOnInteraction: false
+    // },
     navigation: {
       nextEl: '.slider-next',
       prevEl: '.slider-prev',
     },
-    on: {
-      slideChangeTransitionEnd: function() {
+    // on: {
+    //   slideChangeTransitionEnd: function() {
       
-        let activeSlide = this.slides[this.activeIndex];
+    //     let activeSlide = this.slides[this.activeIndex];
         
-        activeSlide.addEventListener('mouseenter', () => {
-          this.slideNext();
-        });      
-      }
-    }
+    //     activeSlide.addEventListener('mouseenter', () => {
+    //       this.slideNext();
+    //     });      
+    //   }
+    // }
   });
 })();
 
@@ -378,7 +378,7 @@ initMask();
   if (!document.querySelector('.accordion-head')) return
 
   const buttons = document.querySelectorAll('.accordion-head');
-  const icons = document.querySelectorAll('.accordion-head .icon');
+  const icons = document.querySelectorAll('.accordion-head .accordion-head-icon');
 
   buttons.forEach((button, index) => {
     if (index === 0) {
