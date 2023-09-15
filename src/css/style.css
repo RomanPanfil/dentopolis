@@ -2643,15 +2643,12 @@ b, strong {
 .main-slide-descroption p:not(:last-of-type) {
   margin-bottom: 12px;
 }
-.main .articles .h3 {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.main .articles-wrapper {
+
+.articles-wrapper {
   margin-bottom: 28px;
 }
 
-.services-page {
+.section-services {
   padding-bottom: 48px;
 }
 
@@ -2842,9 +2839,10 @@ b, strong {
   letter-spacing: 0.03375rem;
 }
 
-.prices {
+.section-prices {
   padding-top: 110px;
 }
+
 .prices .row {
   margin-left: -40px;
   margin-right: -40px;
@@ -2920,10 +2918,11 @@ b, strong {
   stroke: #343544;
 }
 
-.portfolio {
+.section-portfolio {
   text-align: center;
   padding-top: 95px;
 }
+
 .portfolio-text {
   display: inline-block;
   color: #343544;
@@ -2948,9 +2947,10 @@ b, strong {
   margin-right: auto;
 }
 
-.works {
-  padding-top: 0px;
+.section-works {
+  padding-top: 0;
 }
+
 .works-wrapper {
   margin-bottom: 28px;
 }
@@ -3112,6 +3112,10 @@ b, strong {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 133.333%;
+}
+
+.section-article {
+  padding-bottom: 62px;
 }
 
 .service-content {
@@ -3526,9 +3530,10 @@ b, strong {
   margin-right: 20px;
 }
 
-.implants {
+.section-implants {
   padding-bottom: 60px;
 }
+
 .implants-title {
   text-align: center;
   margin-left: auto;
@@ -3557,9 +3562,10 @@ b, strong {
      object-position: center;
 }
 
-.examples {
+.section-examples {
   padding-top: 0;
 }
+
 .examples-wrapper {
   margin-bottom: 28px;
 }
@@ -3911,9 +3917,6 @@ b, strong {
   letter-spacing: 0.03375rem;
 }
 
-.services {
-  padding-bottom: 82px;
-}
 .services-title {
   text-align: center;
   margin-bottom: 60px;
@@ -4425,9 +4428,10 @@ b, strong {
   height: 100%;
 }
 
-.contacts {
-  padding-bottom: 0px;
+.section-contacts {
+  padding-bottom: 0;
 }
+
 .contacts-banner {
   color: #222340;
 }
@@ -4903,9 +4907,10 @@ b, strong {
   margin-bottom: 0;
 }
 
-.diploms {
+.section-diploms {
   padding-bottom: 38px;
 }
+
 .diploms-title {
   font-size: 24px;
   font-size: 1.5rem;
@@ -5482,5 +5487,29 @@ b, strong {
 
 .labels {
   background-color: #319DAC;
+}
+
+.reviews-slider__vertical {
+  height: 945px;
+}
+.reviews-slider__vertical .swiper-slide {
+  height: auto;
+}
+
+.vertical-arrows {
+  -webkit-transform: rotate(90deg) translateX(-50%);
+      -ms-transform: rotate(90deg) translateX(-50%);
+          transform: rotate(90deg) translateX(-50%);
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 1;
+}
+.vertical-arrows-prev {
+  cursor: pointer;
+}
+.vertical-arrows-next {
+  cursor: pointer;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */

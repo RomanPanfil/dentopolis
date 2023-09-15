@@ -239,6 +239,29 @@ const FARBA = {
   });
 })();
 
+// reviews slider
+// (function() {
+//   const sliderFour = new Swiper('.reviews-slider', {
+//     direction: 'vertical',
+//     loop: false,
+//     slidesPerColumn: 1,    
+//   });
+// })();
+
+(function() {
+  const verticalSlider = new Swiper('.vertical-slider', {    
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    freeMode: 'true',
+    spaceBetween: 20,
+    mousewheel: true,   
+    navigation: {
+      nextEl: '.reviews-slider__vertical .vertical-arrows-next',
+      prevEl: '.reviews-slider__vertical .vertical-arrows-prev'
+    }  
+  });
+})();
+
 // валидация формы
 $(document).ready(function () {
   
