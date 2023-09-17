@@ -103,7 +103,7 @@
         background-color: #FFF;
         border-radius: 12px;
         box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-        transition: all 0.5s;
+        transition: visibility 0.5s, translate 0.5s;
         &.open {         
           visibility: visible;
           transform: translateY(0);
@@ -202,7 +202,7 @@
               height: 16px;
               flex-shrink: 0;
               margin-left: 6px;
-              transition: all 0.5s;
+              transition: transform 0.5s;
             }
           }
   
@@ -277,11 +277,10 @@
                
                 li {                               
                   a {                 
-                    width: 100%;
-                    transition: all 0.5s; 
+                    width: 100%;                   
                     text-transform: unset;   
                     padding-left: 40px;   
-                    transition: all 0.5s;
+                    transition: background-color 0.5s, color 0.5s;
                   }
                   &:hover {
                     a {
@@ -307,7 +306,7 @@
         li {        
           a {
             width: 100%;
-            transition: all 0.5s;
+            transition: background-color 0.5s, color 0.5s;
           }
           &:hover {
             & > a {
@@ -324,7 +323,7 @@
         opacity: 0;
         visibility: hidden;
         position: absolute; 
-        transition: all 0.5s;
+        transition: width 0.5s, height 0.5s, opacity 0.5s;
         top: 50px;
         z-index: 2;
         height: 0;
@@ -436,10 +435,10 @@
   padding: 20px 40px 40px 40px;
   border-radius: 12px;
   background: #FFF;
-  box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);    
-  margin-bottom: 32px;
+  box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+  margin-bottom: 32px;  
 
-  &.simple {
+  &:last-child {
     padding-bottom: 20px;
   }
 
@@ -471,7 +470,8 @@
       }
 
       width: 68px;
-      height: 68px;     
+      height: 68px;
+      flex-shrink: 0;    
     }    
   }
   
@@ -497,8 +497,7 @@
           line-height: 155%;          
           @include ls(0.2);
           padding: 11px 20px;
-          display: inline-block;
-          transition: all 0.5s;
+          display: inline-block;         
           border-radius: 12px;
 
           &:hover {
@@ -771,6 +770,7 @@
       @include ls(0.2);      
       display: flex;
       justify-content: space-between;
+      gap: 12px;
       padding: 11px 20px;
       border-radius: 12px;
       cursor: pointer;
@@ -1117,15 +1117,15 @@
     }
 
     
-    &-image {
-      margin-bottom: 16px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-      }        
-    }    
+    // &-image {
+    //   margin-bottom: 16px;
+    //   img {
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    //     object-position: center;
+    //   }        
+    // }    
 
     &-item {
       &:not(:last-child) {
@@ -1134,35 +1134,36 @@
     }    
   }
 
-  &-block {
-    margin-top: 50px;
-  }
+  // &-block {
+  //   margin-top: 50px;
+  // }
 
-  &-video {    
-    &-title {
-      @include fz(24);
-      font-weight: 600;
-      line-height: 133.333%;
-      text-transform: uppercase;
-      @include ls(0.72);
-      margin-bottom: 20px;   
-    }
-    &-wrapper {
-      margin-bottom: 16px;
-    }    
-    video {
-      object-fit: cover;
-      width: 100%;
-      max-height: 472px;
-      display: block;      
-    }
-  }
+  // &-video {    
+  //   &-title {
+  //     @include fz(24);
+  //     font-weight: 600;
+  //     line-height: 133.333%;
+  //     text-transform: uppercase;
+  //     @include ls(0.72);
+  //     margin-bottom: 20px;   
+  //   }
+  //   &-wrapper {
+  //     margin-bottom: 16px;
+  //   }    
+  //   video {
+  //     object-fit: cover;
+  //     width: 100%;
+  //     max-height: 472px;
+  //     display: block;      
+  //   }
+  // }
 
   &-interwiev {      
     background-color: #FFF;
     border-radius: 12px;
     box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-    padding: 40px;   
+    padding: 40px;
+    margin-top: 50px;  
     margin-bottom: 16px;
 
     &-wrapper {
@@ -1226,7 +1227,10 @@
     background-color: #FFF;
     border-radius: 12px;
     box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-    padding: 20px 20px 40px;     
+    padding: 20px 20px 40px;
+    &__article {
+      margin-top: 50px;
+    }  
 
     &.single {
       margin-bottom: 71px;
@@ -1260,14 +1264,17 @@
       margin-bottom: 24px;
     }
 
-    &-row {
-      @include fz(20);
+    &-row {      
+      @include fz(18);
+      @include ls(0.36);
+      line-height: 135%;    
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 19px;
+      gap: 12px;
+      padding: 17px 19px;
       cursor: pointer;
-      transition: background-color 0.5s;
+      transition: background-color 0.5s, color 0.5s;
     
       &:hover {
         background-color: $primary;       
@@ -1278,7 +1285,7 @@
         }
 
         .service-price-sum {
-          color: #fff;
+          color: #fff;              
         }
       }
     
@@ -1288,22 +1295,16 @@
     }
 
     &-name {
-      color: $font;
-      @include fz(20);
+      color: $font;     
       font-weight: 400;
-      @include ls(0.2);
-      line-height: 155%;
-      transition: color 0.5s  
     }
 
     &-sum {
       @include fz(20);
+      @include ls(0.36);  
       font-weight: 600;      
-      line-height: 155%;
-      @include ls(0.2);
       color: $bgc_pink;
-      white-space: nowrap;
-      transition: color 0.5s
+      white-space: nowrap;      
     }
 
     &-all {
@@ -1642,7 +1643,8 @@
   border-radius: 12px;
   background-color: #FFF;     
   box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-  height: 207px;
+  min-height: 207px;
+  height: calc(100% - 32px);
   overflow: hidden;
   margin-bottom: 32px;
 
@@ -1669,8 +1671,8 @@
   &-title {
     border-bottom: 2px solid $bgc;
     margin-bottom: 24px;
-    overflow: auto;
-    max-height: 82px;
+    // overflow: auto;
+    // max-height: 82px;
     color: $font;
     @include fz(20);           
     font-weight: 500;
@@ -2292,6 +2294,7 @@
   &-links {
     margin-bottom: 76px;
     display: flex;
+    flex-wrap: wrap;
     gap: 49px;
     justify-content: space-between;
     
@@ -2374,16 +2377,7 @@
       @include ls(0.72);    
       text-transform: uppercase;
       margin-bottom: 32px;
-    }
-
-    &-name {
-      color: $gray_dark;
-      @include fz(18);   
-      font-weight: 500;
-      line-height: 155.556%;
-      @include ls(0.36);
-      margin-bottom: 20px;     
-    }
+    }  
 
     p {
       color: $gray_dark;
@@ -2429,8 +2423,7 @@
           color: #fff;
         }
 
-        svg {             
-          display: block;              
+        svg {                    
           width: 24px;
           margin-left: 20px;
         }
@@ -2443,12 +2436,12 @@
       font-weight: 400;
       line-height: 155%;
       @include ls(0.2);
-      transition: all 0.5s;
+      transition: color 0.5s;
     }
 
     &-info {
-      display: flex;
-      align-items: center;
+      // display: flex;
+      // align-items: center;     
       color: $gray_dark;
       text-align: right;
       @include fz(18);        
@@ -2456,13 +2449,15 @@
       @include ls(0.54);
       margin-left: auto;
       flex-shrink: 0;
-      transition: all 0.5s;      
+      transition: color 0.5s;      
 
       svg {        
         width: 0;
         height: 24px;
         // margin-left: 20px;
-        transition: all 0.5s;
+        transition: width 0.5s;
+        display: inline-block;
+        vertical-align: middle;
       }
     }
 
@@ -2479,6 +2474,8 @@
 
     &-weight {           
       margin-left: 20px;
+      display: inline-block;
+      vertical-align: middle;
     }
   }  
 }
@@ -2548,7 +2545,7 @@
   &-content {
     max-height: 0; 
     overflow: hidden;
-    transition: all 0.5s;
+    transition: max-height 0.5s;
 
     &.open {
       max-height: max-content;
@@ -2647,21 +2644,19 @@
     }
 
     &-head {
+      display: flex;
+      align-items: center;
       border-bottom: 2px solid $primary;
       padding: 20px;      
     }
 
     &-icon {
       width: 68px;
-      height: 68px;
-      display: inline-block;
-      vertical-align: middle;
+      height: 68px;     
       margin-right: 20px;
     }
 
-    &-title {
-      display: inline-block;
-      vertical-align: middle;
+    &-title {     
       @include fz(24);        
       font-weight: 600;
       line-height: 133.333%;
@@ -2687,6 +2682,7 @@
       line-height: 140%;
       margin-right: 30px;
       max-width: 50px;
+      flex: 0 0 50px;
     }
 
     &-info {

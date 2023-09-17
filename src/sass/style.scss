@@ -60,6 +60,15 @@ article {
   @include ls(0.36);
 	line-height: 155.556%;
   color: $gray_dark;
+
+  img {
+    margin-top: 32px;
+    margin-bottom: 8px;
+  }
+
+  video {   
+    width: 100%;
+  }
 }
 @import "ui";
 

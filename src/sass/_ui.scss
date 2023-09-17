@@ -168,7 +168,7 @@ h4, .h4, .ui-h4 {
 	text-transform: uppercase;	
 	font-weight: 600;
 	line-height: 133.333%;
-	@include ls(0.72);
+	@include ls(0.69);
 	padding-top: 34px;
 	padding-bottom: 14px;
 }
@@ -525,11 +525,13 @@ b, strong {
 			font-weight: 500;      
 			@include ls(0.72);         
 			display: block;
-			width: 62px;
-			height: 62px;     
-			padding: 20px;
+			min-width: 62px;
+			height: 62px;
+			line-height: 62px;		
+			padding-left: 6px;
+			padding-right: 6px;
 			border-radius: 50%;
-			transition: all 0.5s;
+			transition: color 0.5s, background-color 0.5s;
 			&:hover {
 				background-color: $primary;
 				color: #FFF;
