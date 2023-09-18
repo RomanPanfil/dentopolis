@@ -610,16 +610,17 @@
 
 .section-prices {
   padding-top: 110px;
-}
-.prices {  
+
   .row {
     margin-left: -40px;
     margin-right: -40px;
   }
+
   [class*=col-]  {
     padding-left: 40px;
     padding-right: 40px;
   }
+
   .h2 {
     text-align: center;
     margin-bottom: 50px;
@@ -757,12 +758,12 @@
   }  
 
   &-item {
-    height: calc(100% - 32px);
+    height: calc(100% - 60px);
     background-color: #FFF;
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-    margin-bottom: 32px;
+    margin-bottom: 60px;
 
     &-row {
       @include fz(20);
@@ -914,8 +915,8 @@
     margin-bottom: 80px;
 
     &-row {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: 17px;
+      padding-bottom: 17px;
     }
 
     &-name {
@@ -1316,7 +1317,7 @@
 
 // implants
 .section-implants {
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 .implants {
   &-title {
@@ -1718,6 +1719,10 @@
 }
 
 // main services section
+.section-main-services {
+  padding-bottom: 80px;
+}
+
 .services {
   &-title {
     text-align: center;
@@ -2179,7 +2184,10 @@
   }
 
   &-title {
-    &.small {       
+    &.small {
+      @include fz(24);     
+      font-weight: 600;
+      line-height: 133.333%;
       max-width: 760px;
       margin-left: auto;
       margin-right: auto;
@@ -2198,10 +2206,10 @@
     transition: background-color 0.5s;
     margin-bottom: 32px;
     height: calc(100% - 32px);
-
     &__slide {
       margin-bottom: 0;
-    }
+      height: 100%;
+    }   
 
     &:hover {
       background-color: $bgc;
@@ -2394,7 +2402,7 @@
       line-height: 155.556%;
       @include ls(0.36);
       &:not(:last-child) {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
       }
     }
   }
@@ -2494,7 +2502,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 20px;
+    padding: 15px 20px;
     cursor: pointer;
     border-bottom: 2px solid $primary;
     transition: background-color 0.5s, color 0.5s;    
@@ -2562,7 +2570,7 @@
 
   &-item {
     padding-top: 16px;
-    padding-bottom: 11px;
+    padding-bottom: 14px;
     &:last-child {
       border-bottom: 2px solid #319DAC;
     }
@@ -2716,6 +2724,12 @@
     font-weight: 600;
     line-height: 133.333%;
     margin-bottom: 60px;
+  }
+
+  &-slide-item {
+    img {
+      display: block;
+    }
   }
 
   .slider-four .slider-arrows {
@@ -2929,19 +2943,23 @@
         height: 100%;        
         width: 35%;        
         flex: 0 0 35%;
+        border-radius: 12px;      
+        box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
       }
 
       .contacts-links {
-        padding-left: 126px;
-        padding-right: 126px;
-        height: 100%;
-        width: 100%;   
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        height: 100%;        
         flex-direction: column;
         justify-content: center;       
         gap: 28px;
         margin-bottom: 0;
-        border-radius: 12px;      
-        box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);        
+        &-wrapper {
+          max-width: 308px;
+        }              
       }
 
       .contacts-links-item:not(:last-child) {

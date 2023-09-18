@@ -405,11 +405,11 @@ article {
   line-height: 155.556%;
   color: #343544;
 }
-article img {
+article > img {
   margin-top: 32px;
   margin-bottom: 8px;
 }
-article video {
+article > video {
   width: 100%;
 }
 
@@ -2854,16 +2854,15 @@ b, strong {
 .section-prices {
   padding-top: 110px;
 }
-
-.prices .row {
+.section-prices .row {
   margin-left: -40px;
   margin-right: -40px;
 }
-.prices [class*=col-] {
+.section-prices [class*=col-] {
   padding-left: 40px;
   padding-right: 40px;
 }
-.prices .h2 {
+.section-prices .h2 {
   text-align: center;
   margin-bottom: 50px;
 }
@@ -2991,13 +2990,13 @@ b, strong {
   margin-bottom: 28px;
 }
 .popular-item {
-  height: calc(100% - 32px);
+  height: calc(100% - 60px);
   background-color: #FFF;
   border-radius: 12px;
   padding: 40px;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-  margin-bottom: 32px;
+  margin-bottom: 60px;
 }
 .popular-item-row {
   font-size: 20px;
@@ -3163,8 +3162,8 @@ b, strong {
   margin-bottom: 80px;
 }
 .service-acide-wrapper .service-price-row {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 .service-acide-wrapper .service-price-name {
   font-size: 18px;
@@ -3507,7 +3506,7 @@ b, strong {
 }
 
 .section-implants {
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
 .implants-title {
@@ -3890,6 +3889,10 @@ b, strong {
   font-weight: 500;
   line-height: 121.111%;
   letter-spacing: 0.03375rem;
+}
+
+.section-main-services {
+  padding-bottom: 80px;
 }
 
 .services-title {
@@ -4330,6 +4333,10 @@ b, strong {
   margin-right: 40px;
 }
 .doctors-title.small {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 133.333%;
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
@@ -4351,6 +4358,7 @@ b, strong {
 }
 .doctor-card__slide {
   margin-bottom: 0;
+  height: 100%;
 }
 .doctor-card:hover {
   background-color: #CDF3F9;
@@ -4569,7 +4577,7 @@ b, strong {
   letter-spacing: 0.0225rem;
 }
 .requisites-text p:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .requisites-files {
   width: 35%;
@@ -4671,7 +4679,7 @@ b, strong {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 16px 20px;
+  padding: 15px 20px;
   cursor: pointer;
   border-bottom: 2px solid #319DAC;
   -webkit-transition: background-color 0.5s, color 0.5s;
@@ -4739,7 +4747,7 @@ b, strong {
 }
 .accordion-item {
   padding-top: 16px;
-  padding-bottom: 11px;
+  padding-bottom: 14px;
 }
 .accordion-item:last-child {
   border-bottom: 2px solid #319DAC;
@@ -4900,6 +4908,9 @@ b, strong {
   font-weight: 600;
   line-height: 133.333%;
   margin-bottom: 60px;
+}
+.diploms-slide-item img {
+  display: block;
 }
 .diploms .slider-four .slider-arrows {
   margin-top: 33px;
@@ -5110,12 +5121,16 @@ b, strong {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 35%;
           flex: 0 0 35%;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
 .vacancies-contacts-wrapper .contacts-links {
-  padding-left: 126px;
-  padding-right: 126px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
   height: 100%;
-  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -5125,9 +5140,9 @@ b, strong {
           justify-content: center;
   gap: 28px;
   margin-bottom: 0;
-  border-radius: 12px;
-  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+}
+.vacancies-contacts-wrapper .contacts-links-wrapper {
+  max-width: 308px;
 }
 .vacancies-contacts-wrapper .contacts-links-item:not(:last-child) {
   margin-bottom: 28px;
