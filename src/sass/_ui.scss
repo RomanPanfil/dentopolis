@@ -331,6 +331,14 @@ b, strong {
 	text-transform: uppercase;
 	user-select: none;
 
+	@media (max-width: 1680px) {
+		height: 56px;
+		line-height: 56px;
+		@include fz(15);
+		padding-left: 26px;
+		padding-right: 26px;
+	}
+
 	svg {
 		margin-left: 12px;		
 		width: 14px;

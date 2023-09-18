@@ -797,6 +797,16 @@ b, strong {
       -ms-user-select: none;
           user-select: none;
 }
+@media (max-width: 1680px) {
+  .ui-btn {
+    height: 56px;
+    line-height: 56px;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
 .ui-btn svg {
   margin-left: 12px;
   width: 14px;
