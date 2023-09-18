@@ -2010,7 +2010,10 @@
     background: #FFF;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15); 
+    box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+    img {
+      user-select: none;
+    }
 
     &-head {
       display: flex;
@@ -2090,7 +2093,12 @@
       }
     }
   }
-
+  &-yandex {
+    width: auto;
+    height: 942px;
+    overflow: hidden;
+    position: relative;
+  }
 }
 
 // feedback form
@@ -3083,6 +3091,12 @@
   .row {
     flex-wrap: wrap;
     row-gap: 32px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  [class*=col-] {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .feedback-form {
     .ui-field {
@@ -3091,8 +3105,10 @@
   }
   .agree {
     &-wrapper {
+      height: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
       gap: 17px;
     }
     max-width: 45%;
@@ -3262,23 +3278,35 @@
 
 .reviews-slider__vertical {
   height: 945px;
-  // padding-bottom: 76px;
+  padding-bottom: 102px;
   .swiper-slide {
     height: auto;
   }
 }
 
-.vertical-arrows {
-  transform: rotate(90deg) translateX(-50%);
+.vertical-arrows { 
   display: inline-block;
   position: absolute;
   left: 50%;
   bottom: 0;
   z-index: 1;
-  &-prev {
-    cursor: pointer;   
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 32px;  
+	user-select: none;
+
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &.swiper-button-disabled {
+      path {
+        stroke: #D9D9D9;
+      }
+    }
   }
-  &-next {
-    cursor: pointer;   
-  }
+  &-prev {   
+    margin-right: 10px; 
+  }  
 }

@@ -486,8 +486,8 @@ b, strong {
 
 	.ui-texarea {
 		display: block;	
-		border-radius: 30px;
-		height: 185px;
+		border-radius: 30px;	
+		height: 97px;
 		color: $gray_dark;
 		@include fz(18);      		
 		font-weight: 400;
@@ -501,6 +501,9 @@ b, strong {
 		resize: none;
 		&::placeholder {
 			color: $gray_dark;
+		}
+		&__aside {
+			height: 185px;
 		}
 	}
 }

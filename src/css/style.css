@@ -953,7 +953,7 @@ b, strong {
 .ui-field .ui-texarea {
   display: block;
   border-radius: 30px;
-  height: 185px;
+  height: 97px;
   color: #343544;
   font-size: 18px;
   font-size: 1.125rem;
@@ -981,6 +981,9 @@ b, strong {
 }
 .ui-field .ui-texarea::placeholder {
   color: #343544;
+}
+.ui-field .ui-texarea__aside {
+  height: 185px;
 }
 
 .pagination {
@@ -4176,6 +4179,12 @@ b, strong {
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
+.reviews-card img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .reviews-card-head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4240,6 +4249,12 @@ b, strong {
 }
 .reviews-card-main p {
   margin: 0;
+}
+.reviews-yandex {
+  width: auto;
+  height: 942px;
+  overflow: hidden;
+  position: relative;
 }
 
 .feedback {
@@ -5263,6 +5278,12 @@ b, strong {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 32px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.reviews-send [class*=col-] {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .reviews-send .feedback-form .ui-field {
   width: 100%;
@@ -5275,12 +5296,16 @@ b, strong {
   gap: 12px;
 }
 .reviews-send .agree-wrapper {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 17px;
 }
 .reviews-send .agree .jq-checkbox {
@@ -5458,25 +5483,36 @@ b, strong {
 
 .reviews-slider__vertical {
   height: 945px;
+  padding-bottom: 102px;
 }
 .reviews-slider__vertical .swiper-slide {
   height: auto;
 }
 
 .vertical-arrows {
-  -webkit-transform: rotate(90deg) translateX(-50%);
-      -ms-transform: rotate(90deg) translateX(-50%);
-          transform: rotate(90deg) translateX(-50%);
   display: inline-block;
   position: absolute;
   left: 50%;
   bottom: 0;
   z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 32px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.vertical-arrows-item {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.vertical-arrows-item.swiper-button-disabled path {
+  stroke: #D9D9D9;
 }
 .vertical-arrows-prev {
-  cursor: pointer;
-}
-.vertical-arrows-next {
-  cursor: pointer;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */

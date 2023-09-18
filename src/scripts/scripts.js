@@ -254,7 +254,7 @@ const FARBA = {
     slidesPerView: 'auto',
     freeMode: 'true',
     spaceBetween: 20,
-    mousewheel: true,   
+    // mousewheel: true,   
     navigation: {
       nextEl: '.reviews-slider__vertical .vertical-arrows-next',
       prevEl: '.reviews-slider__vertical .vertical-arrows-prev'
