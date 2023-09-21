@@ -172,14 +172,32 @@ const FARBA = {
 // reviews slider
 (function() {
   const sliderFour = new Swiper('.reviews-slider', {  
-    loop: false,    
-    slidesPerView: 3,
+    loop: false,   
+    slidesPerView: 1.4,
     slidesPerGroup: 1,
-    spaceBetween: 32,  
+    spaceBetween: 12,     
     navigation: {
       nextEl: '.reviews-slider .slider-next',
       prevEl: '.reviews-slider .slider-prev',
-    },
+    },    
+    breakpoints: {
+      599: {
+        spaceBetween: 20,
+        slidesPerView: 1.4,
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 32,        
+      },
+      1368: {
+        slidesPerView: 3,
+        spaceBetween: 32,        
+      }
+    }
   });
 })();
 
@@ -197,17 +215,34 @@ const FARBA = {
   });
 })();
 
-// description slider
+// gallery slider
 (function() {
   const sliderFour = new Swiper('.gallery-slider', {  
     loop: false,    
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 32,  
+    slidesPerView: 1.4,
+    slidesPerGroup: 1,
+    spaceBetween: 12,
     navigation: {
       nextEl: '.gallery-slider .slider-next',
       prevEl: '.gallery-slider .slider-prev',
     },
+    breakpoints: {
+      599: {        
+        spaceBetween: 20,
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      1366: {
+        slidesPerView: 3,
+        spaceBetween: 32,   
+      }
+    }
   });
 })();
 
@@ -547,3 +582,84 @@ $(document).on("click", ".mfp-link", function () {
   });
   return false;
 });
+
+// бургер-меню
+(function() {
+  if(!document.querySelector('.header-top-burger') || !document.querySelector('.mobile-nav')) return
+
+  const menuBtn = document.querySelector('.header-top-burger');
+  const mobileMenu = document.querySelector('.mobile-nav');
+
+  menuBtn.addEventListener('click', openMenu);
+
+  function openMenu() {
+    mobileMenu.classList.toggle('active');
+    document.querySelector('.header-top-burger span').classList.toggle('active');
+
+    // добавим управление overflow для body
+    const isOpen = mobileMenu.classList.contains('active');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+})();
+
+// мобильное меню навигации
+(function() {
+  const navItem = document.querySelectorAll('.mobile-nav ul a');
+
+  navItem.forEach(item => {    
+    item.addEventListener('click', openSubMenu)
+  });
+
+  function openSubMenu(ev) {
+    const parentLI = ev.target.closest('li');   
+    
+    if (parentLI) {
+      parentLI.classList.toggle('opened');     
+    }
+  }
+})();
+
+
+(function() {
+  document.querySelector('.on-top').addEventListener('click', () => {    
+    document.querySelector('.main').scrollIntoView({
+      behavior: "smooth"
+    });    
+  }) 
+})();
+
+
+(function() {
+  const sections = document.querySelectorAll('.section-feedback__padding');
+
+  const removeFeedbackClass = () => {
+    sections.forEach(section => {
+      section.classList.remove('feedback');
+    });
+  }
+  
+  const addFeedbackClass = () => {
+    sections.forEach(section => {
+      section.classList.add('feedback');
+    });
+  }
+  
+  const mediaQuery = window.matchMedia('(max-width: 767px)');
+  
+  // Проверка при загрузке страницы
+  if (mediaQuery.matches) {
+    removeFeedbackClass();
+  } else {
+    addFeedbackClass(); 
+  }
+  
+  // Проверка при ресайзе окна  
+  mediaQuery.addEventListener('change', e => {
+    if (e.matches) {
+      removeFeedbackClass();
+    } else {
+      addFeedbackClass(); 
+    }
+  });
+})();

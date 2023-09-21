@@ -33,25 +33,34 @@
   }
 
   @media (max-width: 992px) {
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   @media (max-width: 599px) {
     position: unset;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (max-width: 420px) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 
 .no-padding {
   padding: 0 !important;
+
+  &__mobile {
+    @media (max-width: 768px) {
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden;
+    }
+  }
 }
+
 
 .flex,
 %flex {
@@ -210,7 +219,27 @@
 	-ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -$col_gutter;
-  margin-right: -$col_gutter; 
+  margin-right: -$col_gutter;
+
+  &__nowrap {    
+    @media (max-width: 768px) {
+      width: calc(100% + 30px);
+      flex-wrap: nowrap;
+      overflow: auto;
+      -ms-overflow-style: none;  
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {    
+        display: none;
+      }
+    }
+    @media (max-width: 599px) {
+      width: calc(100% + 20px);      
+    }
+    @media (max-width: 420px) {
+      width: calc(100% + 16px);      
+    }
+  }
 
   &-no-margin {
     margin-left: 0;
@@ -219,6 +248,10 @@
   @media (max-width: 1366px) {
     margin-left: -10px;
     margin-right: -10px;
+  }
+  @media (max-width: 599px) {
+    margin-left: -6px;
+    margin-right: -6px;
   }  
 }
 [class*="col-"] {
@@ -229,6 +262,15 @@
    padding-left: 10px;
    padding-right: 10px;
   }
+  @media (max-width: 599px) {
+    padding-left: 6px;
+    padding-right: 6px;
+   }
+}
+
+.col-us-9_10 {
+  flex: 0 0 72%;
+  max-width: 72%;
 }
 // .inner, .container {
 //   max-width: $inner+px;
@@ -256,12 +298,19 @@ $reverseBreakpoints: reverse($breakpoints);
       }
       .col-#{$name}-offset-#{$i} {
         margin-left: (100% / 12 * $i);
-      }
+      }     
     }
     .col-#{$name}-20 {
       -ms-flex: 0 0 20%;
       flex: 0 0 20%;
       max-width: 20%;
     }
+  }
+  @media (max-width: #{$screen - 1}px) {
+    @for $i from 1 through 12 {      
+      .col-#{$name}-order-#{$i} {
+        @include order($i)
+      }
+    }    
   }
 }

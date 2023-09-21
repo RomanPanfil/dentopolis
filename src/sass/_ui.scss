@@ -225,6 +225,21 @@ b, strong {
 	padding-top: 80px;
 	padding-bottom: 80px;
 
+	@media (max-width: 1366px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	@media (max-width: 1024px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	@media (max-width: 599px) {
+		padding-top: 37px;
+		padding-bottom: 48px;
+	}
+
 	&-title {
 		text-align: center;
 		margin-bottom: 60px;
@@ -233,6 +248,23 @@ b, strong {
 		text-transform: uppercase;
 		font-weight: 600;
 		letter-spacing: 0.96px;
+
+		@media (max-width: 1366px) {
+			@include fz(30);			
+			margin-bottom: 40px;	
+		}
+
+		@media (max-width: 1024px) {
+			@include fz(28);			
+			margin-bottom: 30px;	
+		}
+
+		@media (max-width: 599px) {
+			@include fz(22);
+			@include ls(0.66);	
+			line-height: 171.364%;
+			margin-bottom: 24px;	
+		}
 	}
 }
 
@@ -255,21 +287,21 @@ b, strong {
 	background: $bgc;
 	color: #FFF;	
 }
-@media (min-width: 992px) {
-	::-webkit-scrollbar {
-		width: 4px;
-		height: 4px;
-		background-color: #FFF;
-	}
-	::-webkit-scrollbar-thumb {
-		width: 4px;
-		height: 4px;
-		background-color: $primary;
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: lighten($bgc, 8%);
-	}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+	background-color: #FFF;
 }
+::-webkit-scrollbar-thumb {
+	width: 4px;
+	height: 4px;
+	background-color: $primary;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: lighten($bgc, 8%);
+}
+
 
 .bg-blue {
 	background-color: $bgc;
@@ -285,6 +317,16 @@ b, strong {
 	color: $primary;	
 	width: max-content;
 	transition: color 0.5s;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
+	@media (max-width: 599px) {
+		@include fz(14);
+		@include ls(0.56);		
+		gap: 2px;
+	}
+
 	&:hover {
 		color: $hover_btn;		
 		svg {			
@@ -293,14 +335,17 @@ b, strong {
 			}				
 		}
 	}
-	svg {		
+	svg {
+		width: 14px;
+		height: 14px;
 		margin-right: 4px;
+		
 		path {
 			transition: stroke 0.5s;
 		}
 	}	
 	&.right {
-		display: block;
+		// display: block;
 		margin-left: auto;
 	}
 }
@@ -338,6 +383,13 @@ b, strong {
 		padding-left: 26px;
 		padding-right: 26px;
 	}
+	@media (max-width: 768px) {
+		height: 47px;
+		line-height: 47px;
+		@include fz(14);
+		padding-left: 26px;
+		padding-right: 26px;
+	}
 
 	svg {
 		margin-left: 12px;		
@@ -356,7 +408,21 @@ b, strong {
 		line-height: 41px;
 		padding-left: 20px;
 		padding-right: 20px;
-		@include fz(16);	
+		@include fz(16);
+		@media (max-width: 1680px) {
+			height: 38px;
+			line-height: 38px;
+			padding-left: 18px;
+			padding-right: 18px;
+			@include fz(14);
+		}
+		@media (max-width: 1366px) {
+			height: 34px;
+			line-height: 34px;
+			padding-left: 14px;
+			padding-right: 14px;
+			@include fz(12);
+		}
 	}
 
 
@@ -399,7 +465,19 @@ b, strong {
 		background: #FFF;
 		color: $gray_dark;
 		letter-spacing: 0.6px;
+		box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 		// transition: background 0.5s, color 0.5s;	
+
+		@media (max-width: 599px) {
+			height: 39px;
+			line-height: 39px;
+			@include fz(13);
+			@include ls(0.52);
+			font-weight: 500;
+			padding-left: 22px;
+			padding-right: 22px;
+			box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);			
+		}
 
 		&.active {
 			background: $pink_btn;
@@ -410,7 +488,7 @@ b, strong {
 			background: $pink_btn;
 			color: #FFF
 		}
-	}
+	}	
 
 	&:hover {		
 		background: $footer;
@@ -421,6 +499,23 @@ b, strong {
 	
 }
 
+.ui-btn-circle {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	border: none;
+	background: $pink_btn;
+	position: relative;
+	cursor: pointer;
+	svg {
+		width: 22px;
+		height: 22px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
 
 
 
@@ -455,29 +550,42 @@ b, strong {
 		color: $gray_dark;
 		@include fz(18);      		
 		font-weight: 400;
-		letter-spacing: 0.36px;
+		@include ls(0.36);		
 		background-color: $bgc;	
-		width: 100%;		
-		outline: none;		
+		width: 100%;			
 		border: none;
 		padding: 17px 32px;
-		outline: none;		
-      &.error {
-        margin-bottom: 0px;
-      }
+		outline: none;
 
-	  &.small {
-		height: 40px;
-	  }
+		@media (max-width: 768px) {		
+			height: 52px;			
+			@include fz(16);						
+			padding: 14px 32px;
+			
+		}
 
-     
+		@media (max-width: 599px) {			
+			height: 44px;			
+			@include fz(14);
+			@include ls(0.14);				
+			padding: 12px 32px;
+			
+		}
+		&.error {
+			margin-bottom: 0px;
+		}
 
-      &::placeholder {
-        color: $gray_dark;
-      }
-      &.error {
-        border-color: $error;
-      }	 
+		&.small {
+			height: 40px;
+		}		
+
+		&::placeholder {
+			color: $gray_dark;
+		}
+
+		&.error {
+			border-color: $error;
+		}
 	}
 	
 	input:invalid + span:before {
@@ -521,7 +629,11 @@ b, strong {
 	text-align: center;
 
 	&-list {
-		display: inline-block;
+		// display: inline-block;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		width: max-content;
 		background-color: #FFF;        
 		border-radius: 35px;        
 		box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
@@ -573,4 +685,17 @@ b, strong {
 		background-color: $primary;
 	}
 	background-color: $primary;
+}
+
+.hidden-mobile {
+	@media (max-width: 599px) {
+		display: none;
+	}
+}
+
+.hidden-desktop {
+	display: none;
+	@media (max-width: 599px) {
+		display: inline-block;
+	}
 }
