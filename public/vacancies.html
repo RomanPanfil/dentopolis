@@ -595,6 +595,45 @@
           <div class="vacancies-contacts-wrapper">
             <div class="contacts-map-wrapper">
               <div class="contacts-map" id="map"></div>
+              <script>
+                function initMap() {  
+                };
+
+                function createMap() {
+                  if(!document.querySelector('#map')) return  
+
+                  // Координаты центра карты 
+                  const center = {lat: 53.94979397878479, lng: 27.694455758422095};
+                  // Координаты маркера
+                  const markerPosition = {lat: 53.949787735905474, lng: 27.69446649937378};
+
+                  // Опции карты
+                  const options = {
+                    center: center,
+                    zoom: 16,
+                    zoomControl: false,
+                    disableDefaultUI: true,
+                    draggable: false,
+                  };
+
+                  // Создаем карту в контейнере
+                  const map = new google.maps.Map(document.getElementById("map"), options);
+
+                  // Создание маркера
+                  const marker = new google.maps.Marker({
+                    optimized: false,
+                    position: markerPosition,
+                    title: 'Стоматология "Дентополис"',
+                    map: map,    
+                  });
+                }
+
+                window.onload = function() {
+                  if(document.getElementById('map')) {
+                    createMap();
+                  }
+                }
+              </script>
             </div> 
             <div class="contacts-links-col bg-blue">
               <div class="contacts-links">                      
@@ -1366,7 +1405,7 @@
 
   <script src="https://unpkg.com/imask"></script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw-OnFKGZhozQ5RblsdK7ogE5PLJtS5pI&callback=initMap" async></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw-OnFKGZhozQ5RblsdK7ogE5PLJtS5pI" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
     integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>

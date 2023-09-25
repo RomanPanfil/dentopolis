@@ -145,13 +145,31 @@ const FARBA = {
 (function() {
   const sliderFour = new Swiper('.doctors-slider', {  
     loop: false,    
-    slidesPerView: 4,
+    slidesPerView: 1.4,
     slidesPerGroup: 1,
-    spaceBetween: 32,  
+    spaceBetween: 12,  
     navigation: {
       nextEl: '.doctors-slider .slider-next',
       prevEl: '.doctors-slider .slider-prev',
     },
+    breakpoints: {     
+      599: {
+        spaceBetween: 20,
+        slidesPerView: 1.4,     
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1140: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      1680: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      }
+    }
   });
 })();
 
@@ -227,7 +245,7 @@ const FARBA = {
       prevEl: '.gallery-slider .slider-prev',
     },
     breakpoints: {
-      599: {        
+      599: {
         spaceBetween: 20,
       },
       769: {
@@ -240,7 +258,7 @@ const FARBA = {
       },
       1366: {
         slidesPerView: 3,
-        spaceBetween: 32,   
+        spaceBetween: 32,
       }
     }
   });
@@ -288,7 +306,7 @@ const FARBA = {
     direction: 'vertical',
     slidesPerView: 'auto',
     freeMode: 'true',
-    spaceBetween: 20,
+    spaceBetween: 32,
     // mousewheel: true,   
     navigation: {
       nextEl: '.reviews-slider__vertical .vertical-arrows-next',
@@ -298,37 +316,37 @@ const FARBA = {
 })();
 
 // валидация формы
-$(document).ready(function () {
+// $(document).ready(function () {
   
 
-  $(".feedback-form").validate({
-    submitHandler: function(form, event) {    
-      event.preventDefault()
-      form.reset()       
-    },
-    rules: {
-      name: {
-        required: true,
-      },
-      email: {
-        required: true,
-      },
-      number: {
-        required: true,     
-        number: false 
-      },
-      message: {
-        required: true,
-      }    
-    },
-    messages: {
-      name: "Пожалуйста, заполните это поле",
-      email: "Пожалуйста, заполните это поле",
-      number: "Пожалуйста, заполните это поле",
-      message: "Пожалуйста, заполните это поле",    
-    }
-  });  
-});
+//   $(".feedback-form").validate({
+//     submitHandler: function(form, event) {    
+//       event.preventDefault()
+//       form.reset()       
+//     },
+//     rules: {
+//       name: {
+//         required: true,
+//       },
+//       email: {
+//         required: true,
+//       },
+//       number: {
+//         required: true,     
+//         number: false 
+//       },
+//       message: {
+//         required: true,
+//       }    
+//     },
+//     messages: {
+//       name: "Пожалуйста, заполните это поле",
+//       email: "Пожалуйста, заполните это поле",
+//       number: "Пожалуйста, заполните это поле",
+//       message: "Пожалуйста, заполните это поле",    
+//     }
+//   });  
+// });
 
 // маска номера телефона
 // $(document).ready(function () {
@@ -512,46 +530,6 @@ initMask();
 
   $('.ui-input.checkbox').styler();
 })();
-
-
-// карта
-function initMap() {  
-};
-
-function createMap() {
-  if(!document.querySelector('#map')) return  
-
-  // Координаты центра карты 
-  const center = {lat: 53.94979397878479, lng: 27.694455758422095};
-  // Координаты маркера
-  const markerPosition = {lat: 53.949787735905474, lng: 27.69446649937378};
-
-  // Опции карты
-  const options = {
-    center: center,
-    zoom: 16,
-    zoomControl: false,
-    disableDefaultUI: true,
-    draggable: false,
-  };
-
-  // Создаем карту в контейнере
-  const map = new google.maps.Map(document.getElementById("map"), options);
-
-  // Создание маркера
-  const marker = new google.maps.Marker({
-    optimized: false,
-    position: markerPosition,
-    title: 'Стоматология "Дентополис"',
-    map: map,    
-  });
-}
-
-window.onload = function() {
-  if(document.getElementById('map')) {
-    createMap();
-  }
-}
 
 // pop-up
 $(document).on("click", ".mfp-link", function () {

@@ -28,6 +28,9 @@
 
   <!-- <link rel=" shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+
 
 </head>
 
@@ -457,7 +460,7 @@
             Цены стоматологических услуг
           </div>
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-m-8">
               <div class="accordion">
                 <div class="accordion-block">
                   <div class="accordion-head">
@@ -818,7 +821,7 @@
 
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-m-4">
               <div class="acide acide__price">
                 <div class="swiper actions-slider slider-four blue-light">
                   <div class="swiper-wrapper">
@@ -846,13 +849,13 @@
                       <div class="actions-wrapper">
                         <img src="./images/action-card-1.jpg" alt="action" loading="lazy">
                         <div class="actions-content">
-                          <div class="title">
+                          <div class="actions-content-title">
                             Мы стремимся не только приноситьвам пользу, но и радовать.
                           </div>
-                          <div class="text">
-                            Поэтому при имплантации All-on- 4 / 6 / 8 дарим вам All-on- 4 / 6 / 8
+                          <div class="actions-content-text">
+                            Поэтому при имплантации All-on- 4 / 6 / 8 дарим вам All-on- 4 / 6 / 8 дарим вам
                           </div>
-                          <a href="#" class="ui-btn ui-btn-transparent more">
+                          <a href="#" class="ui-more right actions-content-more">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                               <path d="M7 1L7 13" stroke="#319DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               <path d="M1 7L13 7" stroke="#319DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -895,9 +898,115 @@
                     </button>
                   </form>
                 </div>
+
+                <script>        
+                  $(document).ready(function () {
+                    $(".feedback-form").validate({
+                      submitHandler: function(form, event) {    
+                        event.preventDefault()
+                        form.reset()       
+                      },
+                      rules: {
+                        name: {
+                          required: true,
+                        },             
+                        number: {
+                          required: true,     
+                          number: false 
+                        },               
+                      },
+                      messages: {
+                        name: "Пожалуйста, заполните это поле",             
+                        number: "Пожалуйста, заполните это поле",              
+                      }
+                    });  
+                  });
+                </script>  
+
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <div class="make-appintment ui-centered bg-blue-light tablet-visible">
+        <div class="container">
+          <a href="#" class="ui-btn">
+            Записаться на прием
+          </a>
+        </div>        
+      </div>      
+
+      <section class="section section-actions bg-blue-light section section-actions__tablet">
+        <div class="container">
+          <div class="section-title">
+            Акции
+          </div>
+          <div class="actions-cards">
+            <div class="row row__nowrap">
+              <div class="col-lg-6 col-sm-12 col-us-9_10">
+                <div class="actions-item">
+                  <div class="actions-item-image">
+                    <!-- <img src="./images/action-1.jpg" alt="present" loading="lazy"> -->
+                    <picture>
+                      <source srcset="./images/action-1.jpg" media="(min-width: 769px)">
+                      <img src="./images/action-1-mobile.jpg" alt="present" loading="lazy" />
+                    </picture>
+                  </div>
+                  <div class="actions-item-info">                  
+                    <p class="actions-item-title">
+                      Мы стремимся не только приноситьвам пользу, но и радовать.
+                    </p>
+                    <p class="actions-item-text">
+                      Поэтому при имплантации All-on- 4 / 6 / 8 ирригатор в подарок. Мы стремимся не только приноситьвам пользу, но и радовать.
+                    </p>
+                    <a href="#" class="ui-more right">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M7 1L7 13" stroke="#319DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 7L13 7" stroke="#319DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                         
+                      Подробнее
+                    </a>
+                  </div>                
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-12 col-us-9_10">
+                <div class="actions-item">
+                  <div class="actions-item-image">
+                    <!-- <img src="./images/action-2.jpg" alt="present" loading="lazy"> -->
+                    <picture>
+                      <source srcset="./images/action-2.jpg" media="(min-width: 769px)">
+                      <img src="./images/action-1-mobile.jpg" alt="present" loading="lazy" />
+                    </picture>
+                  </div>
+                  <div class="actions-item-info">                  
+                    <p class="actions-item-title">
+                      Мы стремимся не только приноситьвам пользу, но и радовать. Поэтому при имплантации All-on- 4 / 6 / 8 дарим вам
+                    </p>
+                    <p class="actions-item-text">
+                      Поэтому при имплантации All-on- 4 / 6 / 8 дарим  
+                    </p>
+                    <a href="#" class="ui-more right">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M7 1L7 13" stroke="#319DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 7L13 7" stroke="#319DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>                                         
+                      Подробнее
+                    </a>
+                  </div>     
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui-centered">
+            <a href="#" class="ui-btn ui-btn-green">
+              Все Акции
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7 1L7 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 7L13 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>          
         </div>
       </section>
 
@@ -947,8 +1056,8 @@
           <div class="installment-title">
             «Дентополис» предлагает стоматологические услуги по картам рассрочек
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-4">
+          <div class="row row__nowrap">
+            <div class="col-lg-4 col-sm-4 col-us-9_10">
               <div class="installment-item">
                 <div class="installment-item-image">
                   <img src="./images/card-1.jpg" alt="cartafun" loading="lazy">
@@ -967,7 +1076,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-sm-4 col-us-9_10">
               <div class="installment-item">
                 <div class="installment-item-image">
                   <img src="./images/card-2.jpg" alt="shopping-card" loading="lazy">
@@ -983,7 +1092,7 @@
                 </div>                  
               </div>
             </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-sm-4 col-us-9_10">
               <div class="installment-item">
                 <div class="installment-item-image">
                   <img src="./images/card-3.jpg" alt="turtle-card" loading="lazy">
@@ -999,6 +1108,33 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-feedback section-feedback__tablet feedback bg-blue-light">
+        <div class="container">
+          <div class="feedback-wrapper">
+            <form class="feedback-form" id="appointment">
+              <div class="feedback-title feedback-title__desktop">
+                записаться на прием
+              </div>
+              <div class="feedback-title feedback-title__mobile">
+                запись на прием
+              </div>
+              <div class="feedback-fields">
+                <div class="ui-field">
+                  <input type="text" placeholder="Имя Фамилия" required name="name" id="name" class="ui-input name">
+                </div>
+                <div class="ui-field">
+                  <input type="text" placeholder="Телефон" required name="number" id="number" class="ui-input number">
+                </div>
+                <button class="ui-btn ui-btn-green">
+                  Записаться
+                </button>
+              </div>
+              
+            </form>
           </div>
         </div>
       </section>
@@ -1534,19 +1670,12 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-
   <script src="https://unpkg.com/imask"></script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw-OnFKGZhozQ5RblsdK7ogE5PLJtS5pI&callback=initMap" async></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw-OnFKGZhozQ5RblsdK7ogE5PLJtS5pI" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
   integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <script src="./scripts/scripts.js"></script>
 </body>
 

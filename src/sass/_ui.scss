@@ -1,5 +1,9 @@
 p {
-	margin: $paragraph_margin;	
+	margin: $paragraph_margin;
+
+	@media (max-width: 599px) {
+		margin: 0 0 10px;
+	}
 }
 ul, ol {
 	padding: 0px;
@@ -13,8 +17,13 @@ ul, ol {
 		display: flex;
 		gap: 15px;
 		margin-bottom: 14px;
-		line-height: 155.556%;
-		letter-spacing: 0.36px;
+		line-height: 155.556%;		
+		@include ls(0.36);
+
+		@media (max-width: 599px) {			
+			line-height: 142.857%;
+			@include ls(0.14);			
+		}
 		&::before {
 			content: '';
 			background-color: $primary;
@@ -31,6 +40,10 @@ ul, ol {
 		}
 		&:not(:last-child) {
 			margin-bottom: 12px;
+
+			@media (max-width: 599px) {
+				margin-bottom: 6px;
+			}
 		}
 	}
 
@@ -137,15 +150,25 @@ h2, .h2, .ui-h2 {
 	@include fz($h2);
 	line-height: 1.2;	
 	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1.35px;
+	text-transform: uppercase;	
+	@include ls(1.35);
 
-	@media (max-width: 959px) {
+	@media (max-width: 1366px) {
 		@include fz(40);
 	}
 
+	@media (max-width: 959px) {
+		@include fz(30);
+	}
+
+	@media (max-width: 768px) {
+		@include fz(26);
+	}
+
 	@media (max-width: 599px) {
-		@include fz(32);
+		@include fz(20);
+		@include ls(0.2);
+		line-height: 155%;
 	}
 }
 h3, .h3, .ui-h3 {
@@ -171,6 +194,14 @@ h4, .h4, .ui-h4 {
 	@include ls(0.69);
 	padding-top: 34px;
 	padding-bottom: 14px;
+
+	@media (max-width: 599px) {
+		@include fz(16);
+		@include ls(0.12);
+		line-height: 156.25%;
+		padding-top: 8px;
+		padding-bottom: 0;
+	}
 }
 h5, .h5 {
 	@include fz($h5);
@@ -557,7 +588,7 @@ b, strong {
 		padding: 17px 32px;
 		outline: none;
 
-		@media (max-width: 768px) {		
+		@media (max-width: 1280px) {		
 			height: 52px;			
 			@include fz(16);						
 			padding: 14px 32px;
@@ -612,7 +643,7 @@ b, strong {
 		width: 100%;		
 		outline: none;		
 		border: none;
-		padding: 17px 32px;
+		padding: 20px 32px;
 		outline: none;
 		resize: none;
 		&::placeholder {

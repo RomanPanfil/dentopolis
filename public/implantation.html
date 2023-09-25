@@ -28,6 +28,9 @@
 
   <!-- <link rel=" shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+
 
 </head>
 
@@ -479,7 +482,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-article bg-blue-light">
+      <section class="section section-article section-article__implatnation bg-blue-light">
         <div class="container">               
           <div class="service-wrapper">
             <div class="service-main-wrapper">
@@ -770,6 +773,31 @@
                     </button>
                   </form>
                 </div>
+
+                <script>        
+                  $(document).ready(function () {
+                    $("#acide-appointment").validate({
+                      submitHandler: function(form, event) {    
+                        event.preventDefault()
+                        form.reset()       
+                      },
+                      rules: {
+                        name: {
+                          required: true,
+                        },             
+                        number: {
+                          required: true,     
+                          number: false 
+                        },               
+                      },
+                      messages: {
+                        name: "Пожалуйста, заполните это поле",             
+                        number: "Пожалуйста, заполните это поле",              
+                      }
+                    });  
+                  });
+                </script>
+
               </div>
           </div>
           </div>
@@ -1129,7 +1157,32 @@
             </form>
           </div>
         </div>
-      </section>     
+      </section>
+      
+      <script>        
+        $(document).ready(function () {
+          $("#appointment").validate({
+            submitHandler: function(form, event) {    
+              event.preventDefault()
+              form.reset()       
+            },
+            rules: {
+              name: {
+                required: true,
+              },             
+              number: {
+                required: true,     
+                number: false 
+              },               
+            },
+            messages: {
+              name: "Пожалуйста, заполните это поле",             
+              number: "Пожалуйста, заполните это поле",              
+            }
+          });  
+        });
+      </script>
+
     </main>
     <!-- main screen end -->
 
@@ -1663,19 +1716,12 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-
   <script src="https://unpkg.com/imask"></script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw-OnFKGZhozQ5RblsdK7ogE5PLJtS5pI&callback=initMap" async></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw-OnFKGZhozQ5RblsdK7ogE5PLJtS5pI" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
   integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <script src="./scripts/scripts.js"></script>
 </body>
 

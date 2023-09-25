@@ -61,6 +61,11 @@ article {
 	line-height: 155.556%;
   color: $gray_dark;
 
+  @media (max-width: 599px) {
+    @include ls(0.14);
+    line-height: 142.857%;
+  }
+
   & > img {
     margin-top: 32px;
     margin-bottom: 8px;
