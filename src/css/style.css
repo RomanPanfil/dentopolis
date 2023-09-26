@@ -7572,6 +7572,16 @@ b, strong {
   padding-top: 48px;
 }
 @media (max-width: 768px) {
+  .section-feedback__padding-top {
+    padding-top: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .section-feedback__padding-bottom {
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 768px) {
   .section-feedback__padding .feedback-wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -7800,6 +7810,11 @@ b, strong {
 .section-doctors {
   padding-bottom: 50px;
 }
+@media (max-width: 599px) {
+  .section-doctors__column {
+    padding-bottom: 28px;
+  }
+}
 
 .section-all-doctors {
   padding-bottom: 75px;
@@ -7905,6 +7920,21 @@ b, strong {
     border-radius: 6px;
     -webkit-box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
             box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+  }
+}
+@media (max-width: 599px) {
+  .doctor-card__column .doctor-card-info {
+    padding-bottom: 22px;
+  }
+  .doctor-card__column .doctor-card-name {
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+  .doctor-card__column .doctor-card-speciality {
+    margin-bottom: 3px;
+  }
+  .doctor-card__column .doctor-card-category {
+    margin-bottom: 14px;
   }
 }
 .doctor-card__slide {

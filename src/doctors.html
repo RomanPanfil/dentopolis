@@ -456,7 +456,7 @@
     <main class="main">
 
       <!-- Наши врачи -->
-      <section class="section section-doctors bg-blue-light">            
+      <section class="section section-doctors section-doctors__column bg-blue-light">            
         <div class="container">
           <div class="section-title">                  
             Наши врачи                                    
@@ -465,7 +465,7 @@
             <div class="row">
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-1.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -496,7 +496,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-2.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -527,7 +527,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-3.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -558,7 +558,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-4.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -589,7 +589,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-5.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -620,7 +620,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-6.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -651,7 +651,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-7.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -682,7 +682,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-8.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -713,7 +713,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-9.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -744,7 +744,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="doctor-card">
+                <div class="doctor-card doctor-card__column">
                   <a href="javascript:void(0)" class="doctor-card-photo">
                     <img src="./images/doctor-11.jpg" alt="doctor" loading="lazy">
                   </a>
@@ -779,22 +779,26 @@
         </div>            
       </section>
 
-      <section class="section-feedback feedback">
+      <section class="section-feedback section-feedback__padding section-feedback__padding-bottom feedback bg-blue-light">
         <div class="container">
           <div class="feedback-wrapper">
             <form class="feedback-form" id="appointment">
-              <div class="feedback-title h3">
-                записаться на прием
+              <div class="feedback-title feedback-title__desktop">
+                Остались вопросы?
               </div>
-              <div class="feedback-fields">
+              <div class="feedback-title feedback-title__mobile">
+                запись на прием
+              </div>
+              <div class="feedback-fields feedback-fields__callback">
                 <div class="ui-field">
                   <input type="text" placeholder="Имя Фамилия" required name="name" id="name" class="ui-input name">
                 </div>
                 <div class="ui-field">
                   <input type="text" placeholder="Телефон" required name="number" id="number" class="ui-input number">
                 </div>
-                <button class="ui-btn ui-btn-green">
-                  Записаться
+                <button class="feedback-button ui-btn ui-btn-green">
+                  <span class="feedback-button-text feedback-button-text__desktop">Заказать звонок</span>
+                  <span class="feedback-button-text feedback-button-text__mobile">Записаться</span>
                 </button>
               </div>
               

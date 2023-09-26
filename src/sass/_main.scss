@@ -3998,6 +3998,20 @@
   }
 
   &__padding {
+    // @media (max-width: 768px) {
+    //   padding-top: 30px;
+    // }
+    &-top {
+      @media (max-width: 768px) {
+        padding-top: 48px;
+      }
+    }
+    &-bottom {
+      @media (max-width: 768px) {
+        padding-bottom: 48px;
+      }
+    }
+
     .feedback-wrapper {
       @media (max-width: 768px) {
         padding-left: 20px;
@@ -4189,7 +4203,13 @@
   }
 }
 .section-doctors {
-  padding-bottom: 50px;   
+  padding-bottom: 50px;
+
+  &__column {
+    @media (max-width: 599px) {
+      padding-bottom: 28px;
+    }
+  }
 }
 
 .section-all-doctors {
@@ -4299,6 +4319,24 @@
     @media (max-width: 599px) {
       border-radius: 6px;
       box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+    }
+
+    &__column {
+      @media (max-width: 599px) {
+        .doctor-card-info {
+          padding-bottom: 22px;
+        }
+        .doctor-card-name {
+          padding-bottom: 4px;
+          margin-bottom: 6px;
+        }
+        .doctor-card-speciality {
+          margin-bottom: 3px;
+        }
+        .doctor-card-category {
+          margin-bottom: 14px;
+        }
+      }
     }
    
     &__slide {
