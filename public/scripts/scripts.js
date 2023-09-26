@@ -147,11 +147,11 @@ const FARBA = {
     loop: false,    
     slidesPerView: 1.4,
     slidesPerGroup: 1,
-    spaceBetween: 12,  
+    spaceBetween: 12,    
     navigation: {
       nextEl: '.doctors-slider .slider-next',
       prevEl: '.doctors-slider .slider-prev',
-    },
+    },   
     breakpoints: {     
       599: {
         spaceBetween: 20,

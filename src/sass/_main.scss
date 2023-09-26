@@ -1715,6 +1715,10 @@
       height: calc(100% - 12px);
     }
 
+    @media (max-width: 320px) {
+      min-height: 126px;
+    }
+
     &-icon {
       width: 68px;
       height: 68px;   
@@ -1773,6 +1777,11 @@
         line-height: 128.571%;
         br {
           display: inline;
+        }
+      }
+      @media (max-width: 320px) {       
+        br {
+          display: none;
         }
       }
     }
@@ -3315,9 +3324,9 @@
     }
 
     @media (max-width: 768px) {
-      max-width: 100%;
+      max-width: 90vw;
       position: relative;
-    }
+    }   
   }
 
   &-title {
@@ -3530,6 +3539,14 @@
       padding: 30px;
     }
 
+    @media (max-width: 1280px) {
+      padding: 24px;
+    }
+
+    @media (max-width: 1140px) {
+      padding: 20px;
+    }
+
     @media (max-width: 599px) {
       padding: 20px 12px;
       min-height: 395px;
@@ -3563,6 +3580,12 @@
         height: 30px;
       }
 
+      @media (max-width: 1140px) {
+        width: 28px;
+        height: 28px;
+        margin-right: 14px;
+      }
+
       @media (max-width: 599px) {
         width: 24px;
         height: 24px;
@@ -3584,6 +3607,10 @@
         @include fz(22);
       }
 
+      @media (max-width: 1140px) {
+        @include fz(20);
+      }
+
       @media (max-width: 599px) {
         margin-left: 36px;
         @include fz(16);
@@ -3600,6 +3627,12 @@
         font-weight: 400;
         line-height: 156.25%;
         @include ls(0.16);
+
+        @media (max-width: 1280px) {          
+          @include fz(15);          
+          line-height: 142.857%;
+          @include ls(0.14);
+        }
 
         @media (max-width: 599px) {
           color: $gray_dark;
@@ -4138,6 +4171,16 @@
 }
 
 // doctors
+
+.doctors-slider {
+  .swiper-slide {
+    @media (max-width: 360px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+}
 .section-team {
   padding-bottom: 0;
 
@@ -4178,6 +4221,11 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 42px;
+
+    @media (max-width: 992px) {
+      gap: 24px;
+      margin-bottom: 42px;
+    }
 
     @media (max-width: 599px) {
       gap: 12px;
@@ -4253,6 +4301,11 @@
 
       @media (max-width: 768px) {
         margin-bottom: 32px;
+      }
+
+      @media (max-width: 360px) {       
+        height: auto;
+        flex-grow: 1;
       }
     }   
 
@@ -5716,6 +5769,12 @@
   overflow-y: auto;
   height: 0%;
   transition: height 0.5s;
+
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+  &::-webkit-scrollbar {    
+    display: none;
+  }
 
   nav {
     padding-top: 20px;

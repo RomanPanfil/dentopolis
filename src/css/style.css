@@ -1022,6 +1022,27 @@ b, strong {
   -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
 }
+@media (max-width: 960px) {
+  .ui-btn.ui-btn-tab {
+    height: 58px;
+    line-height: 58px;
+    font-size: 18px;
+    font-size: 1.125rem;
+    letter-spacing: 0.0325rem;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .ui-btn.ui-btn-tab {
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    font-size: 1rem;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 @media (max-width: 599px) {
   .ui-btn.ui-btn-tab {
     height: 39px;
@@ -5170,6 +5191,11 @@ b, strong {
     height: calc(100% - 12px);
   }
 }
+@media (max-width: 320px) {
+  .benefits-item {
+    min-height: 126px;
+  }
+}
 .benefits-item-icon {
   width: 68px;
   height: 68px;
@@ -5242,6 +5268,11 @@ b, strong {
   }
   .benefits-item-text br {
     display: inline;
+  }
+}
+@media (max-width: 320px) {
+  .benefits-item-text br {
+    display: none;
   }
 }
 
@@ -6860,7 +6891,7 @@ b, strong {
 }
 @media (max-width: 768px) {
   .prepage-content {
-    max-width: 100%;
+    max-width: 90vw;
     position: relative;
   }
 }
@@ -7089,6 +7120,16 @@ b, strong {
     padding: 30px;
   }
 }
+@media (max-width: 1280px) {
+  .advantages-card {
+    padding: 24px;
+  }
+}
+@media (max-width: 1140px) {
+  .advantages-card {
+    padding: 20px;
+  }
+}
 @media (max-width: 599px) {
   .advantages-card {
     padding: 20px 12px;
@@ -7125,6 +7166,13 @@ b, strong {
     height: 30px;
   }
 }
+@media (max-width: 1140px) {
+  .advantages-card-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+  }
+}
 @media (max-width: 599px) {
   .advantages-card-icon {
     width: 24px;
@@ -7149,6 +7197,12 @@ b, strong {
     font-size: 1.375rem;
   }
 }
+@media (max-width: 1140px) {
+  .advantages-card-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
 @media (max-width: 599px) {
   .advantages-card-title {
     margin-left: 36px;
@@ -7166,6 +7220,14 @@ b, strong {
   font-weight: 400;
   line-height: 156.25%;
   letter-spacing: 0.01rem;
+}
+@media (max-width: 1280px) {
+  .advantages-card-content p {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 142.857%;
+    letter-spacing: 0.00875rem;
+  }
 }
 @media (max-width: 599px) {
   .advantages-card-content p {
@@ -7709,6 +7771,19 @@ b, strong {
   }
 }
 
+@media (max-width: 360px) {
+  .doctors-slider .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+}
+
 .section-team {
   padding-bottom: 0;
 }
@@ -7752,6 +7827,12 @@ b, strong {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 42px;
+}
+@media (max-width: 992px) {
+  .doctors-tabs {
+    gap: 24px;
+    margin-bottom: 42px;
+  }
 }
 @media (max-width: 599px) {
   .doctors-tabs {
@@ -7822,6 +7903,14 @@ b, strong {
 @media (max-width: 768px) {
   .doctor-card__slide {
     margin-bottom: 32px;
+  }
+}
+@media (max-width: 360px) {
+  .doctor-card__slide {
+    height: auto;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 .doctor-card:hover {
@@ -9452,6 +9541,11 @@ b, strong {
   -webkit-transition: height 0.5s;
   -o-transition: height 0.5s;
   transition: height 0.5s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.mobile-nav::-webkit-scrollbar {
+  display: none;
 }
 .mobile-nav nav {
   padding-top: 20px;
