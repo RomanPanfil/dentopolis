@@ -454,8 +454,12 @@
 
     <!-- main screen start -->
     <main class="main">
-      <section class="section-prepage service-banner">
-        <img src="./images/implantation-bg.jpg" alt="implantation" loading="lazy">
+      <section class="section-prepage section-prepage__service service-banner">
+        <!-- <img src="./images/implantation-bg.jpg" alt="implantation" loading="lazy"> -->
+        <picture>
+          <source srcset="./images/implantation-bg.jpg" media="(min-width: 769px)">
+          <img src="./images/implantation-bg-mobile.jpg" alt="alt" loading="lazy" />
+        </picture>
         <div class="container">
           <div class="prepage-content service-banner-content">
             <div class="prepage-title">
@@ -606,13 +610,15 @@
                       </div>
                     </div>
                   </div>
-                  <a href="#" class="ui-btn ui-btn-green">
-                    Читать интервью
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 1L7 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M1 7L13 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> 
-                  </a>
+                  <div class="service-interwiev-button">
+                    <a href="#" class="ui-btn ui-btn-green">
+                      Читать интервью
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M7 1L7 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 7L13 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>                  
                 </div>
                 <h4>
                   Имплантация зубов под ключ в Минске: цены - 2023 года
@@ -803,6 +809,59 @@
           </div>
         </div>
       </section>
+
+      <section class="section-feedback section-feedback__padding feedback bg-blue">
+        <div class="container">
+          <div class="feedback-wrapper">
+            <form class="feedback-form" id="appointment">
+              <div class="feedback-title feedback-title__desktop">
+                Остались вопросы?
+              </div>
+              <div class="feedback-title feedback-title__mobile">
+                запись на прием
+              </div>
+              <div class="feedback-fields feedback-fields__callback">
+                <div class="ui-field">
+                  <input type="text" placeholder="Имя Фамилия" required name="name" id="name" class="ui-input name">
+                </div>
+                <div class="ui-field">
+                  <input type="text" placeholder="Телефон" required name="number" id="number" class="ui-input number">
+                </div>
+                <button class="feedback-button ui-btn ui-btn-green">
+                  <span class="feedback-button-text feedback-button-text__desktop">Заказать звонок</span>
+                  <span class="feedback-button-text feedback-button-text__mobile">Записаться</span>
+                </button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <script>        
+        $(document).ready(function () {
+          $("#callback").validate({
+            submitHandler: function(form, event) {    
+              event.preventDefault()
+              form.reset()       
+            },
+            rules: {
+              name: {
+                required: true,
+              },             
+              number: {
+                required: true,     
+                number: false 
+              },               
+            },
+            messages: {
+              name: "Пожалуйста, заполните это поле",             
+              number: "Пожалуйста, заполните это поле",              
+            }
+          });  
+        });
+      </script>  
+
       <section class="section section-implants bg-blue">
         <div class="container">
           <div class="implants-title">
@@ -863,10 +922,13 @@
           </div>
         </div>
       </section>
-      <section class="section bg-blue-light">
+      <section class="section section-implantation-doctors bg-blue-light">
         <div class="container">
-          <div class="doctors-title small">                
+          <div class="doctors-title doctors-title__desktop small">                
             Врачи клиники "Дентополис", которые занимаются имплантацией и протезированием на имплантатах                               
+          </div>          
+          <div class="section-title section-title__mobile">
+            Наши врачи
           </div>
           <div class="swiper doctors-slider slider-four blue-light">
             <div class="swiper-wrapper">  
@@ -1060,7 +1122,7 @@
           </div>                
           <div class="examples-wrapper margin">
             <div class="row">
-              <div class="col-xl-6 col-lg-12">
+              <div class="col-sm-6 col-xs-12">
                 <div class="example flex horizontal">
                   <div class="example-images">
                     <div class="example-before">                  
@@ -1079,21 +1141,74 @@
                         Восстановление утраченого зуба с помощью дентальной имплантации и коронки из  
                       </p>                                            
                     </div>
-                    <div class="example-executor">                                        
+                    <div class="example-executor__desktop">
                       <a href="#" class="example-executor-name">
                         Николаеня Александр Николаевич
                       </a>
                     </div>
-                    <div class="example-executor">                                       
+                    <div class="example-executor__desktop">
                       <a href="#" class="example-executor-name">
                         Крат Максим Игоревич ​
                       </a>
                     </div>
                   </div>
-                </div>                            
+                  <div class="example-executor-list">
+                    <div class="example-executor">
+                      <div class="example-executor-title">
+                        Стоматолог-ортопед       
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Николаеня Александр Николаевич
+                      </a>
+                    </div>
+                    <div class="example-executor">
+                      <div class="example-executor-title">                        
+                        Стоматолог-хирург-имплантолог                                                                    
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Крат Максим Игоревич ​
+                      </a>
+                    </div>
+                  </div>                 
+                </div>
+                
+                <div class="example example__mobile">
+                  <div class="example-images">
+                    <div class="example-before">                  
+                      <img src="./images/before.jpg" alt="before" loading="lazy">
+                    </div>
+                    <div class="example-after">                 
+                      <img src="./images/after.jpg" alt="after" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="example-text">
+                    <div class="example-description">                      
+                      Восстановление утраченого зуба с помощью дентальной имплантации и коронки из  диоксида циркония                                                   
+                    </div>                    
+                    
+                  </div>
+                  <div class="example-executors">
+                    <div class="example-executor">
+                      <div class="example-executor-title">
+                        Стоматолог-ортопед       
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Николаеня Александр Николаевич
+                      </a>
+                    </div>
+                    <div class="example-executor">
+                      <div class="example-executor-title">                        
+                        Стоматолог-хирург-имплантолог                                                                    
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Крат Максим Игоревич ​
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div class="col-xl-6 col-lg-12">
+              <div class="col-sm-6 col-xs-12">
                 <div class="example flex horizontal">
                   <div class="example-images">
                     <div class="example-before">                  
@@ -1109,18 +1224,70 @@
                         Восстановление утраченого зуба с помощью дентальной имплантации и коронки из  диоксида циркония
                       </div>                                                                                  
                     </div>
-                    <div class="example-executor">                                        
+                    <div class="example-executor__desktop">                                        
                       <a href="#" class="example-executor-name">
                         Николаеня Александр Николаевич
                       </a>
                     </div>
-                    <div class="example-executor">                                       
+                    <div class="example-executor__desktop">                                       
                       <a href="#" class="example-executor-name">
                         Крат Максим Игоревич ​
                       </a>
                     </div>
                   </div>
-                </div>                            
+                  <div class="example-executor-list">
+                    <div class="example-executor">
+                      <div class="example-executor-title">
+                        Стоматолог-ортопед       
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Николаеня Александр Николаевич
+                      </a>
+                    </div>
+                    <div class="example-executor">
+                      <div class="example-executor-title">                        
+                        Стоматолог-хирург-имплантолог                                                                    
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Крат Максим Игоревич ​
+                      </a>
+                    </div>
+                  </div>    
+                </div>
+                
+                <div class="example example__mobile">
+                  <div class="example-images">
+                    <div class="example-before">                  
+                      <img src="./images/before.jpg" alt="before" loading="lazy">
+                    </div>
+                    <div class="example-after">                 
+                      <img src="./images/after.jpg" alt="after" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="example-text">
+                    <div class="example-description">                      
+                      Восстановление утраченого зуба с помощью дентальной имплантации и коронки из  диоксида циркония                                                   
+                    </div>                    
+                  </div>
+                  <div class="example-executors">
+                    <div class="example-executor">
+                      <div class="example-executor-title">
+                        Стоматолог-ортопед       
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Николаеня Александр Николаевич
+                      </a>
+                    </div>
+                    <div class="example-executor">
+                      <div class="example-executor-title">                        
+                        Стоматолог-хирург-имплантолог                                                                    
+                      </div>
+                      <a href="#" class="example-executor-name">
+                          Крат Максим Игоревич ​
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1135,12 +1302,15 @@
           </div>            
         </div>                                   
       </section>
-      <section class="section-feedback feedback">
+      <section class="section-feedback feedback bg-blue-light">
         <div class="container">
           <div class="feedback-wrapper">
             <form class="feedback-form" id="appointment">
-              <div class="feedback-title h3">
+              <div class="feedback-title feedback-title__desktop">
                 записаться на прием
+              </div>
+              <div class="feedback-title feedback-title__mobile">
+                запись на прием
               </div>
               <div class="feedback-fields">
                 <div class="ui-field">

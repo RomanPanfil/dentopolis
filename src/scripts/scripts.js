@@ -277,6 +277,7 @@ const FARBA = {
     },
     breakpoints: {
       599: {
+        slidesPerView: 1.4,
         spaceBetween: 20,
       },
       769: {

@@ -37,12 +37,17 @@ ul, ol {
 			background-repeat: no-repeat no-repeat;
 			background-position: center center;
 			background-size: 10px 10px;
+
+			@media (max-width: 599px) {
+				margin-top: 0;
+				margin-left: 2px;
+			}
 		}
 		&:not(:last-child) {
 			margin-bottom: 12px;
 
 			@media (max-width: 599px) {
-				margin-bottom: 6px;
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -279,6 +284,14 @@ b, strong {
 		text-transform: uppercase;
 		font-weight: 600;
 		letter-spacing: 0.96px;
+
+		&__mobile {
+			display: none;
+
+			@media (max-width: 768px) {
+				display: block;
+			}
+		}
 
 		@media (max-width: 1366px) {
 			@include fz(30);			

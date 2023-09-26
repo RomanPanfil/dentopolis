@@ -268,13 +268,27 @@ const FARBA = {
 (function() {
   const sliderFour = new Swiper('.implants-slider', {  
     loop: false,    
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 32,  
+    slidesPerView: 1.4,
+    slidesPerGroup: 1,
+    spaceBetween: 12,  
     navigation: {
       nextEl: '.implants-slider .slider-next',
       prevEl: '.implants-slider .slider-prev',
     },
+    breakpoints: {
+      599: {
+        slidesPerView: 1.4,
+        spaceBetween: 20,
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },      
+    }
   });
 })();
 
