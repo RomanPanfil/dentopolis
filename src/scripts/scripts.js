@@ -113,6 +113,35 @@ const FARBA = {
   }
 })();
 
+// поиск в header mobile
+(function() {
+  if (!document.querySelector('.search-wrapper__mobile') || !document.querySelector('.mobile-nav-search .mobile-nav-icon') || !document.querySelector('.search-wrapper__mobile .close-icon')) return
+
+  const searchWrapper = document.querySelector('.search-wrapper__mobile');
+  const iconSearch = document.querySelector('.mobile-nav-search .mobile-nav-icon');
+  const iconClose = document.querySelector('.search-wrapper__mobile .close-icon');
+
+  iconSearch.addEventListener('click', (e) => {
+    console.log('click');
+    e.stopPropagation()
+    searchWrapper.classList.toggle('open');   
+  });
+
+  iconClose.addEventListener('click', () => {    
+    searchWrapper.classList.remove('open');    
+  });
+
+  searchWrapper.addEventListener('click', e => e.stopPropagation());
+  document.addEventListener('click', handleClickOutside);
+
+
+  function handleClickOutside(event) {
+    if (!event.target.closest('.search-wrapper__mobile')) {
+      searchWrapper.classList.remove('open');
+    }
+  }
+})();
+
 // main slider
 (function() {
   const mainSlider = new Swiper('.main-slider', {

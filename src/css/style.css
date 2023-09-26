@@ -9527,6 +9527,40 @@ b, strong {
   margin-right: 10px;
 }
 
+.mobile-nav-icon {
+  cursor: pointer;
+}
+
+.search-wrapper__mobile {
+  min-width: 336px;
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+  overflow: hidden;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 10%);
+      -ms-transform: translate(-50%, 10%);
+          transform: translate(-50%, 10%);
+  padding: 12px 20px;
+  -webkit-transition: visibility 0.5s, translate 0.5s;
+  -o-transition: visibility 0.5s, translate 0.5s;
+  transition: visibility 0.5s, translate 0.5s;
+  z-index: 1;
+}
+.search-wrapper__mobile.open {
+  visibility: visible;
+}
+
 .mobile-nav {
   background-color: #fff;
   position: fixed;
@@ -9558,6 +9592,7 @@ b, strong {
   display: inline-block;
 }
 .mobile-nav-info {
+  position: relative;
   background-color: #319DAC;
   color: #FFF;
   font-size: 16px;
