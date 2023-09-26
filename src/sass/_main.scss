@@ -4290,6 +4290,12 @@
       height: calc(100% - 20px);
     }
 
+    @media (max-width: 768px) {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @media (max-width: 599px) {
       border-radius: 6px;
       box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
@@ -4962,7 +4968,17 @@
       background-color: $bgc-pink;     
       border-radius: 12px;     
       box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
-      padding: 48px 60px 60px;      
+      padding: 48px 60px 60px;
+      display: flex;
+      flex-direction: column; 
+
+      @media (max-width: 768px) {
+        padding: 38px 50px 50px;
+      }
+
+      @media (max-width: 599px) {
+        padding: 37px 12px 48px;
+      }
 
       .h3 {
         color: #FFF;
@@ -4972,13 +4988,39 @@
         @include ls(0.96);       
         text-transform: uppercase;
         margin-bottom: 48px;
+        margin-top: 0;
+
+        @media (max-width: 768px) {
+         margin-bottom: 35px;        
+        }
+
+        @media (max-width: 599px) {
+          @include fz(22);
+          @include ls(0.66);
+          margin-bottom: 24px;
+          align-self: flex-start;          
+        }
       }
 
       .ui-field {
         width: 100%;
         margin-bottom: 40px;
+
+        @media (max-width: 599px) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .ui-btn {
+        @media (max-width: 599px) {
+          width: 100%;
+        }        
       }
     }
+
+    // .feedback-form {
+    //   row-gap: 20px;
+    // }
   }
   button.mfp-close {
     font-size: 0;
@@ -4989,6 +5031,16 @@
       width: 32px;
       height: 32px;    
       content: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1833_5135)'%3E%3Cpath d='M8 7.51465L24.9706 24.4852' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 24.4854L24.9706 7.51479' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1833_5135'%3E%3Crect width='32' height='32' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+      @media (max-width: 768px) {
+        top: 45px;
+        right: 50px;
+      }
+
+      @media (max-width: 599px) {
+        top: 36px;
+        right: 12px;
+      }
     }
   }
 }

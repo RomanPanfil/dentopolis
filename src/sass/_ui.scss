@@ -284,6 +284,7 @@ b, strong {
 		text-transform: uppercase;
 		font-weight: 600;
 		letter-spacing: 0.96px;
+		user-select: none;
 
 		&__mobile {
 			display: none;
