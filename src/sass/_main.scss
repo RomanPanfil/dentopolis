@@ -2583,6 +2583,15 @@
 .examples {
   &-wrapper {
     margin-bottom: 28px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 599px) {
+      margin-bottom: 12px;
+    }
+
     &.aside {
       margin-bottom: 0;
     }
@@ -2738,9 +2747,9 @@
       font-weight: 400;          
       @include ls(0.48);
       margin-bottom: 4px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
       // display: inline-block;
       width: 100%;
 
@@ -2757,9 +2766,9 @@
       font-weight: 600;
       line-height: 1;          
       @include ls(0.48);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
       // display: inline-block;
       width: 100%;
 
