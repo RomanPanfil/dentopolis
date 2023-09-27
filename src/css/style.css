@@ -6551,6 +6551,33 @@ b, strong {
   overflow: hidden;
   margin-bottom: 32px;
 }
+@media (max-width: 1366px) {
+  .article {
+    margin-bottom: 20px;
+    height: calc(100% - 20px);
+  }
+}
+@media (max-width: 1439px) {
+  .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .article {
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+            box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+  }
+}
+@media (max-width: 599px) {
+  .article {
+    margin-bottom: 12px;
+    height: calc(100% - 12px);
+  }
+}
 .article-banner {
   position: relative;
   min-height: 540px;
@@ -6645,6 +6672,12 @@ b, strong {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+@media (max-width: 1439px) {
+  .article-image {
+    height: auto;
+    width: 100%;
+  }
+}
 .article-image img {
   width: 100%;
   height: 100%;
@@ -6659,6 +6692,11 @@ b, strong {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+@media (max-width: 480px) {
+  .article-content {
+    padding: 12px;
+  }
+}
 .article-title {
   border-bottom: 2px solid #CDF3F9;
   margin-bottom: 24px;
@@ -6668,6 +6706,16 @@ b, strong {
   font-weight: 500;
   line-height: 140%;
   padding-bottom: 24px;
+}
+@media (max-width: 480px) {
+  .article-title {
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 150%;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
 }
 .article-author-text .name {
   color: #FFF;
@@ -6693,6 +6741,15 @@ b, strong {
   font-weight: 400;
   letter-spacing: 0.03rem;
 }
+@media (max-width: 480px) {
+  .article-author-speciality {
+    font-size: 10px;
+    font-size: 0.625rem;
+    letter-spacing: 0.00625rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
 .article-author-speciality p {
   margin-bottom: 4px;
 }
@@ -6703,6 +6760,15 @@ b, strong {
   font-weight: 500;
   line-height: 121.111%;
   letter-spacing: 0.03375rem;
+}
+@media (max-width: 480px) {
+  .article-author-name {
+    font-size: 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.0075rem;
+    font-weight: 500;
+    line-height: 125%;
+  }
 }
 
 .section-main-services {
