@@ -3545,6 +3545,10 @@
 
     &.contacts {
       margin-bottom: 20px;
+
+      @media (max-width: 480px) {
+        margin-bottom: 16px;
+      }
     }
 
     @media (max-width:768px) {
@@ -3608,8 +3612,14 @@
 
   &-benefits {
     &-item {
+      display: flex;
+      align-items: center;
       &:not(:last-child) {
         margin-bottom: 16px;
+
+        @media (max-width: 480px) {
+          margin-bottom: 12px;
+        }
       }
       svg {
         width: 32px;
@@ -3617,6 +3627,13 @@
         display: inline-block;
         vertical-align: middle;
         margin-right: 12px;
+        flex-shrink: 0;
+
+        @media (max-width: 480px) {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
       }
       p {
         @include fz(20);
@@ -3628,6 +3645,12 @@
         width: max-content;
         margin: 0;
         vertical-align: middle;
+
+        @media (max-width: 480px) {
+          @include fz(14);
+          @include ls(0.12); 
+          line-height: 128.571%;
+        }
       }
     }
   }
@@ -4674,15 +4697,30 @@
     display: flex;
     padding-bottom: 80px;
     justify-content: space-between;
+
+    @media (max-width: 1366px) {
+      flex-direction: column;
+    }
   }
   &-main-wrapper {   
     padding-right: 80px;
     width: 65%;
-    flex: 0 0 65%
+    flex: 0 0 65%;
+
+    @media (max-width: 1366px) {
+      padding-right: 0;
+      width: 100%;
+      flex: 0 0 100%;
+    }
   }
   &-acide-wrapper {    
     width: 35%;
-    flex: 0 0 35%;    
+    flex: 0 0 35%;
+
+    @media (max-width: 1366px) {     
+      width: 100%;
+      flex: 0 0 100%;
+    }
   
     .feedback-wrapper {
       position: sticky;
@@ -4697,6 +4735,14 @@
     flex-wrap: wrap;
     gap: 49px;
     justify-content: space-between;
+
+    @media (max-width: 1366px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 1140px) {
+      gap: 22px;
+    }
 
     &__desktop {
       @media (max-width: 960px) {
@@ -4718,7 +4764,12 @@
 
       &:last-child {
         align-items: flex-end;
-      }     
+
+        @media (max-width: 1140px) {
+          justify-content: unset;
+          align-items: unset;          
+        }
+      }
     }
     &-item {       
       display: flex;      
@@ -4729,6 +4780,14 @@
       }
       &:not(:last-child) {
         margin-bottom: 10px;
+
+        @media (max-width: 960px) {
+          margin-bottom: 28px;
+        }
+
+        @media (max-width: 480px) {
+          margin-bottom: 21px;
+        }
       }
       &.socials {
         gap: 24px;
@@ -5573,11 +5632,96 @@
   }
 }
 
+// section banner
+
+.section-banner {
+  @media (max-width: 1140px) {
+    min-height: 400px;
+  }
+
+  @media (max-width: 960px) {
+    aspect-ratio: 0.96;
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+
+  @media (max-width: 768px) {     
+    padding-top: 100px;
+    aspect-ratio: 0.9;
+  }
+
+  @media (max-width: 599px) {     
+    padding-top: 46px;
+  }
+
+  @media (max-width: 490px) {
+    padding-top: 36px;
+    aspect-ratio: 0.78;      
+  }
+
+  @media (max-width: 360px) {
+    min-height: 460px;
+  }
+
+  &-bg {
+    position: absolute;
+    height: 100%;      
+    top: 0;
+    left: 0;      
+     
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center left;
+    }
+  }
+
+  &-photo {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 55%;
+
+    @media (max-width: 1680px) {
+      width: 60%;
+    }
+
+    @media (max-width: 1366px) {
+      width: 69%;
+    }
+
+    @media (max-width: 960px) {
+      height: 58%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+    }
+
+    img {
+      mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+
+      @media (max-width: 1680px) {
+        object-position: center left;
+      }
+      
+      @media (max-width: 960px) {
+        mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);         
+        object-position: center;
+      }
+    }
+  }
+}
+
 // vacancies
 .section-vacancies {
   @media (max-width: 480px) {
     padding-top: 46px;
-  }  
+  }
 }
 
 .section-vacancies-benefits {
@@ -5594,34 +5738,7 @@
 }
 
 .vacancies {
-  &-banner {
-    @media (max-width: 1140px) {
-      min-height: 400px;
-    }
-
-    @media (max-width: 960px) {
-      aspect-ratio: 0.96;
-      align-items: flex-start;
-      padding-top: 150px;
-    }
-
-    @media (max-width: 768px) {     
-      padding-top: 100px;
-      aspect-ratio: 0.9;
-    }
-
-    @media (max-width: 599px) {     
-      padding-top: 46px;
-    }
-
-    @media (max-width: 490px) {
-      padding-top: 36px;
-      aspect-ratio: 0.78;      
-    }
-
-    @media (max-width: 360px) {
-      min-height: 460px;
-    }
+  &-banner {   
 
     &-content {
       color: $font;
@@ -5636,59 +5753,6 @@
         max-width: unset;
       }
     }    
-
-    &-bg {
-      position: absolute;
-      height: 100%;      
-      top: 0;
-      left: 0;      
-       
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center left;
-      }
-    }
-
-    &-photo {
-      position: absolute;
-      right: 0;
-      height: 100%;
-      width: 55%;
-
-      @media (max-width: 1680px) {
-        width: 60%;
-      }
-
-      @media (max-width: 1366px) {
-        width: 69%;
-      }
-
-      @media (max-width: 960px) {
-        height: 58%;
-        width: 100%;
-        top: unset;
-        bottom: 0;
-      }
-
-      img {
-        mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center right;
-
-        @media (max-width: 1680px) {
-          object-position: center left;
-        }
-        
-        @media (max-width: 960px) {
-          mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);         
-          object-position: center;
-        }
-      }
-    }
   }  
 
   &-list {
@@ -6408,6 +6472,9 @@
 
   @media (max-width: 992px) {
     display: none;
+    &.contacts-acide {
+      display: block;
+    }
   }
 
   &__price {
