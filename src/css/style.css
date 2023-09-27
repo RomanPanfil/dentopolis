@@ -8765,11 +8765,6 @@ b, strong {
 .doctor-banner {
   color: #222340;
 }
-@media (max-width: 1366px) {
-  .doctor-banner {
-    min-height: 480px;
-  }
-}
 @media (max-width: 1140px) {
   .doctor-banner {
     min-height: 400px;
@@ -8777,11 +8772,11 @@ b, strong {
 }
 @media (max-width: 960px) {
   .doctor-banner {
-    aspect-ratio: 1;
+    aspect-ratio: 0.96;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-top: 140px;
+    padding-top: 150px;
   }
 }
 @media (max-width: 768px) {
@@ -8792,11 +8787,12 @@ b, strong {
 }
 @media (max-width: 599px) {
   .doctor-banner {
-    padding-top: 50px;
+    padding-top: 80px;
   }
 }
 @media (max-width: 490px) {
   .doctor-banner {
+    padding-top: 50px;
     aspect-ratio: 0.78;
   }
 }
@@ -8824,11 +8820,21 @@ b, strong {
   top: 0;
   right: 0;
   height: 100%;
-  width: 55%;
+  width: 57%;
+}
+@media (max-width: 1680px) {
+  .doctor-banner-photo {
+    width: 60%;
+  }
+}
+@media (max-width: 1366px) {
+  .doctor-banner-photo {
+    width: 69%;
+  }
 }
 @media (max-width: 960px) {
   .doctor-banner-photo {
-    height: 42%;
+    height: 58%;
     width: 100%;
     top: unset;
     bottom: 0;
@@ -8867,6 +8873,16 @@ b, strong {
     position: relative;
   }
 }
+@media (max-width: 1366px) {
+  .doctor-banner-content {
+    max-width: 560px;
+  }
+}
+@media (max-width: 960px) {
+  .doctor-banner-content {
+    max-width: 100%;
+  }
+}
 .doctor-banner-name {
   font-size: 32px;
   font-size: 2rem;
@@ -8876,7 +8892,27 @@ b, strong {
   text-transform: uppercase;
   margin-bottom: 28px;
 }
+@media (max-width: 1366px) {
+  .doctor-banner-name {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 166.786%;
+    margin-bottom: 18px;
+  }
+}
+@media (max-width: 960px) {
+  .doctor-banner-name {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
 @media (max-width: 599px) {
+  .doctor-banner-name {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
   .doctor-banner-name {
     font-size: 22px;
     font-size: 1.375rem;

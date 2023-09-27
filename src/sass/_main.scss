@@ -5045,7 +5045,7 @@
     color: $font;
 
     @media (max-width: 1366px) {
-      min-height: 480px;
+      // min-height: 480px;
     }
 
     @media (max-width: 1140px) {
@@ -5053,9 +5053,9 @@
     }
 
     @media (max-width: 960px) {
-      aspect-ratio: 1;
+      aspect-ratio: 0.96;
       align-items: flex-start;
-      padding-top: 140px;
+      padding-top: 150px;
     }
 
     @media (max-width: 768px) {     
@@ -5065,10 +5065,11 @@
 
     @media (max-width: 599px) {
       // aspect-ratio: 0.78;
-      padding-top: 50px;
+      padding-top: 80px;
     }
 
     @media (max-width: 490px) {
+      padding-top: 50px;
       aspect-ratio: 0.78;      
     }
 
@@ -5095,10 +5096,18 @@
       top: 0;
       right: 0;
       height: 100%;
-      width: 55%;
+      width: 57%;
+
+      @media (max-width: 1680px) {
+        width: 60%;
+      }
+
+      @media (max-width: 1366px) {
+        width: 69%;
+      }
 
       @media (max-width: 960px) {
-        height: 42%;
+        height: 58%;
         width: 100%;
         top: unset;
         bottom: 0;
@@ -5128,15 +5137,39 @@
       }
     }
 
+    &-content {
+      @media (max-width: 1366px) {
+        max-width: 560px;
+      }
+
+      @media (max-width: 960px) {
+        max-width: 100%;
+      }
+    }   
+
     &-name {
-      @include fz(32);    
+      @include fz(32);
       font-weight: 600;
       line-height: 145.938%;
-      @include ls(0.96);    
-      text-transform: uppercase;     
+      @include ls(0.96);
+      text-transform: uppercase;
       margin-bottom: 28px;
 
+      @media (max-width: 1366px) {
+        @include fz(28);
+        line-height: 166.786%;
+        margin-bottom: 18px;
+      }
+
+      @media (max-width: 960px) {
+        @include fz(32);        
+      }
+
       @media (max-width: 599px) {
+        @include fz(28);       
+      }
+
+      @media (max-width: 480px) {
         @include fz(22);       
         line-height: 171.364%;
         @include ls(0.66);
