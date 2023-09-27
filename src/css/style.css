@@ -7700,7 +7700,7 @@ b, strong {
     padding-bottom: 48px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section-feedback__padding .feedback-wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -8625,6 +8625,46 @@ b, strong {
 .doctor-banner {
   color: #222340;
 }
+@media (max-width: 1366px) {
+  .doctor-banner {
+    min-height: 480px;
+  }
+}
+@media (max-width: 1140px) {
+  .doctor-banner {
+    min-height: 400px;
+  }
+}
+@media (max-width: 960px) {
+  .doctor-banner {
+    aspect-ratio: 1;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .doctor-banner {
+    padding-top: 100px;
+    aspect-ratio: 0.9;
+  }
+}
+@media (max-width: 599px) {
+  .doctor-banner {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 490px) {
+  .doctor-banner {
+    aspect-ratio: 0.78;
+  }
+}
+@media (max-width: 360px) {
+  .doctor-banner {
+    min-height: 460px;
+  }
+}
 .doctor-banner-bg {
   position: absolute;
   top: 0;
@@ -8646,6 +8686,14 @@ b, strong {
   height: 100%;
   width: 55%;
 }
+@media (max-width: 960px) {
+  .doctor-banner-photo {
+    height: 42%;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+  }
+}
 .doctor-banner-photo img {
   -webkit-mask-image: -webkit-gradient(linear, right top, left top, color-stop(50%, black), to(rgba(0, 0, 0, 0)));
   -webkit-mask-image: linear-gradient(to left, black 50%, rgba(0, 0, 0, 0) 100%);
@@ -8658,6 +8706,27 @@ b, strong {
   -o-object-position: center right;
      object-position: center right;
 }
+@media (max-width: 1680px) {
+  .doctor-banner-photo img {
+    -o-object-position: center left;
+       object-position: center left;
+  }
+}
+@media (max-width: 960px) {
+  .doctor-banner-photo img {
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, black), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: linear-gradient(to top, black 50%, rgba(0, 0, 0, 0) 100%);
+            mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, black), to(rgba(0, 0, 0, 0)));
+            mask-image: linear-gradient(to top, black 50%, rgba(0, 0, 0, 0) 100%);
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media (max-width: 599px) {
+  .doctor-banner-content {
+    position: relative;
+  }
+}
 .doctor-banner-name {
   font-size: 32px;
   font-size: 2rem;
@@ -8667,6 +8736,15 @@ b, strong {
   text-transform: uppercase;
   margin-bottom: 28px;
 }
+@media (max-width: 599px) {
+  .doctor-banner-name {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 171.364%;
+    letter-spacing: 0.04125rem;
+    margin-bottom: 12px;
+  }
+}
 .doctor-banner-speciality {
   color: #343544;
   font-size: 20px;
@@ -8675,8 +8753,21 @@ b, strong {
   line-height: 140%;
   margin-bottom: 20px;
 }
+@media (max-width: 599px) {
+  .doctor-banner-speciality {
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    margin-bottom: 12px;
+  }
+}
 .doctor-banner-experience {
   margin-bottom: 26px;
+}
+@media (max-width: 599px) {
+  .doctor-banner-experience {
+    margin-bottom: 12px;
+  }
 }
 .doctor-banner-experience p {
   color: #343544;
@@ -8686,8 +8777,23 @@ b, strong {
   line-height: 140%;
   margin-bottom: 2px;
 }
+@media (max-width: 599px) {
+  .doctor-banner-experience p {
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    margin-bottom: 0px;
+    line-height: 156.25%;
+  }
+}
 .doctor-banner-experience p b {
   font-weight: 500;
+}
+
+@media (max-width: 599px) {
+  .section-education {
+    padding-bottom: 30px;
+  }
 }
 
 .education-card {
@@ -8697,8 +8803,30 @@ b, strong {
           box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
   padding: 20px 40px 40px;
 }
+@media (max-width: 1366px) {
+  .education-card {
+    padding: 15px 35px 35px 35px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .education-card {
+    -webkit-box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+            box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+  }
+}
+@media (max-width: 480px) {
+  .education-card {
+    padding: 0px 12px 20px 12px;
+  }
+}
 .education-card:not(:last-child) {
   margin-bottom: 32px;
+}
+@media (max-width: 1366px) {
+  .education-card:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 .education-card-head {
   display: -webkit-box;
@@ -8710,16 +8838,66 @@ b, strong {
   border-bottom: 2px solid #319DAC;
   padding: 20px;
 }
+@media (max-width: 599px) {
+  .education-card-head {
+    padding-left: 0;
+    padding-right: 12px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+  }
+}
 .education-card-icon {
   width: 68px;
   height: 68px;
   margin-right: 20px;
+}
+@media (max-width: 1366px) {
+  .education-card-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .education-card-icon {
+    width: 54px;
+    height: 54px;
+  }
+}
+@media (max-width: 599px) {
+  .education-card-icon {
+    margin-right: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .education-card-icon {
+    width: 48px;
+    height: 48px;
+  }
 }
 .education-card-title {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 133.333%;
+}
+@media (max-width: 1366px) {
+  .education-card-title {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 768px) {
+  .education-card-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .education-card-title {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 125%;
+  }
 }
 .education-card-item {
   min-height: 63px;
@@ -8735,6 +8913,19 @@ b, strong {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 768px) {
+  .education-card-item:last-child {
+    border: none;
+  }
+}
+@media (max-width: 480px) {
+  .education-card-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 0px;
+    padding-right: 20px;
+  }
+}
 .education-card-year {
   display: inline-block;
   vertical-align: middle;
@@ -8749,6 +8940,30 @@ b, strong {
       -ms-flex: 0 0 50px;
           flex: 0 0 50px;
 }
+@media (max-width: 1366px) {
+  .education-card-year {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .education-card-year {
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 0.0075rem;
+    line-height: 127.333%;
+  }
+}
+@media (max-width: 480px) {
+  .education-card-year {
+    font-size: 14px;
+    font-size: 0.875rem;
+    letter-spacing: 0.0075rem;
+    line-height: 127.333%;
+    margin-right: 12px;
+    max-width: 36px;
+  }
+}
 .education-card-info {
   display: inline-block;
   vertical-align: middle;
@@ -8759,9 +8974,47 @@ b, strong {
   letter-spacing: 0.0125rem;
   margin-bottom: 0;
 }
+@media (max-width: 1366px) {
+  .education-card-info {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .education-card-info {
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 0.0075rem;
+    line-height: 127.333%;
+  }
+}
+@media (max-width: 480px) {
+  .education-card-info {
+    font-size: 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.0075rem;
+    line-height: 127.333%;
+  }
+}
 
 .section-diploms {
   padding-bottom: 38px;
+}
+@media (max-width: 1366px) {
+  .section-diploms {
+    padding-bottom: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .section-diploms {
+    padding-bottom: 58px;
+  }
+}
+@media (max-width: 480px) {
+  .section-diploms {
+    padding-top: 46px;
+    padding-bottom: 42px;
+  }
 }
 
 .diploms-title {
@@ -8772,8 +9025,29 @@ b, strong {
   line-height: 133.333%;
   margin-bottom: 60px;
 }
+@media (max-width: 1366px) {
+  .diploms-title {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 960px) {
+  .diploms-title {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .diploms-title {
+    display: none;
+  }
+}
+.diploms-slide-item {
+  aspect-ratio: 4/3;
+}
 .diploms-slide-item img {
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 .diploms .slider-four .slider-arrows {
   margin-top: 33px;

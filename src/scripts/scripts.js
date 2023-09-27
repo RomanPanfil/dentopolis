@@ -325,13 +325,37 @@ const FARBA = {
 (function() {
   const sliderFour = new Swiper('.diploms-slider', {  
     loop: false,    
-    slidesPerView: 6,
-    slidesPerGroup: 2,
-    spaceBetween: 32,  
+    slidesPerView: 1.4,
+    slidesPerGroup: 1,
+    spaceBetween: 12,  
     navigation: {
       nextEl: '.diploms-slider .slider-next',
       prevEl: '.diploms-slider .slider-prev',
     },
+    breakpoints: {
+      420: {
+        slidesPerView: 2.4
+      },
+      480: {
+        slidesPerView: 2.4
+      },
+      599: {            
+        spaceBetween: 20,
+        slidesPerView: 3.4,
+      },
+      769: {        
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 32,
+      },
+      1366: {
+        slidesPerView: 6,
+        spaceBetween: 32,
+      }
+    }
   });
 })();
 
