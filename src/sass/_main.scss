@@ -782,6 +782,10 @@
 .articles {
   &-wrapper {
     margin-bottom: 28px;
+
+    @media (max-width: 599px) {
+      margin-bottom: 20px;
+    }
   }
 }  
 
@@ -3112,6 +3116,7 @@
     @media (max-width: 1439px) {
       height: auto;
       width: 100%;
+      aspect-ratio: 4/2.6;
     }
     
     img {
@@ -3127,6 +3132,14 @@
     padding-right: 32px;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    @media (max-width: 1140px) {
+      padding: 26px;
+    }
+
+    @media (max-width: 960px) {
+      padding: 18px;
+    }
     
     @media (max-width: 480px) {
       padding: 12px;
@@ -3143,6 +3156,16 @@
     font-weight: 500;
     line-height: 140%;    
     padding-bottom: 24px;
+
+    @media (max-width: 1140px) {
+      @include fz(18);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 960px) {
+      @include fz(16);     
+    }
 
     @media (max-width: 480px) {
       @include fz(12);
@@ -3177,6 +3200,14 @@
       font-weight: 400;  
       @include ls(0.48);
 
+      @media (max-width: 1140px) {
+        @include fz(14);     
+      }
+
+      @media (max-width: 960px) {
+        @include fz(12);
+      }
+
       @media (max-width: 480px) {
         @include fz(10);
         @include ls(0.1);
@@ -3194,6 +3225,14 @@
       font-weight: 500;
       line-height: 121.111%;        
       @include ls(0.54);
+
+      @media (max-width: 1140px) {
+        @include fz(16);     
+      }
+
+      @media (max-width: 960px) {
+        @include fz(14);
+      }
 
       @media (max-width: 480px) {
         @include fz(12);
