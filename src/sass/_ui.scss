@@ -682,6 +682,23 @@ b, strong {
 		}
 		&__aside {
 			height: 185px;
+
+			@media (max-width: 599px) {
+				height: 142px;
+			}
+		}
+
+		@media (max-width: 1280px) {					
+			@include fz(16);						
+			padding: 14px 32px;
+			
+		}
+
+		@media (max-width: 599px) {					
+			@include fz(14);
+			@include ls(0.14);				
+			padding: 12px 32px;
+			border-radius: 22px;			
 		}
 	}
 }
@@ -753,6 +770,7 @@ b, strong {
 	background-color: $bgc;
 	border: 3px solid $bgc;
 	cursor: pointer;
+	flex-shrink: 0;
 }
 
 .jq-checkbox.checked {
