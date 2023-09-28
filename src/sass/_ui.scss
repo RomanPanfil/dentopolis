@@ -698,7 +698,8 @@ b, strong {
 			@include fz(14);
 			@include ls(0.14);				
 			padding: 12px 32px;
-			border-radius: 22px;			
+			border-radius: 22px;
+			height: 142px;		
 		}
 	}
 }
