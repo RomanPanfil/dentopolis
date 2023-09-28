@@ -321,6 +321,10 @@ b, strong {
     line-height: 133.333%;
     text-transform: uppercase;
     margin-bottom: 28px;
+
+	@media (max-width: 768px) {
+		text-align: center;
+	}
 }
 /*---- ICONS ---- */
 

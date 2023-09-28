@@ -1895,6 +1895,10 @@
 
 .section-article {
   padding-bottom: 62px;
+
+  @media (max-width: 599px) {
+    padding-bottom: 48px;
+  }
   
   &__implatnation {
     padding-bottom: 80px;
@@ -2381,7 +2385,18 @@
     }  
 
     &.single {
-      margin-bottom: 71px;
+      margin-bottom: 71px;     
+
+      @media (max-width: 768px) {
+        border-radius: 6px;
+        box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: 599px) {       
+        margin-bottom: 40px;
+      }
+
       .service-price-items {
         margin-bottom: 12px;
       }
@@ -2394,6 +2409,11 @@
         font-weight: 600;
         line-height: 155%;        
         @include ls(0.2);
+
+        @media (max-width: 480px) {
+          @include fz(12);
+          @include ls(0.12);  
+        }
       }
       .service-price-all {
         margin-right: 0;
@@ -2588,6 +2608,10 @@
   &-wrapper {
     margin-bottom: 28px;
 
+    &__single {
+      margin-bottom: 0 !important;
+    }
+
     @media (max-width: 768px) {
       margin-bottom: 18px;
     }
@@ -2643,6 +2667,18 @@
     }
     @media (max-width: 768px) {
       display: flex;
+    }
+
+    &-desk {
+      @media (max-width: 1140px) {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        display: flex;
+        margin-bottom: 0;
+        height: 100%;
+      }
     }
   }
 
@@ -2795,6 +2831,18 @@
 
     @media (max-width: 1140px) {
       display: none;
+    }
+
+    &__desk {
+      margin-bottom: 0;
+      height: 100%;
+      @media (max-width: 1140px) {
+        display: flex;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
     .example-images {
       width: 48%;
@@ -4671,10 +4719,24 @@
       aspect-ratio: 3.243;
       width: 50%;
       order: 1;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        order: unset;
+      }
     }
     .doctor-card-info {
       width: 50%;
-      padding: 40px 60px;          
+      padding: 40px 60px;
+      
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 34px 24px 38px
+      }
+
+      @media (max-width: 599px) {        
+        padding: 20px 12px 12px;
+      }      
     }
   }
 
@@ -4760,13 +4822,29 @@
 
     @media (max-width: 768px) {
       max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      // margin-left: auto;
+      // margin-right: auto;
+      &__column {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &__single {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     @media (max-width: 599px) {
       border-radius: 6px;
       box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+    }
+
+    &__single {
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
     }
 
     &__column {
