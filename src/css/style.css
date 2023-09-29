@@ -10865,6 +10865,7 @@ b, strong {
           transform: translateY(-2px);
 }
 .footer-services {
+  position: relative;
   text-align: end;
   margin-bottom: 32px;
 }
@@ -10932,37 +10933,39 @@ b, strong {
   font-size: 1rem;
 }
 .footer .on-top {
-  position: absolute;
-  right: 50px;
+  display: none;
+  position: fixed;
   bottom: 20px;
   width: 62px;
   height: 62px;
   background-color: #319DAC;
   border-radius: 50%;
   cursor: pointer;
+  margin-right: 50px;
+  z-index: 2;
 }
 @media (max-width: 1440px) {
   .footer .on-top {
-    right: 40px;
+    margin-right: 40px;
   }
 }
 @media (max-width: 992px) {
   .footer .on-top {
+    margin-right: 25px;
     width: 52px;
     height: 52px;
-    right: 25px;
   }
 }
 @media (max-width: 599px) {
   .footer .on-top {
+    margin-right: 20px;
     width: 44px;
     height: 44px;
-    right: 20px;
   }
 }
 @media (max-width: 420px) {
   .footer .on-top {
-    right: 12px;
+    margin-right: 12px;
   }
 }
 .footer .on-top svg {

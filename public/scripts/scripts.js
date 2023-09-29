@@ -721,3 +721,60 @@ $(document).on("click", ".mfp-link", function () {
     }
   });
 })();
+
+
+
+// стрелка наверх внизу страницы
+(function() {
+  if(!document.querySelector('.on-top') || !document.querySelector('.container')) return
+
+  const onTop = document.querySelector('.on-top');
+  const container = document.querySelector('.container');
+  onTop.style.display = 'none';
+
+  const getContainerRightOffset = () => {
+    const windowWidth = window.innerWidth;
+    const containerRect = container.getBoundingClientRect();
+    
+    return windowWidth - containerRect.right; 
+  }
+
+  const setOnTopPosition = () => {
+    const rightOffset = getContainerRightOffset();
+    
+    onTop.style.right = `${rightOffset}px`;
+  } 
+
+  setOnTopPosition();
+
+  window.addEventListener('resize', setOnTopPosition);
+
+
+
+  let prevScrollTop = 0;
+
+  const setOnTopVisible = () => {
+    const currentScrollTop = window.pageYOffset;
+  
+    if (currentScrollTop === 0) {
+      // доскроллили до верха 
+      onTop.style.display = 'none';
+  
+    } else if (prevScrollTop > currentScrollTop) {
+      // скроллим вверх
+      onTop.style.display = 'block';
+  
+    } else {
+      // скроллим вниз
+      onTop.style.display = 'block';
+    }
+  
+    prevScrollTop = currentScrollTop;
+  }
+
+  setOnTopVisible();
+
+  window.addEventListener('scroll', setOnTopVisible);
+
+  
+})();

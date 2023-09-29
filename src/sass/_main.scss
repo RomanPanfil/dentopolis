@@ -6742,7 +6742,8 @@
     }    
   }
 
-  &-services {    
+  &-services {
+    position: relative; 
     text-align: end;
     margin-bottom: 32px;
     @media (max-width: 599px) {
@@ -6797,36 +6798,37 @@
     @include fz(16);
   }
 
-  .on-top {   
-    position: absolute;
-    right: 50px;
+  .on-top {    
+    display: none;
+    position: fixed;
     bottom: 20px;
-    // transform: translate(-50%, -50%);
     width: 62px;
     height: 62px;
     background-color: $primary;
     border-radius: 50%;
     cursor: pointer;
+    margin-right: 50px;
+    z-index: 2;
 
-    @media (max-width: 1440px) {      
-      right: 40px;
+    @media (max-width: 1440px) {     
+      margin-right: 40px;
     }
   
-    @media (max-width: 992px) {
+    @media (max-width: 992px) {     
+      margin-right: 25px;
       width: 52px;
-      height: 52px;     
-      right: 25px;
+      height: 52px;
     }
   
-    @media (max-width: 599px) {
+    @media (max-width: 599px) {     
+      margin-right: 20px;
       width: 44px;
-      height: 44px;    
-      right: 20px;
+      height: 44px;
     }
   
-    @media (max-width: 420px) {     
-     right: 12px;
-    }   
+    @media (max-width: 420px) {    
+     margin-right: 12px;
+    }
 
     svg {
       width: 24px;
