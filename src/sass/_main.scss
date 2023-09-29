@@ -4721,6 +4721,7 @@
       order: 1;
 
       @media (max-width: 768px) {
+        aspect-ratio: 1.25;
         width: 100%;
         order: unset;
       }

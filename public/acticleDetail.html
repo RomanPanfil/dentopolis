@@ -454,8 +454,13 @@
 
     <!-- main screen start -->
     <main class="main">
-      <section class="article-banner">
-        <img src="./images/article-bg.jpg" alt="implantation" loading="lazy">
+      <section class="article-banner section-banner">        
+        <div class="section-banner-bg">
+          <img src="./images/article-bg.jpg" alt="bg" loading="lazy">
+        </div>
+        <div class="section-banner-photo section-banner-photo__article">
+          <img src="images/article-banner-photo.jpg" alt="doctor" loading="lazy">
+        </div>
         <div class="container">
           <div class="article-banner-content">
             <div class="article-banner-date">
@@ -520,6 +525,7 @@
                   Этот материал имеет определенную степень прозрачности, что позволяет ему легко адаптироваться к естественному оттенку эмали,
                   и тем самым не выделяться среди остальных зубов.
                 </p>
+                <img src="./images/dental-technician-holding.jpg" alt="alt">
                 <h4>
                   Как производят и устанавливают циркониевые коронки?
                 </h4>
@@ -613,22 +619,40 @@
           <div class="swiper articles-slider slider-four blue">
             <div class="slider-arrows">
               <a href="#" class="slider-prev">
-                <svg width="53" height="14" viewBox="0 0 53 14" fill="none">
-                  <path d="M52 7H1" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M7 13L1 7L7 1" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                            
-                <span>Предыдущая статья</span>
+                <div class="slider-prev-desktop">
+                  <svg width="53" height="14" viewBox="0 0 53 14" fill="none">
+                    <path d="M52 7H1" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 13L1 7L7 1" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Предыдущая статья</span>
+                </div>
+                <div class="slider-prev-mobile">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M20.5 12H4.5" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.5 18L4.5 12L10.5 6" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                    
+                  <span>Предыдущая</span>
+                </div>                
               </a>
               <a href="#" class="slider-next">
-                <span>Следующая статья</span>
-                <svg width="53" height="14" viewBox="0 0 53 14" fill="none">
-                  <path d="M1 7H52" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M46 13L52 7L46 1" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                            
+                <div class="slider-prev-desktop">
+                  <span>Следующая статья</span>
+                  <svg width="53" height="14" viewBox="0 0 53 14" fill="none">
+                    <path d="M1 7H52" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M46 13L52 7L46 1" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="slider-prev-mobile">
+                  <span>Следующая</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 12H20" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 18L20 12L14 6" stroke="#222340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                    
+                </div>                          
               </a>
             </div>
             <div class="row">
-              <div class="col-lg-6 col-md-12">
+              <div class="col-us-6">
                 <a href="javascript:void(0)" class="article">
                   <div class="article-image">
                     <img src="./images/article-image.jpg" alt="article">
@@ -648,7 +672,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-lg-6 col-md-12">
+              <div class="col-us-6">
                 <a href="javascript:void(0)" class="article">
                   <div class="article-image">
                     <img src="./images/article-image.jpg" alt="article">
@@ -680,7 +704,33 @@
             </a>
           </div>            
         </div>
-      </section>             
+      </section>
+      <section class="section-feedback section-feedback__tablet feedback bg-blue-light">
+        <div class="container">
+          <div class="feedback-wrapper">
+            <form class="feedback-form" id="appointment">
+              <div class="feedback-title feedback-title__desktop">
+                записаться на прием
+              </div>
+              <div class="feedback-title feedback-title__mobile">
+                запись на прием
+              </div>
+              <div class="feedback-fields">
+                <div class="ui-field">
+                  <input type="text" placeholder="Имя Фамилия" required name="name" id="name" class="ui-input name">
+                </div>
+                <div class="ui-field">
+                  <input type="text" placeholder="Телефон" required name="number" id="number" class="ui-input number">
+                </div>
+                <button class="ui-btn ui-btn-green">
+                  Записаться
+                </button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </section>          
     </main>
     <!-- main screen end -->
 

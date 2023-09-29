@@ -8514,6 +8514,7 @@ b, strong {
 }
 @media (max-width: 768px) {
   .doctors__single .doctor-card-photo {
+    aspect-ratio: 1.25;
     width: 100%;
     -webkit-box-ordinal-group: unset;
         -ms-flex-order: unset;

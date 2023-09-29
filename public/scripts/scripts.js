@@ -370,15 +370,28 @@ const FARBA = {
 
 (function() {
   const verticalSlider = new Swiper('.vertical-slider', {    
-    direction: 'vertical',
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     freeMode: 'true',
-    spaceBetween: 32,
+    spaceBetween: 12,
     // mousewheel: true,   
     navigation: {
       nextEl: '.reviews-slider__vertical .vertical-arrows-next',
       prevEl: '.reviews-slider__vertical .vertical-arrows-prev'
-    }  
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,        
+      },
+      768: {
+        spaceBetween: 20,
+      },          
+      1023: {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: 'true',
+        spaceBetween: 32,
+      }
+    }
   });
 })();
 
