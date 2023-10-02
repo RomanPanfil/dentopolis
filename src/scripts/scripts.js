@@ -395,6 +395,37 @@ const FARBA = {
   });
 })();
 
+// examples slider
+(function() {
+  const sliderFour = new Swiper('.examples-slider', {  
+    loop: false,    
+    slidesPerView: 1.4,
+    slidesPerGroup: 1,
+    spaceBetween: 12,    
+    navigation: {
+      nextEl: '.examples-slider .slider-next',
+      prevEl: '.examples-slider .slider-prev',
+    },   
+    breakpoints: {      
+      599: {       
+        spaceBetween: 20,   
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1140: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      1680: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      }
+    }
+  });
+})();
+
 // валидация формы
 // $(document).ready(function () {
   

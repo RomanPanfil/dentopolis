@@ -308,7 +308,12 @@ b, strong {
 			@include fz(22);
 			@include ls(0.66);	
 			line-height: 171.364%;
-			margin-bottom: 24px;	
+			margin-bottom: 24px;
+
+			&__rating {
+				@include fz(20);				
+				line-height: 155%;				
+			}
 		}
 	}
 }
