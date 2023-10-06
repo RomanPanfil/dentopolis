@@ -248,6 +248,38 @@ const FARBA = {
   });
 })();
 
+// video reviews slider
+(function() {
+  const sliderFour = new Swiper('.video-reviews-slider', {  
+    loop: false,    
+    slidesPerView: 1.4,
+    slidesPerGroup: 1,
+    spaceBetween: 12,    
+    navigation: {
+      nextEl: '.video-reviews-slider .slider-next',
+      prevEl: '.video-reviews-slider .slider-prev',
+    },   
+    breakpoints: {     
+      599: {
+        spaceBetween: 20,
+        slidesPerView: 1.4,     
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1140: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      1680: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      }
+    }
+  });
+})();
+
 // actions slider
 (function() {
   const sliderFour = new Swiper('.actions-slider', {  
@@ -643,32 +675,86 @@ initMask();
 })();
 
 // pop-up
-$(document).on("click", ".mfp-link", function () {
-  var a = $(this);
-  $.magnificPopup.open({
-    items: { src: a.attr("data-href") },
-    type: "ajax",
-    overflowY: "scroll",
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in',
-    ajax: {
-      tError: "Error. Not valid url",
-    },
-    callbacks: {
-      open: function () {
-        setTimeout(function(){
-          $('.mfp-wrap').addClass('not_delay');
-          $('.mfp-popup').addClass('not_delay');
-        },700);
+// $(document).on("click", ".mfp-link", function () {
+//   var a = $(this);
+//   $.magnificPopup.open({
+//     items: { src: a.attr("data-href") },
+//     type: "ajax",
+//     overflowY: "scroll",
+//     removalDelay: 300,
+//     mainClass: 'my-mfp-zoom-in',
+//     ajax: {
+//       tError: "Error. Not valid url",
+//     },
+//     callbacks: {
+//       open: function () {
+//         setTimeout(function(){
+//           $('.mfp-wrap').addClass('not_delay');
+//           $('.mfp-popup').addClass('not_delay');                  
+//         },700);
 
-        document.documentElement.style.overflow = 'hidden'
+//         document.documentElement.style.overflow = 'hidden'
+//       },
+
+//       close: function() {
+//         document.documentElement.style.overflow = ''
+//       }
+//     }
+//   });
+//   return false;
+// });
+
+
+// Открытие попапа
+$(document).on("click", ".mfp-link", function() {
+  var $link = $(this);
+  // Если ссылка с классом .video-link
+  if($link.hasClass('video-link')) {
+    // Открыть попап
+    $.magnificPopup.open({
+      items: {
+        src: $link.attr("data-href"),  
       },
+      type: 'ajax',
+      // Код для видео
+      callbacks: {
+        ajaxContentAdded: function() {
+          var videoURL = $link.data('video');
+          $(this.content).find('iframe').attr('src', videoURL);
 
-      close: function() {
-        document.documentElement.style.overflow = ''
+          document.documentElement.style.overflow = 'hidden'
+        },
+        close: function() {
+          document.documentElement.style.overflow = ''
+        }
       }
-    }
-  });
+    });
+  } else {
+    // Обычное открытие
+    $.magnificPopup.open({
+      items: { src: $link.attr("data-href") },
+      type: "ajax",
+      overflowY: "scroll",
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in',
+      ajax: {
+        tError: "Error. Not valid url",
+      },
+      callbacks: {
+        open: function () {
+          setTimeout(function(){
+            $('.mfp-wrap').addClass('not_delay');
+            $('.mfp-popup').addClass('not_delay');                  
+          },700);
+  
+          document.documentElement.style.overflow = 'hidden'
+        },  
+        close: function() {
+          document.documentElement.style.overflow = ''
+        }
+      }
+    });
+  }
   return false;
 });
 
