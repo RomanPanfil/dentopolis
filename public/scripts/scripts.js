@@ -3,7 +3,7 @@ const FARBA = {
 
   WW: document.documentElement.clientWidth,
 
-  isTouch: 'ontouchstart' in window || navigator.msMaxTouchPoints,
+  // isTouch: 'ontouchstart' in window || navigator.msMaxTouchPoints,
 
   //lazy load для сторонних либ
   lazyLibraryLoad(scriptSrc, linkHref, callback) {
@@ -592,6 +592,36 @@ initMask();
   });
 })();
 
+// переключение табов
+(function() {
+  if (!document.querySelector('.ui-tabs button') || !document.querySelector('.ui-tabs-wrapper')) return
+
+  const tabs = document.querySelectorAll('.ui-tabs button');
+  const tabsPanel = document.querySelectorAll('.ui-tabs-wrapper');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      
+      let tabId = this.getAttribute('data-tab');
+      
+      tabs.forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      this.classList.add('active');
+
+      tabsPanel.forEach(panel => {
+      if(panel.id === tabId) {
+        panel.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+      }
+    });
+
+    });
+  });
+})();
+
 // аккордион
 (function() {
   if (!document.querySelector('.accordion-head')) return
@@ -780,10 +810,10 @@ $(document).on("click", ".mfp-link", function() {
 
 // мобильное меню навигации
 (function() {
-  const navItem = document.querySelectorAll('.mobile-nav ul a');
+  const navIcons = document.querySelectorAll('.mobile-nav ul a svg');
 
-  navItem.forEach(item => {    
-    item.addEventListener('click', openSubMenu)
+  navIcons.forEach(icon=> {    
+    icon.addEventListener('click', openSubMenu)
   });
 
   function openSubMenu(ev) {
@@ -894,4 +924,32 @@ $(document).on("click", ".mfp-link", function() {
   window.addEventListener('scroll', setOnTopVisible);
 
   
+})();
+
+// переключатель цен
+(function() {
+  if(!document.querySelector('.prices-switcher input') || !document.querySelector('.section-prices__foreign .accordion-item')) return
+
+  const switcher = document.querySelector('.prices-switcher input');
+  const priceItems = document.querySelectorAll('.section-prices__foreign .accordion-item')
+
+  switcher.addEventListener('change', switchPrice);
+
+  function switchPrice(ev) {
+    let currencyDisplay = this.checked ? 'none' : 'block';
+    let rubDisplay = this.checked ? 'block' : 'none';
+
+    priceItems.forEach((priceItem) => {       
+      let currency = priceItem.querySelector('.service-price-currency');
+      let rub = priceItem.querySelector('.service-price-rub');
+       
+      if(currency) {        
+        currency.style.display = currencyDisplay;
+      }
+
+      if(rub) {       
+        rub.style.display = rubDisplay;
+      }
+    })
+  }
 })();
