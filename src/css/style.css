@@ -7641,6 +7641,9 @@ b, strong {
           align-items: center;
   background-color: #768bce;
 }
+.section-prepage__black {
+  color: #222340;
+}
 @media (max-width: 768px) {
   .section-prepage {
     aspect-ratio: 0.83;
@@ -7706,6 +7709,14 @@ b, strong {
   .prepage-content {
     max-width: 90vw;
     position: relative;
+  }
+}
+.prepage-content__wild {
+  max-width: 55%;
+}
+@media (max-width: 960px) {
+  .prepage-content__wild {
+    max-width: 90vw;
   }
 }
 .prepage-title {
@@ -9492,6 +9503,9 @@ b, strong {
 .contacts-map {
   height: 594px;
   width: 100%;
+}
+.contacts-map__foreign {
+  height: 490px;
 }
 @media (max-width: 1366px) {
   .contacts-map {
@@ -11962,7 +11976,7 @@ b, strong {
   margin-right: 0;
   margin-bottom: 40px;
 }
-@media (max-width: 1680px) {
+@media (max-width: 1366px) {
   .acide .ui-field.feedback-form-field {
     width: 37%;
   }
@@ -12920,6 +12934,18 @@ b, strong {
   padding-left: 40px;
   padding-right: 40px;
 }
+@media (max-width: 1280px) {
+  .implantation-description {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 1140px) {
+  .implantation-description {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media (max-width: 960px) {
   .implantation-description {
     width: 100%;
@@ -12948,6 +12974,20 @@ b, strong {
   margin-bottom: 46px;
   margin-left: 32px;
 }
+@media (max-width: 1280px) {
+  .implantation-description-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1140px) {
+  .implantation-description-title {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-bottom: 24px;
+  }
+}
 @media (max-width: 960px) {
   .implantation-description-title {
     display: none;
@@ -12957,10 +12997,16 @@ b, strong {
   font-size: 20px;
   font-size: 1.25rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .implantation-description-list {
     font-size: 18px;
     font-size: 1.125rem;
+  }
+}
+@media (max-width: 1140px) {
+  .implantation-description-list {
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {

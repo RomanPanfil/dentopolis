@@ -3842,7 +3842,11 @@
   color: #FFF;
   display: flex;
   align-items: center;
-  background-color: #768bce;  
+  background-color: #768bce;
+
+  &__black {
+    color: $font;
+  }
 
   @media (max-width: 768px) {
     aspect-ratio: 0.83;
@@ -3898,7 +3902,15 @@
     @media (max-width: 768px) {
       max-width: 90vw;
       position: relative;
-    }   
+    }
+
+    &__wild {
+      max-width: 55%;
+
+      @media (max-width: 960px) {
+        max-width: 90vw;        
+      }
+    }
   }
 
   &-title {
@@ -5533,6 +5545,10 @@
   &-map {
     height: 594px;
     width: 100%;
+
+    &__foreign {
+      height: 490px;
+    }
 
     @media (max-width: 1366px) {
       max-height: 594px;
@@ -7637,7 +7653,7 @@
     margin-bottom: 40px;
 
     &.feedback-form-field {
-      @media (max-width: 1680px) {
+      @media (max-width: 1366px) {
         width: 37%;
       }
 
@@ -8594,6 +8610,16 @@
     padding-left: 40px;
     padding-right: 40px;
 
+    @media (max-width: 1280px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (max-width: 1140px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
     @media (max-width: 960px) {
       width: 100%;
       flex: 0 0 100%;
@@ -8615,6 +8641,16 @@
       margin-bottom: 46px;
       margin-left: 32px;
 
+      @media (max-width: 1280px) {
+        @include fz(20);
+        margin-bottom: 32px;
+      }
+
+      @media (max-width: 1140px) {
+        @include fz(18);
+        margin-bottom: 24px;
+      }
+
       @media (max-width: 960px) {
         display: none;
       }     
@@ -8623,8 +8659,12 @@
     &-list {
       @include fz(20);
 
-      @media (max-width: 1024px) {
+      @media (max-width: 1280px) {
         @include fz(18); 
+      }
+
+      @media (max-width: 1140px) {
+        @include fz(16); 
       }
 
       @media (max-width: 768px) {
