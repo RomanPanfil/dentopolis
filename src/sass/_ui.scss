@@ -314,6 +314,11 @@ b, strong {
 				@include fz(20);				
 				line-height: 155%;				
 			}
+
+			&__small-mobile {
+				@include fz(20);				
+				line-height: 155%;
+			}
 		}
 	}
 }
