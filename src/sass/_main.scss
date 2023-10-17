@@ -1550,6 +1550,10 @@
       align-items: center;
       gap: 16px;
 
+      @media (max-width: 1366px) {        
+        margin-bottom: 20px;
+      }
+
       @media (max-width: 960px) {
         gap: 12px;
         margin-bottom: 18px;
@@ -1580,6 +1584,10 @@
 
       @media (max-width: 1680px) {
         @include fz(22);       
+      }
+
+      @media (max-width: 1366px) {
+        @include fz(20);       
       }
 
       @media (max-width: 599px) {

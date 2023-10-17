@@ -5124,6 +5124,11 @@ b, strong {
           align-items: center;
   gap: 16px;
 }
+@media (max-width: 1366px) {
+  .portfolio-card-head {
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 960px) {
   .portfolio-card-head {
     gap: 12px;
@@ -5158,6 +5163,12 @@ b, strong {
   .portfolio-card-title {
     font-size: 22px;
     font-size: 1.375rem;
+  }
+}
+@media (max-width: 1366px) {
+  .portfolio-card-title {
+    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 599px) {
