@@ -953,3 +953,29 @@ $(document).on("click", ".mfp-link", function() {
     })
   }
 })();
+
+// Выстраивание в 2 колонки картичек на странице "Все услуги"
+(function() {
+  if(!document.querySelector('.services-page-wrapper')) return
+
+  function setGutter() {
+    let gutter = 32;
+  
+    if (window.innerWidth < 1366) {
+      gutter = 16;
+    }
+  
+    $('.services-page-wrapper').isotope({
+      itemSelector: '.service-card',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: '.service-card',
+        gutter: gutter
+      }
+    }); 
+  }
+  
+  setGutter();
+  
+  $(window).resize(setGutter);
+})();
