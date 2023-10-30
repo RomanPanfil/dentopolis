@@ -13259,4 +13259,118 @@ b, strong {
   text-align: center;
   white-space: nowrap;
 }
+
+.search-hint {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media (max-width: 1366px) {
+  .search-hint {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 960px) {
+  .search-hint {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.28;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 599px) {
+  .search-hint {
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin-bottom: 32px;
+  }
+}
+.search-hint span {
+  font-weight: 600;
+}
+.search-list-card {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+          box-shadow: 0px 6px 30px 0px rgba(43, 47, 137, 0.15);
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+@media (max-width: 960px) {
+  .search-list-card {
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .search-list-card {
+    padding: 20px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+            box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 599px) {
+  .search-list-card {
+    padding: 20px 12px;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 32px;
+  }
+}
+.search-list-card li {
+  padding: 20px 32px;
+  border-bottom: 1px solid #CDF3F9;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s, border-radius 0.3s;
+  -o-transition: background-color 0.3s, border-radius 0.3s;
+  transition: background-color 0.3s, border-radius 0.3s;
+  margin-bottom: 0 !important;
+}
+@media (max-width: 768px) {
+  .search-list-card li {
+    padding: 20px 0px;
+  }
+}
+@media (max-width: 599px) {
+  .search-list-card li {
+    padding: 12px 0px;
+  }
+  .search-list-card li:last-child {
+    border-bottom: none;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .search-list-card li:hover {
+    background-color: #319DAC;
+    border-radius: 12px;
+  }
+  .search-list-card li:hover a {
+    color: #fff;
+  }
+}
+@media (max-width: 599px) {
+  .search-list-card .ui-list {
+    margin-bottom: 0;
+  }
+}
+.search-list-card .ui-list li::before {
+  margin-top: 8px;
+}
+@media (max-width: 599px) {
+  .search-list-card .ui-list li::before {
+    margin-top: 2px;
+  }
+}
 /*# sourceMappingURL=sourcemaps/style.css.map */
