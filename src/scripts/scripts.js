@@ -704,6 +704,12 @@ initMask();
   $('.ui-input.checkbox').styler();
 })();
 
+(function() {
+  if(!document.querySelector('input.star')) return
+
+  $('input.star').styler();
+})();
+
 // pop-up
 // $(document).on("click", ".mfp-link", function () {
 //   var a = $(this);

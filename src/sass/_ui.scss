@@ -873,3 +873,41 @@ b, strong {
 		  }
 	}
 }
+
+.rating-stars {	
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+  }
+  
+  .star {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	display: inline-block;
+	margin-right: 2px;
+	cursor: pointer;
+  }
+  
+  .star::before {
+	content: "";
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	background-image: url('../images/svg/empty-star.svg');
+	background-repeat: no-repeat;
+  }
+  
+  .star:checked::before,
+  .star.checked::before {
+	background-image: url('../images/svg/full-star.svg');
+	background-repeat: no-repeat;
+  }
+  
+  .star:hover::before,
+  .star:hover ~ .star::before,
+  .star.checked ~ .star::before {
+	background-image: url('../images/svg/full-star.svg');
+	background-repeat: no-repeat;
+  }
+  

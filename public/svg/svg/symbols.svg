@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+		<symbol id="empty-star" viewBox="0 0 24 24">
+			<path d="M12.472 18.499a1 1 0 0 0-.93 0l-3.922 2.06a1 1 0 0 1-1.45-1.055l.748-4.361a1 1 0 0 0-.289-.886l-3.173-3.085a1 1 0 0 1 .554-1.707l4.38-.634a1 1 0 0 0 .753-.547l1.96-3.969a1 1 0 0 1 1.794 0l1.96 3.969a1 1 0 0 0 .753.546l4.38.634a1 1 0 0 1 .555 1.707l-3.175 3.087a1 1 0 0 0-.288.886l.748 4.357a1 1 0 0 1-1.451 1.054L12.471 18.5z" fill="#CDF3F9" stroke="#CDF3F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+		</symbol>
+	
+		<symbol id="full-star" viewBox="0 0 24 24">
+			<path d="M12.472 18.499a1 1 0 0 0-.93 0l-3.922 2.06a1 1 0 0 1-1.45-1.055l.748-4.361a1 1 0 0 0-.289-.886l-3.173-3.085a1 1 0 0 1 .554-1.707l4.38-.634a1 1 0 0 0 .753-.547l1.96-3.969a1 1 0 0 1 1.794 0l1.96 3.969a1 1 0 0 0 .753.546l4.38.634a1 1 0 0 1 .555 1.707l-3.175 3.087a1 1 0 0 0-.288.886l.748 4.357a1 1 0 0 1-1.451 1.054L12.471 18.5z" fill="#319DAC" stroke="#319DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+		</symbol>
+	
+</svg>

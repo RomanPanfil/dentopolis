@@ -1430,6 +1430,50 @@ b, strong {
   border-radius: 50%;
 }
 
+.rating-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.star {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+.star::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-image: url("../images/svg/empty-star.svg");
+  background-repeat: no-repeat;
+}
+
+.star:checked::before,
+.star.checked::before {
+  background-image: url("../images/svg/full-star.svg");
+  background-repeat: no-repeat;
+}
+
+.star:hover::before,
+.star:hover ~ .star::before,
+.star.checked ~ .star::before {
+  background-image: url("../images/svg/full-star.svg");
+  background-repeat: no-repeat;
+}
+
 .inner,
 .container {
   position: relative;
@@ -11528,6 +11572,31 @@ b, strong {
   width: 100%;
   display: block;
 }
+.reviews-send .rating-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  letter-spacing: 0.0225rem;
+  margin-bottom: 12px;
+}
+@media (max-width: 599px) {
+  .reviews-send .rating-wrapper {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42;
+    letter-spacing: 0.00875rem;
+  }
+}
 .reviews-send .agree {
   width: 45%;
   max-width: 260px;
@@ -11537,7 +11606,6 @@ b, strong {
   gap: 12px;
 }
 .reviews-send .agree-wrapper {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11555,30 +11623,26 @@ b, strong {
 }
 .reviews-send .agree span {
   color: #FFF;
-  font-size: 11px;
-  font-size: 0.6875rem;
+  font-size: 9px;
+  font-size: 0.5625rem;
   font-weight: 400;
   line-height: 145.455%;
   letter-spacing: 0.006875rem;
 }
 @media (max-width: 1280px) {
   .reviews-send .agree span {
-    font-size: 10px;
-    font-size: 0.625rem;
+    font-size: 8px;
+    font-size: 0.5rem;
     letter-spacing: 0.00625rem;
   }
 }
 @media (max-width: 1140px) {
   .reviews-send .agree span {
-    font-size: 9px;
-    font-size: 0.5625rem;
     letter-spacing: 0.005625rem;
   }
 }
 @media (max-width: 599px) {
   .reviews-send .agree span {
-    font-size: 8px;
-    font-size: 0.5rem;
     letter-spacing: 0.005rem;
     line-height: 162.5%;
   }
