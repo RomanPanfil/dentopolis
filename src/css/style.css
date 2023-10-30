@@ -11597,6 +11597,9 @@ b, strong {
     letter-spacing: 0.00875rem;
   }
 }
+.reviews-send .rating-wrapper span {
+  margin-left: 30px;
+}
 .reviews-send .agree {
   width: 45%;
   max-width: 260px;
@@ -11616,6 +11619,16 @@ b, strong {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 17px;
+}
+@media (max-width: 599px) {
+  .reviews-send .agree-wrapper {
+    gap: 6px;
+  }
+}
+@media (max-width: 599px) {
+  .reviews-send .agree {
+    width: 58%;
+  }
 }
 .reviews-send .agree .jq-checkbox {
   -ms-flex-negative: 0;
