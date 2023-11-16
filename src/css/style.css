@@ -12096,6 +12096,9 @@ b, strong {
   height: 945px;
   padding-bottom: 102px;
 }
+.reviews-slider__vertical .swiper-slide:last-child .reviews-card {
+  margin-bottom: 32px;
+}
 @media (max-width: 1023px) {
   .reviews-slider__vertical {
     height: auto;

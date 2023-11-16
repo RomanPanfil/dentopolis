@@ -7742,6 +7742,13 @@
   height: 945px;
   padding-bottom: 102px;
 
+  .swiper-slide:last-child {
+    .reviews-card {     
+      margin-bottom: 32px;
+    }
+  }
+  
+
   @media (max-width: 1023px) {
     height: auto;
   }
@@ -7764,7 +7771,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  padding-top: 32px;  
+  padding-top: 32px; 
 	user-select: none;
 
   @media (max-width: 599px) {
