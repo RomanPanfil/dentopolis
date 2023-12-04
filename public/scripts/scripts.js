@@ -817,16 +817,18 @@ $(document).on("click", ".mfp-link", function() {
 // мобильное меню навигации
 (function() {
   const navIcons = document.querySelectorAll('.mobile-nav ul a svg');
-
-  navIcons.forEach(icon=> {    
-    icon.addEventListener('click', openSubMenu)
+  
+  navIcons.forEach(icon => {
+    icon.addEventListener('click', e => {
+      e.preventDefault();
+      openSubMenu(e);
+    });
   });
 
-  function openSubMenu(ev) {
-    const parentLI = ev.target.closest('li');   
-    
+  function openSubMenu(e) {
+    const parentLI = e.target.closest('li');
     if (parentLI) {
-      parentLI.classList.toggle('opened');     
+      parentLI.classList.toggle('opened'); 
     }
   }
 })();
