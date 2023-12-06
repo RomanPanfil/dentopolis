@@ -1267,6 +1267,104 @@
     @media (max-width: 599px) {
       padding-top: 64px;        
     }
+
+    .service-price {
+      &-row {     
+        display: table-row;      
+  
+        @media (max-width: 768px) {
+          display: flex;
+        }       
+      
+        &:hover {
+          background-color: unset;       
+          border-radius: unset;
+          
+          @media (max-width: 768px) {
+            background-color: $primary;
+            border-radius: 12px;
+          }
+      
+          .service-price-name {
+            background-color: $primary;         
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;    
+            
+            @media (max-width: 768px) {
+              background-color: unset;
+              border-radius: unset;
+            }
+          }
+  
+          .service-price-sum {
+            background-color: $primary;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            
+            @media (max-width: 768px) {
+              background-color: unset;
+              border-radius: unset;
+            }
+          }
+        }
+      
+        &:not(:last-of-type) {
+          .service-price-name {
+            border-bottom: 2px solid $bgc;
+  
+            @media (max-width: 768px) {
+              border-bottom: none;
+            }
+          }
+  
+          .service-price-sum {
+            border-bottom: 2px solid $bgc;
+            
+            @media (max-width: 768px) {
+              border-bottom: none;
+            }
+          }
+        }      
+      }
+  
+      &-name {
+        display: table-cell;
+        width: 100%;
+        padding: 17px 19px;
+  
+        @media (max-width: 768px) {
+          padding: 0;
+        }
+      }
+  
+      &-sum {
+        display: table-cell;
+      }
+  
+      &-rub {
+        display: table-cell;
+        text-align: end;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+  
+        @media (max-width: 768px) {
+          padding: 0;
+          display: unset;
+        }
+      }
+  
+      &-currency {     
+        display: table-cell;
+        padding-left: 20px;
+        padding-right: 20px;
+  
+        @media (max-width: 768px) {       
+          padding: 0;
+          display: none;
+        }
+      }
+    }
   }
 
   .row {
@@ -1350,7 +1448,7 @@
         vertical-align: middle;  
       }
     }
-  }
+  }  
 }
 
 .actions {
@@ -5114,9 +5212,17 @@
   &__single {    
     padding-bottom: 26px;
     .doctor-card-photo {
-      aspect-ratio: 3.243;
+      aspect-ratio: 1.63;
       width: 50%;
       order: 1;
+
+      @media (max-width: 1140px) {
+        width: 100%;
+      }
+
+      @media (max-width: 992px) {
+        width: 50%;
+      }
 
       @media (max-width: 768px) {
         aspect-ratio: 1.25;
@@ -5127,6 +5233,14 @@
     .doctor-card-info {
       width: 50%;
       padding: 40px 60px;
+
+      @media (max-width: 1140px) {
+        width: 100%;
+      }
+
+      @media (max-width: 992px) {
+        width: 50%;
+      }
       
       @media (max-width: 768px) {
         width: 100%;
@@ -5232,7 +5346,7 @@
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
-      }
+      }      
     }
 
     @media (max-width: 599px) {
@@ -5241,6 +5355,13 @@
     }
 
     &__single {
+
+      @media (max-width: 1140px) {
+        flex-direction: column;
+      }  
+      @media (max-width: 992px) {
+        flex-direction: row;
+      }  
       @media (max-width: 768px) {
         flex-direction: column;
       }

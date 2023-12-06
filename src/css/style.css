@@ -4837,6 +4837,101 @@ b, strong {
     padding-top: 64px;
   }
 }
+.section-prices__foreign .service-price-row {
+  display: table-row;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.section-prices__foreign .service-price-row:hover {
+  background-color: unset;
+  border-radius: unset;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-row:hover {
+    background-color: #319DAC;
+    border-radius: 12px;
+  }
+}
+.section-prices__foreign .service-price-row:hover .service-price-name {
+  background-color: #319DAC;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-row:hover .service-price-name {
+    background-color: unset;
+    border-radius: unset;
+  }
+}
+.section-prices__foreign .service-price-row:hover .service-price-sum {
+  background-color: #319DAC;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-row:hover .service-price-sum {
+    background-color: unset;
+    border-radius: unset;
+  }
+}
+.section-prices__foreign .service-price-row:not(:last-of-type) .service-price-name {
+  border-bottom: 2px solid #CDF3F9;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-row:not(:last-of-type) .service-price-name {
+    border-bottom: none;
+  }
+}
+.section-prices__foreign .service-price-row:not(:last-of-type) .service-price-sum {
+  border-bottom: 2px solid #CDF3F9;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-row:not(:last-of-type) .service-price-sum {
+    border-bottom: none;
+  }
+}
+.section-prices__foreign .service-price-name {
+  display: table-cell;
+  width: 100%;
+  padding: 17px 19px;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-name {
+    padding: 0;
+  }
+}
+.section-prices__foreign .service-price-sum {
+  display: table-cell;
+}
+.section-prices__foreign .service-price-rub {
+  display: table-cell;
+  text-align: end;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-rub {
+    padding: 0;
+    display: unset;
+  }
+}
+.section-prices__foreign .service-price-currency {
+  display: table-cell;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (max-width: 768px) {
+  .section-prices__foreign .service-price-currency {
+    padding: 0;
+    display: none;
+  }
+}
 .section-prices .row {
   margin-left: -40px;
   margin-right: -40px;
@@ -9032,11 +9127,21 @@ b, strong {
   padding-bottom: 26px;
 }
 .doctors__single .doctor-card-photo {
-  aspect-ratio: 3.243;
+  aspect-ratio: 1.63;
   width: 50%;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+@media (max-width: 1140px) {
+  .doctors__single .doctor-card-photo {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .doctors__single .doctor-card-photo {
+    width: 50%;
+  }
 }
 @media (max-width: 768px) {
   .doctors__single .doctor-card-photo {
@@ -9050,6 +9155,16 @@ b, strong {
 .doctors__single .doctor-card-info {
   width: 50%;
   padding: 40px 60px;
+}
+@media (max-width: 1140px) {
+  .doctors__single .doctor-card-info {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .doctors__single .doctor-card-info {
+    width: 50%;
+  }
 }
 @media (max-width: 768px) {
   .doctors__single .doctor-card-info {
@@ -9156,6 +9271,22 @@ b, strong {
     border-radius: 6px;
     -webkit-box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
             box-shadow: 0px 2px 9px 0px rgba(43, 47, 137, 0.15);
+  }
+}
+@media (max-width: 1140px) {
+  .doctor-card__single {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .doctor-card__single {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 @media (max-width: 768px) {
