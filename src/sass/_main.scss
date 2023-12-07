@@ -4035,6 +4035,12 @@
         max-width: 90vw;        
       }
     }
+
+    &__wild-mobile {
+      @media (max-width: 960px) {
+        max-width: 90vw;        
+      }
+    }
   }
 
   &-title {
@@ -6767,7 +6773,34 @@
         object-position: center;
       }
     }
-  }
+
+    &__about {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 50%;
+  
+      @media (max-width: 1680px) {
+        width: 55%;
+      }
+  
+      @media (max-width: 1366px) {
+        width: 64%;
+      }
+      
+      @media (max-width: 960px) {
+        height: 58%;
+        width: 100%;
+        top: unset;
+        bottom: 0;
+      }
+  
+      @media (max-width: 599px) {        
+        height: 38%;       
+      }
+    }
+  }  
 }
 
 // vacancies
