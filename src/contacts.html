@@ -855,42 +855,124 @@
                 </div>                             
               </div>
               <div class="contacts-map" id="map"></div>
+
               <script>
-                function initMap() {  
-                };
+                function initMap() {
+                  if(!document.querySelector('#map')) return;
 
-                function createMap() {
-                  if(!document.querySelector('#map')) return  
-
-                  // Координаты центра карты 
-                  const center = {lat: 53.94979397878479, lng: 27.694455758422095};
-                  // Координаты маркера
-                  const markerPosition = {lat: 53.949787735905474, lng: 27.69446649937378};
-
-                  // Опции карты
-                  const options = {
-                    center: center,
-                    zoom: 16,
-                    zoomControl: false,
-                    disableDefaultUI: true,
-                    draggable: false,
+                  const center = {
+                    lat: 53.947685627759775, 
+                    lng: 27.694574234462856
                   };
 
-                  // Создаем карту в контейнере
-                  const map = new google.maps.Map(document.getElementById("map"), options);
+                  const markerPosition = {
+                    lat: 53.94953414379193,
+                    lng: 27.694476944997555
+                  };
+                  // const markerPosition = {
+                  //   lat: 53.949787735905474,
+                  //   lng: 27.69446649937378
+                  // };
+                    
+                  let map;
 
-                  // Создание маркера
-                  const marker = new google.maps.Marker({
-                    optimized: false,
-                    position: markerPosition,
-                    title: 'Стоматология "Дентополис"',
-                    map: map,    
-                  });
-                }
+                  function createMap() {
+                    map = new google.maps.Map(document.getElementById("map"), {
+                      center: center,
+                      zoomControl: false,
+                      disableDefaultUI: true,
+                      draggable: false,                      
+                    });  
+
+                    var iconCode = '<svg width="22" height="46" viewBox="0 0 54 78" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7039 4.25795C22.0792 -0.608456 32.3738 -0.523399 40.6705 4.48075C48.8856 9.58683 53.8785 18.6997 53.8324 28.5025C53.6408 38.2411 48.287 47.3953 41.5947 54.472C37.732 58.5749 33.411 62.2028 28.7199 65.2818C28.2368 65.5612 27.7076 65.7482 27.1584 65.8337C26.6298 65.8112 26.1151 65.655 25.6606 65.3792C18.4986 60.7528 12.2155 54.8475 7.11328 47.9472C2.84393 42.1872 0.418381 35.2284 0.166016 28.0156L0.185129 26.9663C0.533717 17.5515 5.62773 8.95055 13.7039 4.25795ZM30.4772 19.967C27.0725 18.5197 23.147 19.306 20.5337 21.9587C17.9204 24.6113 17.1348 28.6071 18.5436 32.0803C19.9525 35.5535 23.2779 37.8191 26.9672 37.8191C29.3841 37.8364 31.7074 36.8683 33.4195 35.1305C35.1315 33.3926 36.09 31.0294 36.0815 28.5674C36.0944 24.8095 33.8819 21.4142 30.4772 19.967Z" fill="#ea4335"/><path opacity="0.4" d="M26.9992 77.3337C37.5846 77.3337 46.1659 75.6174 46.1659 73.5003C46.1659 71.3832 37.5846 69.667 26.9992 69.667C16.4137 69.667 7.83252 71.3832 7.83252 73.5003C7.83252 75.6174 16.4137 77.3337 26.9992 77.3337Z" fill="##ea4335"/> </svg>';
+                    
+                    let marker = new google.maps.Marker({
+                      position: markerPosition,
+                      map: map,
+                      icon: {
+                        url: `data:image/svg+xml;base64,${btoa(iconCode)}`,
+                        labelOrigin: new google.maps.Point(116, 22)
+                      },
+                      title: 'Стоматология "Дентополис"', 
+                      label: {
+                        text: 'Стоматология \n"Дентополис"',                                 
+                        color: "#b41412",
+                        // fontSize: "14px",                                         
+                      },
+                    });                  
+
+                    setZoom();
+                    
+                    function setLabelSize() {
+                      if (window.innerWidth < 960) {
+                        marker.setLabel({
+                          text: marker.getLabel().text,
+                          color: "#b41412",
+                          fontSize: "12px" 
+                        });
+
+                        marker.setIcon({
+                          url: `data:image/svg+xml;base64,${btoa(iconCode)}`,
+                          labelOrigin: new google.maps.Point(102, 22) 
+                        });
+                      } else {
+                        marker.setLabel({
+                          text: marker.getLabel().text,
+                          color: "#b41412",
+                          fontSize: "14px"  
+                        });
+
+                        marker.setIcon({
+                          url: `data:image/svg+xml;base64,${btoa(iconCode)}`,
+                          labelOrigin: new google.maps.Point(116, 22)
+                        });
+                      }
+                    }
+
+                    setLabelSize();
+
+                    window.addEventListener('resize', setLabelSize);
+                  }                  
+
+                  function setZoom() {
+                    if (window.innerWidth < 960) {
+                      map.setZoom(13.9);                                     
+                    } else {
+                      map.setZoom(16.1);             
+                    }
+                  }
+
+                  createMap();
+
+                  
+                  
+                  window.addEventListener('resize', setZoom);  
+
+
+                  // Скрываем бизнесы
+                  var styleNoBusiness = [
+                      {
+                        featureType: "poi.business",
+                        stylers: [
+                          { visibility: "off" }
+                        ]
+                      }
+                    ];
+
+                    // Создаем стиль без бизнесов
+                    var noBusinessMapType = new google.maps.StyledMapType(styleNoBusiness, {
+                      name: "Без бизнесов"  
+                    });
+                    
+                    // Добавляем этот стиль на карту
+                    map.mapTypes.set('no_business', noBusinessMapType);
+                    map.setMapTypeId('no_business');                   
+                }           
+              
 
                 window.onload = function() {
                   if(document.getElementById('map')) {
-                    createMap();
+                    initMap();
                   }
                 }
               </script>
