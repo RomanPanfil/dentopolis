@@ -7892,6 +7892,23 @@
   }
 }
 
+.contacts-acide {
+  .feedback-title {     
+    @include fz(24);        
+    line-height: 133.333%;
+    @include ls(0.72);      
+    margin-bottom: 50px;
+    padding-right: 0;
+    
+    @media (max-width: 599px) {
+      @include fz(20); 
+      @include ls(0.12);              
+      line-height: 155%;
+      margin-bottom: 22px;    
+    }
+  }
+}
+
 .labels {
   background-color: #319DAC;
 }

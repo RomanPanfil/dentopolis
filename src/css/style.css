@@ -12264,6 +12264,24 @@ b, strong {
   }
 }
 
+.contacts-acide .feedback-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 133.333%;
+  letter-spacing: 0.045rem;
+  margin-bottom: 50px;
+  padding-right: 0;
+}
+@media (max-width: 599px) {
+  .contacts-acide .feedback-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+    letter-spacing: 0.0075rem;
+    line-height: 155%;
+    margin-bottom: 22px;
+  }
+}
+
 .labels {
   background-color: #319DAC;
 }
