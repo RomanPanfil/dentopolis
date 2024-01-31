@@ -1,0 +1,144 @@
+<div class="mfp-popup popup-appointment">
+    <div class="mfp-popup-inner">
+        <div class="feedback-wrapper">
+            <div class="h3">
+                запись на прием
+            </div>
+            <form class="feedback-form" id="popup-appointment">
+                <div class="ui-field">
+                    <a href="#" class="feedback-form-file">
+                        <img src="./images/x-ray.png" alt="x-ray" class="feedback-form-file-image">
+                        <div class="feedback-form-file-text">
+                            У меня есть снимок
+                        </div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="feedback-form-file-icon">
+                            <path d="M1.97344 0C1.26919 0 0.698293 0.570901 0.698293 1.27514C0.698293 1.97938 1.26919 2.55028 1.97344 2.55028H11.6464L0.373481 13.8232C-0.124494 14.3212 -0.124494 15.1285 0.373481 15.6265C0.871455 16.1245 1.67883 16.1245 2.1768 15.6265L13.4497 4.35361V14.0266C13.4497 14.7308 14.0206 15.3017 14.7249 15.3017C15.4291 15.3017 16 14.7308 16 14.0266V1.27514C16 0.570901 15.4291 0 14.7249 0H1.97344Z" fill="#2E99AD"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="ui-field">
+                    <input type="text" placeholder="Имя Фамилия" required name="name" id="name" class="ui-input name">
+                </div>
+                <div class="ui-field">
+                    <input type="email" placeholder="Email" required name="email" id="email" class="ui-input email">
+                </div>
+                <div class="ui-field">
+                    <input type="text" placeholder="Телефон" required name="number" id="number" class="ui-input number">
+                </div>
+                <div class="feedback-form-textarea">
+                    <div class="ui-field">
+                      <textarea name="message" id="message" required placeholder="Сообщение" class="ui-texarea"></textarea>
+                    </div>
+                </div>              
+                <div class="feedback-form-send">
+                    <label>
+                      <input type="checkbox" class="ui-input checkbox">
+                      <span class="feedback-form-agree">Даю согласие на обработку данных и соглашаюсь с политикой конфиденциальности</span>
+                    </label>          
+                    <button class="ui-btn ui-btn-green">
+                      Отправить
+                    </button>
+                </div>   
+            </form>
+        </div>
+    </div>
+    <script>
+        $('.ui-input.checkbox').styler();
+        function initMask() {
+            const inputs = document.querySelectorAll('.feedback-form .number'); 
+            if(!inputs.length) return
+
+            inputs.forEach(element => {
+                IMask(element, {
+                mask: [
+                    {
+                    mask: '+000 (00) 000-00-00',
+                    startsWith: '375',
+                    lazy: false,
+                    country: 'Belarus'
+                    },
+                    {
+                    mask: '+0 (000) 000-00-00',
+                    startsWith: '7',
+                    lazy: false,
+                    country: 'Russia'
+                    },
+                    {
+                    mask: '+{38} (0{00}) 000-00-00', 
+                    startsWith: '38',
+                    lazy: false,
+                    country: 'Ukraine'
+                    },
+                    {
+                    mask: '+000 (00) 000-00-00',
+                    startsWith: '371', 
+                    lazy: false,
+                    country: 'Latvia'  
+                    },
+                    {
+                    mask: '+000 (000) 000-00-00',
+                    startsWith: '370',
+                    lazy: false,
+                    country: 'Lithuania'
+                    },
+                    {
+                    mask: '+00 (000) 000-00-00',
+                    startsWith: '48',
+                    lazy: false, 
+                    country: 'Poland'
+                    },
+                    {
+                    mask: '+{49} {0} {000} {000}-{00}-{00}',
+                    startsWith: '49',
+                    lazy: false,
+                    country: 'Germany'
+                    },    
+                    {
+                    mask: '0000000000000',
+                    startsWith: '',
+                    country: 'unknown'
+                    }
+                ],
+                dispatch: (appended, dynamicMasked) => {
+                    const number = (dynamicMasked.value + appended).replace(/\D/g,'');
+                
+                    return dynamicMasked.compiledMasks.find(m => number.indexOf(m.startsWith) === 0);
+                }
+                })
+            })
+            };
+
+            initMask();
+
+        $(document).ready(function () {          
+
+            $(".feedback-form").validate({
+                submitHandler: function(form, event) {    
+                   event.preventDefault()
+                   form.reset()       
+                },
+                rules: {
+                    name: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                    },
+                    number: {
+                        required: true,
+                        number: false 
+                    },
+                    message: {
+                        required: true,
+                    }    
+                },
+                messages: {
+                    name: "Пожалуйста, заполните это поле",
+                    email: "Пожалуйста, заполните это поле",
+                    number: "Пожалуйста, заполните это поле",
+                    message: "Пожалуйста, заполните это поле",
+                }
+            });     
+        });
+    </script>
+</div>
