@@ -2093,6 +2093,14 @@
     padding-top: 48px;
   }
 
+  .section-title {
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 46px;
+    }
+  }
+
   &-item {
     height: calc(100% - 32px);
     display: flex;

@@ -5749,6 +5749,14 @@ b, strong {
     padding-top: 48px;
   }
 }
+.benefits .section-title {
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .benefits .section-title {
+    margin-bottom: 46px;
+  }
+}
 .benefits-item {
   height: calc(100% - 32px);
   display: -webkit-box;

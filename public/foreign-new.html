@@ -833,7 +833,7 @@
       <section class="section-feedback section-feedback__padding feedback bg-blue-light">
         <div class="container">
           <div class="feedback-wrapper">
-            <form class="feedback-form feedback-form__appointment" id="feedback-online-second">
+            <form class="feedback-form feedback-form__appointment" id="feedback-online-first">
               <div class="feedback-title">
                 записаться на прием
               </div>              
@@ -856,7 +856,7 @@
                   Записаться
                 </button>
                 <label class="feedback-form-agree">
-                  <input type="checkbox" class="ui-input checkbox">
+                  <input type="checkbox" class="ui-input checkbox" name="feedbackAgree" id="feedbackAgree">
                   <span class="feedback-form-agree">Даю согласие на обработку данных и соглашаюсь с политикой конфиденциальности</span>
                 </label>
               </div>
@@ -879,11 +879,15 @@
               number: {
                 required: true,     
                 number: false 
-              },               
-            },
+              },
+              feedbackAgree: {
+                required: true,                    
+              },
+            },  
             messages: {
               name: "Пожалуйста, заполните это поле",             
-              number: "Пожалуйста, заполните это поле",              
+              number: "Пожалуйста, заполните это поле",
+              feedbackAgree: "",            
             }
           });  
         });
@@ -3073,46 +3077,6 @@
                 </div>                             
               </div>
               <div class="contacts-map contacts-map__foreign" id="map"></div>
-              <!-- <script>
-                function initMap() {  
-                };
-
-                function createMap() {
-                  if(!document.querySelector('#map')) return  
-
-                  // Координаты центра карты 
-                  // const center = {lat: 53.94979397878479, lng: 27.694455758422095};
-                  const center = {lat: 53.947685627759775, lng: 27.694574234462856};
-                  // Координаты маркера
-                  const markerPosition = {lat: 53.949787735905474, lng: 27.69446649937378};
-
-                  // Опции карты
-                  const options = {
-                    center: center,
-                    zoom: 16.1,
-                    zoomControl: false,
-                    disableDefaultUI: true,
-                    draggable: false,
-                  };
-
-                  // Создаем карту в контейнере
-                  const map = new google.maps.Map(document.getElementById("map"), options);
-
-                  // Создание маркера
-                  const marker = new google.maps.Marker({
-                    optimized: false,
-                    position: markerPosition,
-                    title: 'Стоматология "Дентополис"',
-                    map: map,    
-                  });
-                }
-
-                window.onload = function() {
-                  if(document.getElementById('map')) {
-                    createMap();
-                  }
-                }
-              </script> -->
 
               <script>
                 function initMap() {
@@ -3127,10 +3091,6 @@
                     lat: 53.94953414379193,
                     lng: 27.694476944997555
                   };
-                  // const markerPosition = {
-                  //   lat: 53.949787735905474,
-                  //   lng: 27.69446649937378
-                  // };
                     
                   let map;
 
@@ -3262,7 +3222,7 @@
                         Отправить
                       </button>
                       <label>
-                        <input type="checkbox" class="ui-input checkbox">
+                        <input type="checkbox" class="ui-input checkbox" name="agree" id="agree">
                         <span class="feedback-form-agree">Даю согласие на обработку данных и соглашаюсь с политикой конфиденциальности</span>
                       </label>
                   </div> 
@@ -3271,7 +3231,7 @@
 
                   <script>        
                     $(document).ready(function () {
-                      $(".feedback-form").validate({
+                      $("#acide-appointment").validate({
                         submitHandler: function(form, event) {    
                           event.preventDefault()
                           form.reset()       
@@ -3282,12 +3242,16 @@
                           },             
                           number: {
                             required: true,     
-                            number: false 
-                          },               
+                            number: false,
+                          },
+                          agree: {
+                            required: true,
+                          }           
                         },
                         messages: {
                           name: "Пожалуйста, заполните это поле",             
-                          number: "Пожалуйста, заполните это поле",              
+                          number: "Пожалуйста, заполните это поле",
+                          agree: "",             
                         }
                       });  
                     });

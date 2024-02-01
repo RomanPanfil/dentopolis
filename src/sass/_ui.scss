@@ -804,6 +804,12 @@ b, strong {
 	border: 3px solid $bgc;
 	cursor: pointer;
 	flex-shrink: 0;
+
+	// &:has(.error ) {		
+	// 	& ~ .feedback-form-agree {
+			
+	// 	}
+	// }
 }
 
 .jq-checkbox.checked {

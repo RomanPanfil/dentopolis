@@ -27,12 +27,12 @@
                 </div>
                 <div class="feedback-form-textarea">
                     <div class="ui-field">
-                      <textarea name="message" id="message" required placeholder="Сообщение" class="ui-texarea"></textarea>
+                      <textarea name="message" id="message" required placeholder="Причина обращения" class="ui-texarea"></textarea>
                     </div>
                 </div>              
                 <div class="feedback-form-send">
                     <label>
-                      <input type="checkbox" class="ui-input checkbox">
+                      <input type="checkbox" class="ui-input checkbox" name="agree" id="agree">
                       <span class="feedback-form-agree">Даю согласие на обработку данных и соглашаюсь с политикой конфиденциальности</span>
                     </label>          
                     <button class="ui-btn ui-btn-green">
@@ -130,13 +130,17 @@
                     },
                     message: {
                         required: true,
-                    }    
+                    },
+                    agree: {
+                        required: true,
+                    }   
                 },
                 messages: {
                     name: "Пожалуйста, заполните это поле",
                     email: "Пожалуйста, заполните это поле",
                     number: "Пожалуйста, заполните это поле",
                     message: "Пожалуйста, заполните это поле",
+                    agree: "",
                 }
             });     
         });
