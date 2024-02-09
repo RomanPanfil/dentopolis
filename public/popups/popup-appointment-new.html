@@ -27,7 +27,7 @@
                 </div>
                 <div class="feedback-form-textarea">
                     <div class="ui-field">
-                      <textarea name="message" id="message" required placeholder="Причина обращения" class="ui-texarea"></textarea>
+                      <textarea name="message" id="message" placeholder="Причина обращения" class="ui-texarea"></textarea>
                     </div>
                 </div>              
                 <div class="feedback-form-send">
@@ -128,9 +128,6 @@
                         required: true,
                         number: false 
                     },
-                    message: {
-                        required: true,
-                    },
                     agree: {
                         required: true,
                     }   
@@ -138,8 +135,7 @@
                 messages: {
                     name: "Пожалуйста, заполните это поле",
                     email: "Пожалуйста, заполните это поле",
-                    number: "Пожалуйста, заполните это поле",
-                    message: "Пожалуйста, заполните это поле",
+                    number: "Пожалуйста, заполните это поле",                   
                     agree: "",
                 }
             });     
